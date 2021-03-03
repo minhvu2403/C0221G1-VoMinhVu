@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dang ki hoc vien</title>
+</head>
+<style>
+    .containerfull {
+        border: 1px solid red;
+        width: 80%;
+        height: 700px;
+        background-color: #ffee46;
+        font-size: 20px;
+    }
+
+    .container {
+        position: relative;
+        padding-left: 35px;
+        cursor: pointer;
+    }
+
+    .title {
+        background-color: #41ffff;
+        margin: 13px 9px;
+        display: block;
+    }
+
+    .title h2 {
+        line-height: 50px;
+        color: blue;
+        margin: 0;
+        display: flex;
+        padding: 7px 14px;
+    }
+
+    .nhap {
+        display: inline-table;
+        margin-right: 64px;
+        margin-left: 10px;
+    }
+
+    .tx {
+        padding: 10px 20px;
+        margin-bottom: 10px;
+    }
+
+    .kt {
+        margin-left: 200px;
+    }
+
+    .kt input {
+        padding: 10px 20px;
+        box-shadow: 2px 3px 4px;
+    }
+
+
+</style>
+<body>
+<div class="containerfull">
+    <div class="title"><h2>ĐĂNG KÍ HỌC VIÊN</h2></div>
+    <form action="" method="get">
+        <table>
+            <tr>
+                <td class="nhap">Họ và tên</td>
+                <td><input class="tx" type="text" name="" id="" size="45"></td>
+            </tr>
+            <tr>
+                <td class="nhap">Ngày sinh</td>
+                <td><input class="tx" type="text" name="" id="" size="30"></td>
+            </tr>
+            <tr>
+                <td class="nhap">Giới tính</td>
+                <td>
+                    <label class="container">Nam
+                        <input type="radio" name="radio" id="" value="hobby">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Nu
+                        <input type="radio" name="radio" id="" value="hobby">
+                        <span class="checkmark"></span>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td class="nhap">Địa chỉ</td>
+                <td>
+                    <textarea name="" id="" cols="40" rows="6"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="nhap">Lop</td>
+                <td>
+                    <select class="tx" name="" id="">
+                        <option value="">-Chon Lop-</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="nhap">Email</td>
+                <td><input class="tx" type="email" name="" id="" size="30"></td>
+            </tr>
+            <tr>
+                <td class="nhap">Số Điện Thoại</td>
+                <td><input class="tx" type="text" name="" id="" size="30"></td>
+            </tr>
+        </table>
+
+    </form>
+    <div class="kt">
+        <input type="submit" value="Đăng kí">
+        <input type="submit" value="Nhập lại">
+    </div>
+</div>
+</body>
+</html>

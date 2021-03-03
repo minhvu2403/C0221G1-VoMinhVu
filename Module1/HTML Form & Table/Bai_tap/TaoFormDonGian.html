@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tao From Don Gian</title>
+</head>
+<style>
+    body {
+        background-color: #41ffff;
+    }
+
+    ul {
+        float: left;
+        margin-top: 5px;
+        list-style: none;
+        margin-left: 10px;
+    }
+
+    ul li {
+        padding: 6px;
+    }
+
+    form label {
+        display: inline-block;
+        width: 93px;
+    }
+
+    .checkbox {
+        height: 120px;
+        margin-left: 33px;
+        display: inline-block;
+    }
+
+    .tx {
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #41ffff;
+
+    }
+
+    input[type="submit"] {
+        width: 195px;
+        height: 45px;
+        font-size: 20px;
+
+    }
+
+    label {
+        font-size: 20px;
+        color: blue;
+    }
+
+    .sub {
+        margin-left: 119px;
+    }
+
+    span {
+        font-size: 20px;
+        color: #ff7a1c;
+    }
+
+    .header {
+        width: 978px;
+        height: 420px;
+        border: 1px solid red;
+        margin: 0 auto;
+        background-color: white;
+    }
+
+    .container {
+        margin: 0 auto;
+        display: table;
+        width: 100%;
+    }
+
+    .titleone {
+        height: 47px;
+        width: 100%;
+        display: block;
+        background-color: #ff7a1c;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .titleone h2 {
+        margin: 0;
+        text-align: center;
+        line-height: 47px;
+    }
+    .content{
+        margin-left: 30px;
+    }
+
+</style>
+<body>
+<div class="header">
+
+    <div class="container">
+        <div class="titleone"><h2>SO THICH CUA BAN</h2></div>
+        <div class="content">
+            <form action="" method="get">
+                <label>Họ và tên:</label>
+                <input class="tx" type="text" name="username" id="" size="45"><br><br>
+                <label>Email:</label>
+                <input class="tx" type="email" name="email" id="" size="30"><br>
+
+            </form>
+            <div>
+                <label>Sở thích:</label>
+            </div>
+            <div class="checkbox">
+                <ul>
+                    <li>
+                        <input type="checkbox" value="None" id="squaredcheck1" class="checkbox1" name="check"/>
+                        <label for="squaredcheck1"><span>Thể Thao</span></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="None" id="squaredcheck2" class="checkbox1" name="check"/>
+                        <label for="squaredcheck2"><span>Lướt Web</span></label>
+                    </li>
+                    <li><input type="checkbox" value="None" id="squaredcheck3" class="checkbox1" name="check"/>
+                        <label for="squaredcheck3"><span>Du Lịch</span></label>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <input type="checkbox" value="None" id="squaredcheck4" class="checkbox1" name="check"/>
+                        <label for="squaredcheck4"><span>Âm nhạc</span></label>
+                    </li>
+                    <li>
+                        <input type="checkbox" value="None" id="squaredcheck5" class="checkbox1" name="check"/>
+                        <label for="squaredcheck5"><span>Chơi game</span></label>
+                    </li>
+                </ul>
+                <ul>
+                    <li><input type="checkbox" value="None" id="squaredcheck6" class="checkbox1" name="check"/>
+                        <label for="squaredcheck6"><span>Đọc sách</span></label>
+                    </li>
+                    <li><input type="checkbox" value="None" id="squaredcheck7" class="checkbox1" name="check"/>
+                        <label for="squaredcheck7"><span>Điện ảnh</span></label>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="sub">
+            <input type="submit" value="Gửi thông tin ">
+            <input type="submit" value="Nhập lại">
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
