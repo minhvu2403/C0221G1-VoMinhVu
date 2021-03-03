@@ -13,7 +13,7 @@
         float: left;
         margin-top: 5px;
         list-style: none;
-        margin-left: 10px;
+        margin-left: 33px;
     }
 
     ul li {
@@ -23,6 +23,8 @@
     form label {
         display: inline-block;
         width: 93px;
+        text-align: right;
+        margin-right: 20px;
     }
 
     .checkbox {
@@ -42,16 +44,26 @@
         width: 195px;
         height: 45px;
         font-size: 20px;
+        outline: none;
 
     }
 
     label {
         font-size: 20px;
         color: blue;
+        cursor: pointer;
     }
 
     .sub {
-        margin-left: 119px;
+        margin-left: 132px;
+    }
+    .sub input{
+        cursor: pointer;
+        margin: 10px;
+        box-shadow: 4px 5px 2px;
+    }
+    .sub input:hover{
+        background-color: #41ffff;
     }
 
     span {
@@ -65,6 +77,7 @@
         border: 1px solid red;
         margin: 0 auto;
         background-color: white;
+        margin-top: 40px;
     }
 
     .container {
@@ -102,12 +115,12 @@
                 <label>Họ và tên:</label>
                 <input class="tx" type="text" name="username" id="" size="45"><br><br>
                 <label>Email:</label>
-                <input class="tx" type="email" name="email" id="" size="30"><br>
-
+                <input class="tx" type="email" name="email" id="" size="30"><br><br>
+                <div>
+                    <label>Sở thích</label>
+                </div>
             </form>
-            <div>
-                <label>Sở thích:</label>
-            </div>
+
             <div class="checkbox">
                 <ul>
                     <li>
