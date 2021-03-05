@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Average</title>
+    <link rel="stylesheet" href="css/Bien.css">
+</head>
+<body>
+<div class="form-list">
+<form action="">
+    <h3>Biến kiểu dữ liệu toán tử</h3>
+    <label>Nhập điểm toán</label>
+    <input type="text" name="maths" id="maths"/>
+    <br>
+    <label>Nhập điểm lý</label>
+    <input type="text" name="physical" id="physical"/>
+    <br>
+    <label>Nhập điểm hóa</label>
+    <input type="text" name="maths" id="chemical"/>
+    <br>
+    <label>Điểm Trung Bình</label>
+    <input type="text" name="" id="average">
+    <br>
+    <label>Xếp loại</label>
+    <input type="text" id="xeploai">
+    <br>
+    <label>Hạng</label>
+    <input type="text" id="hang"><br>
+    <label> &nbsp;</label>
+    <input class="submit" type="button"value="Kết Quả"onclick="result();">
+    <button type="reset" class="submit">Làm lại</button>
+</form>
+</div>
+<script>
+
+    function result(){
+        let maths =parseInt(document.getElementById("maths").value);
+        let physical =parseInt(document.getElementById("physical").value);
+        let chemical =parseInt(document.getElementById("chemical").value);
+        let dtb =(maths+physical+chemical)/3;
+
+        let hang;
+        let hocluc;
+        switch (
+            (dtb>9 && dtb<=100)?1:
+                (dtb>7 && dtb<9)?2:
+                    (dtb>=5 && dtb<7)?3:0
+
+            ) {
+            case 1 : hang = "A"; hocluc = "Giỏi"; break;
+            case 2 : hang = "B"; hocluc = "Khá"; break;
+            case 3 : hang = "C"; hocluc = "Trung bình"; break;
+            case 0 : hang = "D"; hocluc = "Yếu"; break;
+        }
+        document.getElementById('average').value=dtb.toFixed(2);
+        document.getElementById('xeploai').value=hocluc;
+        document.getElementById('hang').value=hang;
+        // alert('Kết quả của biến thực thi:'+result.toFixed(2));
+        // document.getElementById("average").value=result;
+        // document.getElementById('xeploai').value=hocluc;
+        // document.getElementById('xeploai').innerHTML=hocluc;
+        // document.getElementById('hang').innerHTML=hang;
+    }
+
+</script>
+</body>
+</html>

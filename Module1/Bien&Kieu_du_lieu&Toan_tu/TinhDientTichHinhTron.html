@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Diện tích hình tròn</title>
+    <link rel="stylesheet" href="css/Bien.css">
+</head>
+<body>
+<div class="form-list">
+    <h3>TÍNH DIỆN TÍCH HÌNH TRÒN</h3>
+    <form action="">
+        <label>Nhập bán kính:</label>
+        <input type="text"id="bk">
+        <br>
+        <label>Chu vi:</label>
+        <input type="text" name="" id="ct">
+        <br>
+        <label>Diện tích:</label>
+        <input type="text" name="" id="dt">
+        <br>
+
+        <input class="submit" type="button"value="Kết Quả"onclick="result()">
+        <button type="reset" class="submit">Làm lại</button>
+    </form>
+</div>
+<script>
+
+    function result() {
+        let R =parseInt(document.getElementById("bk").value);
+        let S =parseFloat((Math.pow(R,2))*3.14);
+        let C =parseFloat((R*2)*3.14);
+        document.getElementById('dt').value =S;
+        document.getElementById('ct').value=C;
+    }
+</script>
+</body>
+</html>

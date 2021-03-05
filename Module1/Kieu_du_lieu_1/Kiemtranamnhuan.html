@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+<style>
+    .container{
+        width: 500px;
+        height: 400px;
+        display: block;
+        border: 1px solid;
+    }
+    .container label{
+        width: 150px;
+        float: left;
+    }
+    .container input[type="text"]{
+        padding: 7px;
+        margin-bottom: 10px;
+        width: 200px;
+    }
+    .btn{
+        width: 108px;
+        height: 42px;
+    }
+    .content{
+        padding: 10px;
+    }
+    .sub{
+        margin-left: 148px;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="content">
+        <form action="">
+            <h3> Kiểm tra năm nhuận</h3>
+            <label >Nhập Năm </label>
+            <input type="text" name="" id="years">
+            <br>
+            <label>Kết Quả</label>
+            <input type="text" name="" id="kq">
+            <br>
+            <div class="sub">
+                <button class="btn" type="button" onclick="result();">Submit</button>
+                <button  class="btn" type="reset">Làm Lại</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<script>
+    function result() {
+        let year =parseInt(document.getElementById('years').value);
+        let result;
+        if (year %4==0){
+            if(year %100 ==0){
+                if(year %400 ==0){
+                    result =(year+ " is a leap year");
+                }else {
+                    result =(year+" is Not leap year");
+                }
+            }else{
+                result =(year+" is a leap year");
+            }
+        }else {
+            result =(year+" is Not leap year");
+        }
+        document.getElementById('kq').value =result;
+    }
+</script>
+</body>
+</html>

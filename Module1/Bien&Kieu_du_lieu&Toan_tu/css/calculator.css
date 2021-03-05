@@ -1,0 +1,85 @@
+body{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+    background: #dde1e7;
+}
+
+.btn {
+    width: 60px;
+    height: 41px
+}
+
+div.calculate{
+    margin: 100px auto;
+    width: 500px;
+    height: 464px;
+    display: flex;
+}
+#result{
+    width: 250px;
+    height: 40px;
+    outline: none;
+    margin-bottom: 10px;
+    box-shadow: inset -3px -3px 7px #ffffff73,
+    inset 3px 3px 5px  rgba(94, 104, 121, 0.288);
+    border: 1px solid #ccc;
+    background-color: white;
+    margin-left: 10px;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: right;
+}
+div.number{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    display: table;
+}
+ div.vien{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+    display: table;
+    padding: 48px;
+     box-shadow: -3px -3px 7px #ffffff73,
+                  3px 3px 5px  rgba(94, 104, 121, 0.288);
+}
+
+.btn{
+    font-size: 18px;
+    text-decoration: none;
+    color: #4d3252;
+    height: 45px;
+    width: 55px;
+    display: block;
+    line-height: 45px;
+    border: none;
+    outline: none;
+
+}
+tr > td:nth-child(3){
+    background-color: red;
+}
+div.number td{
+    flex: 1;
+    margin: 0 5px;
+    border-radius: 3px;
+    background: #dde1e7;
+    box-shadow: -3px -3px 7px #ffffff73,
+                 3px 3px 5px rgba(55, 56, 121, 0.288);
+
+}
+table{
+    margin: 0 auto;
+    border-spacing: 8px;
+}
+div.number td.active .btn{
+    font-size: 17px;
+    color: #6f6cde;
+}
+div.number td.active{
+    box-shadow: inset -3px -3px 7px #ffffff73,
+               inset 3px 3px 5px  rgba(94, 104, 121, 0.288);
+}

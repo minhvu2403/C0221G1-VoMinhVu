@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
+    <link rel="stylesheet" href="css/Bien.css">
+</head>
+<body>
+   <div class="form-list">
+       <h3>CHUYỂN ĐỔI ĐỘ C SANG ĐỘ F</h3>
+       <form action="">
+           <label>Độ 0C</label>
+           <input type="text"id="Cesius">
+           <br>
+           <label>Độ 0F</label>
+           <input type="text" name="" id="Fahrenheit">
+           <br>
+           <input class="submit" type="button"value="Kết Quả"onclick="result()">
+           <button type="reset" class="submit">Làm lại</button>
+       </form>
+   </div>
+   <script>
+
+       function result() {
+           let Ce =parseInt(document.getElementById("Cesius").value);
+           let Fa =parseInt(((9*Ce)/5)+32);
+           document.getElementById('Fahrenheit').value =Fa;
+       }
+   </script>
+</body>
+</html>

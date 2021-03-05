@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+    <link rel="stylesheet" href="css/Bien.css">
+</head>
+<body>
+<img src="" alt="">
+   <div class="form-list">
+       <h3>CHUYỂN ĐỔI TIỀN TỆ</h3>
+       <form action="">
+           <label>Amount</label>
+           <input type="text"id="amount">
+           <br>
+           <label>From Currency</label>
+           <select name="" id="Fr">
+               <option value="" selected disabled>--CHỌN--</option>
+               <option value="VND">VND</option>
+               <option value="USD">USD</option>
+               <option value="NDT">NDT</option>
+           </select>
+           <br>
+           <label>To Cuurency</label>
+           <select name="" id="Cu">
+               <option value="" selected disabled>--CHỌN--</option>
+               <option value="VND">VND</option>
+               <option value="USD">USD</option>
+               <option value="NDT">NDT</option>
+           </select>
+           <br>
+           <label>chuyển đổi</label>
+           <input type="text" name="" id="cd">
+           <br>
+           <div class="sub">
+               <button class="btn" type="button" onclick="convertCurrency()">Ket Qua</button>
+               <button type="reset" class="btn">Làm lại</button>
+           </div>
+
+       </form>
+   </div>
+   <script>
+       let btn = document.querySelector('submit');
+       let baseC =document.getElementById("Cu");
+       let baseF =document.getElementById("Fr");
+       let amountInput =document.getElementById("amount");
+       function convertCurrency() {
+           let amount =amountInput.value;
+           let from =baseF.value;
+           let to =baseC.value;
+           let result=0;
+
+               if(from==to){
+                   result =amount;
+               }
+               else {
+                   switch (from) {
+                       case 'VND':
+                       {
+                           if(to=='USD'){
+                               result=amount/23020.00;
+                           }else {
+                               result=amount/3558.62;
+                           }
+                       }
+                       break;
+                       case 'USD':{
+                           if (to=='VND'){
+                               result=amount*23020.00
+                           }
+                           else {
+                               result=amount*6.47;
+                           }
+                           break;
+                       }
+                       case 'NDT':{
+                           if (to=='VND'){
+                               result=amount*3558.62;
+                           }
+                           else {
+                               result=amount/6.47;
+                           }
+                           break;
+                       }
+
+                   }
+               }
+
+           document.getElementById('cd').value=result;
+       }
+   </script>
+</body>
+</html>

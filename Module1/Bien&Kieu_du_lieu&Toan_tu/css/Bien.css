@@ -1,0 +1,37 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+div.form-list{
+    width: 500px;
+    border: 1px solid #ccc;
+    margin-left: 25px;
+    padding: 10px;
+    float: left;
+}
+h3{
+    padding: 0;
+    margin-top: 0;
+}
+div.form-list label{
+    width: 150px;
+    float: left;
+}
+div.form-list form input[type="text"]{
+    margin-bottom: 10px;
+    width: 200px;
+    padding: 5px;
+}
+.btn{
+    width: 84px;
+    padding: 6px;
+    margin: 10px;
+}
+div.form-list select{
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 215px;
+}
+.sub{
+    margin-left: 140px;
+}
