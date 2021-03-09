@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <form action="">
+        <h3>Bài 1:Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.</h3>
+        <label >Input Age:</label>
+        <input type="text" name="" id="a" oninput="input()">
+        <label>Ket Qua</label>
+        <input type="text" name="" id="result">
+        <input id="submit" onclick="CheckAge()" type="button" class="kQ" value="Ket Qua">
+        <button type="reset">Reset</button>
+        <br>
+        <p id="a-error" class="error-a"></p>
+    </form>
+</div>
+<script>
+    function input() {
+        let age =parseInt(document.getElementById('a').value);
+
+        if(isNaN(age)==false ){
+            document.getElementById('a-error').innerHTML='';
+        }
+    }
+    function CheckAge() {
+        let age =parseInt(document.getElementById('a').value);
+
+        if(isNaN(age)==true){
+            document.getElementById('a-error').innerHTML='Vui long nhap vao tuoi';
+        }
+        else{
+            if (age>=16){
+                document.getElementById('result').value='Ban du tuoi len lop 10'
+            }
+            else{
+                document.getElementById('result').value='Ban khong du tuoi len lop 10'
+            }
+        }
+
+    }
+</script>
+
+</body>
+</html>

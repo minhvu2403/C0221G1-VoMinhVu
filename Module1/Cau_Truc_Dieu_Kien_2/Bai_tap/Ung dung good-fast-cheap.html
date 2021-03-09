@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body {
+        background: #dde1e7;
+        display: grid;
+    }
+
+    .container {
+        width: 330px;
+        height: 374px;
+        margin: 100px auto;
+        display: block;
+        box-shadow: -3px -3px 7px #ffffff73, 3px 5px 5px rgba(94, 104, 121, 0.288);
+    }
+
+    .grade {
+        position: relative;
+        display: flex;
+        width: 165px;
+        height: 34px;
+        text-align: center;
+        margin: 36px 79px 9px;
+        box-shadow: -3px -3px 7px #ffffff73, 3px 5px 5px rgba(94, 104, 121, 0.288);
+    }
+
+    .switch {
+        position: relative;
+        width: 75px;
+        height: 34px;
+
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        transition: 0.4s;
+        border-radius: 34px;
+        background-color: #dde1e7;
+        box-shadow: inset -3px -3px 7px #ffff, inset 0px 3px 5px rgba(94, 104, 121, 0.91);
+
+    }
+
+    .slider:before {
+        position: absolute;
+        content: ' ';
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: #fff;
+        transition: 0.4s;
+        border-radius: 50%;
+    }
+
+    input:checked + .good {
+        box-shadow: inset -3px -3px 7px rgb(21, 210, 79), inset 0px 3px 5px rgba(16, 25, 19, 0.83);
+        background-color: rgb(12, 209, 94);
+    }
+
+    input:checked + .cheap {
+        box-shadow: inset -3px -3px 7px rgb(22, 107, 179),
+        inset 0px 3px 5px rgba(16, 25, 19, 0.83);
+        background-color: rgb(22, 107, 179);
+    }
+
+    input:checked + .fast {
+        box-shadow: inset -3px -3px 7px rgb(160, 11, 32), inset 0px 3px 5px rgba(16, 25, 19, 0.83);
+        background-color: rgb(160, 11, 32);
+    }
+
+    .text {
+        padding: 6px;
+        margin-left: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .center {
+        margin: 100px auto;
+        display: block;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(44px);
+
+    }
+
+</style>
+<body>
+<div class="container">
+    <div class="center">
+        <div class="grade level">
+            <label class="switch">
+                <input type="checkbox" id="g" onclick="switchGood()">
+                <span class="slider good"></span>
+            </label>
+            <span class="text">Good</span>
+        </div>
+        <div class="grade level">
+            <label class="switch">
+                <input type="checkbox" id="c" onclick="switchCheap()">
+                <span class="slider cheap"></span>
+            </label>
+            <span class="text">Cheap</span>
+        </div>
+        <div class="grade level">
+            <label class="switch">
+                <input type="checkbox" id="f" onclick="switchFast()">
+                <span class="slider fast"></span>
+            </label>
+            <span class="text">Fast</span>
+        </div>
+    </div>
+</div>
+<script>
+    function switchGood() {
+        let isGood = document.getElementById('g').checked;
+        let isCheap = document.getElementById('c').checked;
+        let isFast = document.getElementById('f').checked;
+        console.log(isGood, isCheap, isFast)
+        if (isCheap && isFast) {
+            if (isGood == true) {
+                document.getElementById('c').checked = false;
+            } else {
+                document.getElementById('f').checked = false;
+            }
+        }
+    }
+
+    function switchCheap() {
+        let isGood = document.getElementById('g').checked;
+        let isCheap = document.getElementById('c').checked;
+        let isFast = document.getElementById('f').checked;
+        console.log(isGood, isCheap, isFast)
+        if (isGood && isFast) {
+            if (isCheap == true) {
+                document.getElementById('f').checked = false;
+            } else {
+                document.getElementById('g').checked = false;
+            }
+        }
+    }
+
+    function switchFast() {
+        let isGood = document.getElementById('g').checked;
+        let isCheap = document.getElementById('c').checked;
+        let isFast = document.getElementById('f').checked;
+        console.log(isGood, isCheap, isFast)
+        if (isGood && isCheap) {
+            if (isFast == true) {
+                document.getElementById('g').checked = false;
+            } else {
+                document.getElementById('c').checked = false;
+            }
+
+        }
+    }
+
+</script>
+</body>
+</html>

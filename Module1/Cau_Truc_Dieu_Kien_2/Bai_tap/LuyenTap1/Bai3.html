@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <form action="">
+        <h3>Bài 3: Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0</h3>
+        <label >Input integer a:</label>
+        <input type="text" name="" id="integer" oninput="input()">
+        <label>Ket Qua</label>
+        <input type="text" name="" id="result">
+        <input id="submit" onclick="CheckInteger()" type="button" class="kQ" value="Ket Qua">
+        <button type="reset">Reset</button>
+        <br>
+        <p id="a-error" class="error-a"></p>
+    </form>
+</div>
+<script>
+    function input() {
+        let integer =parseInt(document.getElementById('integer').value);
+
+        if(isNaN(integer)==false ){
+            document.getElementById('a-error').innerHTML='';
+        }
+    }
+    function CheckInteger() {
+        let integer =parseInt(document.getElementById('integer').value);
+        if(isNaN(integer)==true){
+            document.getElementById('a-error').innerHTML='Vui long nhap so';
+        }
+        else{
+            if (integer>0){
+                document.getElementById('result').value=integer+ ' lon hon '+0
+            }
+            else{
+                document.getElementById('result').value=integer+ ' khong lon hon '+0
+            }
+        }
+
+    }
+</script>
+
+</body>
+</html>

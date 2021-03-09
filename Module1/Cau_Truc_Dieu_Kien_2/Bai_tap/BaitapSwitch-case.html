@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai tap Switch-case</title>
+</head>
+<style>
+    .container{
+        width: 510px;
+        height: 240px;
+        display: block;
+        border: 1px solid;
+    }
+    form{
+        padding: 20px;
+    }
+    form label{
+        width: 150px;
+        float: left;
+    }
+    form input[type="text"]{
+        margin-bottom: 10px;
+        padding: 5px;
+        width: 200px;
+    }
+    .sub{
+        margin-left: 150px;
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .sub button{
+        width: 80px;
+        height: 40px;
+    }
+    .tn{
+        color: red;
+        font-weight: bold;
+    }
+</style>
+<body>
+<div class="container">
+    <form action="">
+        <h3>ứng dụng cho phép tính được số ngày trong một tháng</h3>
+        <label>Nhập vào tháng:</label>
+        <input type="text" name="" id="month">
+        <br>
+        <label>Kết quả:</label>
+        <input type="text" name="" id="kq" class="tn">
+        <div class="sub">
+            <button type="button" id="submit" onclick="result()">Kết quả</button>
+            <button type="reset">Làm lại</button>
+        </div>
+    </form>
+</div>
+<script>
+    function result() {
+         let month= parseInt(document.getElementById('month').value);
+         let kq=null;
+         switch (month) {
+               case 4: case 6:case 9: case 11:
+                   kq='Tháng '+month+' Có 30 ngày';
+                   break;
+                   case 1:case 3:case 5:case 7:case 8:case 10:case 12:
+                 kq='Tháng '+month+' Có 31 ngày';
+                 break;
+                 case 2:
+                     kq='Tháng '+month+ ' Có 28 hoặc 29 ngày ';
+                     break;
+         }
+         document.getElementById('kq').value=kq;
+    }
+</script>
+</body>
+</html>

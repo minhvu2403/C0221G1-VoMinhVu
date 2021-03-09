@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Ứng dụng máy tính</title>
     <link rel="stylesheet" href="css/calculator.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 </head>
 <body>
      <div class="calculate">
@@ -66,18 +66,20 @@
         function equal() {
             let lx='loi cu phap';
            let  res =result.innerHTML
-            if(res.charAt(0)=='*'){
-                result.innerHTML=lx;
-            }
-             else  if (res.includes(kqk)){
-                     result.innerHTML=lx;
+             if(res.includes("**")|| res.includes("//")){
+                 result.innerHTML = lx;
              }
-            else
-            {
-                 let output=eval(res)
-                result.innerHTML=output
-            }
-
+             else{
+                 try{
+                     let output=eval(res);
+                     result.innerHTML=output;
+                 }
+                 catch (e) {
+                     if (e instanceof SyntaxError) {
+                         result.innerHTML = lx;
+                     }
+                 }
+             }
         }
         function clean() {
            result.innerHTML=" "

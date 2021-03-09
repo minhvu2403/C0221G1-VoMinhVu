@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <form action="">
+        <h3>Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.</h3>
+        <label >Input Tuoi</label>
+        <input type="text" name="" id="a" oninput="input()">
+        <label>Ket Qua</label>
+        <input type="text" name="" id="result">
+        <input id="submit" onclick="tr()" type="button" class="kQ" value="Ket Qua">
+        <button type="reset">Reset</button>
+        <br>
+        <p id="a-error" class="error-a"></p>
+    </form>
+</div>
+<script>
+    function input() {
+        let a =parseFloat(document.getElementById('a').value);
+        if(isNaN(a)==false ){
+            document.getElementById('a-error').innerHTML='';
+        }
+    }
+    function tr() {
+        let a =parseFloat(document.getElementById('a').value);
+
+        if(isNaN(a)==true){
+            document.getElementById('a-error').innerHTML='Vui long nhap vao 1 so';
+        }
+
+        else {
+            if (Number.isInteger(a)) {
+                if (a > 120 || a < 0) {
+                    document.getElementById('result').value = 'du lieu nhap ko phai tuoi'
+                } else {
+                    document.getElementById('result').value = 'du lieu nhap la tuoi'
+
+                }
+            } else {
+                document.getElementById('result').value = 'du lieu nhap ko hop le'
+
+            }
+        }
+    }
+</script>
+</body>
+</html>

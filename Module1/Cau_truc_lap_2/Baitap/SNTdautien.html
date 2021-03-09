@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="">
+    <label>Nhap so:</label>
+    <input type="text" id="so">
+    <input type="submit" value="Click" onclick="SNT()">
+</form>
+<script>
+        function SNT() {
+            let number =parseInt(document.getElementById('so').value);
+             let n ;
+             let count =0;
+             let i =2;
+             while (count<number){
+                 if (isPrimeNumber(i)){
+                     alert('so nguyen to dau tien'+i+",");
+                     count++;
+                 }
+                 i++;
+             }
+        }
+        function isPrimeNumber(number) {
+               if (number<2){
+                   return false;
+               }
+                let sq =Math.sqrt(number);
+                   for (let i =0 ;i<=sq;i++){
+                       if (i%number==0){
+                           return false;
+                       }
+                   }
+                   return  true;
+        }
+
+</script>
+</body>
+</html>

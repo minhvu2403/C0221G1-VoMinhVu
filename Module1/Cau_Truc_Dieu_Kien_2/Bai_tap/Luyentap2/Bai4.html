@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <form action="">
+        <h3>Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.</h3>
+        <label >Input  canh a</label>
+        <input type="text" name="" id="a" oninput="input()">
+        <label>Input canh b</label>
+        <input type="text" name="" id="b" oninput="input()">
+        <label>Ket Qua</label>
+        <input type="text" name="" id="result">
+        <input id="submit" onclick="tr()" type="button" class="kQ" value="Ket Qua">
+        <button type="reset">Reset</button>
+        <br>
+        <p id="a-error" class="error-a"></p>
+        <p id="b-error" class="error-b"></p>
+    </form>
+</div>
+<script>
+    function input() {
+        let a =parseInt(document.getElementById('a').value);
+        let b =parseInt(document.getElementById('b').value);
+        let S=null;
+        if(isNaN(a)==false ){
+            document.getElementById('a-error').innerHTML='';
+
+        }
+        if (isNaN(b)==false){
+            document.getElementById('b-error').innerHTML='';
+        }
+    }
+    function tr() {
+        let a =parseInt(document.getElementById('a').value);
+        let b =parseInt(document.getElementById('b').value);
+        console.log(a,b)
+        if(isNaN(a)==true && isNaN(b)==true){
+            document.getElementById('a-error').innerHTML='Vui long nhap vao 1 so';
+            document.getElementById('b-error').innerHTML='Vui long nhap vao 1 so';
+        }
+        else if(isNaN(a)==true){
+            document.getElementById('a-error').innerHTML='Vui long nhap vao 1  so';
+
+        }
+        else if (isNaN(b)==true) {
+            document.getElementById('b-error').innerHTML='Vui long nhap so vao 1 so';
+
+        }
+        else{
+            S=(a*b);
+            document.getElementById('result').value =S+ " m²";
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <form action="">
+        <h3>Bài 10: Viết chương trình tính giá điện</h3>
+        <label >Input soDien</label>
+        <input type="text" name="" id="a" oninput="input()">
+        <input id="submit" onclick="tr()" type="button" class="kQ" value="Ket Qua">
+        <button type="reset" onclick="change()">Reset</button>
+        <br>
+        <p id="a-error" class="error-a"></p>
+        <br>
+        <p id="result"style="color: red" ></p>
+    </form>
+</div>
+<script>
+    function input() {
+        let a =parseInt(document.getElementById('a').value);
+        if(isNaN(a)==false ){
+            document.getElementById('a-error').innerHTML='';
+        }
+    }
+    function change() {
+        let  b =document.getElementById('result').innerHTML;
+        if(b.trim().length>0){
+            document.getElementById('result').innerHTML='';
+        }
+    }
+    function tr() {
+        let a =parseInt(document.getElementById('a').value);
+         let tienDien=null;
+         let bac1=1678, bac2=1734, bac3=2014, bac4=2536, bac5=2834, bac6=2927;
+
+        if(isNaN(a)==true){
+            document.getElementById('a-error').innerHTML='Vui long nhap vao 1 so';
+        }
+        else if (a<0){
+            document.getElementById('a-error').innerHTML ="So dien khong duoc nho hon 0";
+        }
+
+        else{
+               if(a<=50){
+                   tienDien =a*bac1;
+                   document.getElementById('result').innerHTML='ban da dung dien trong khoang 0 - 50 kWh so tien ban phai tra la:'+tienDien;
+               }
+                if (a<=100){
+                   tienDien=50*bac1+((a-50)*bac2);
+                   document.getElementById('result').innerHTML='ban da dung dien trong khoang 51 - 100 kWh so tien ban phai tra la:'+tienDien;
+
+               }
+               else if (a<=200){
+                   tienDien=50*bac1+(50*bac2)+((a-100)*bac3);
+                    document.getElementById('result').innerHTML='ban da dung dien trong khoang 101 - 200 kWh so tien ban phai tra la:'+tienDien;
+
+                }
+               else if (a<=300){
+                   tienDien=50*bac1+(50*bac2)+(100*bac3)+((a-200)*bac4);
+                    document.getElementById('result').innerHTML='ban da dung dien trong khoang 201 - 300 kWh so tien ban phai tra la:'+tienDien;
+
+
+                }
+               else if (a<=400){
+                   tienDien=50*bac1+(50*bac2)+(100*bac3)+(100*bac4)+((a-300)*bac5);
+                    document.getElementById('result').innerHTML='ban da dung dien trong khoang 301 - 400 kWh so tien ban phai tra la:'+tienDien;
+
+               }
+               else{
+                   tienDien=50*bac1+(50*bac2)+(100*bac3)+(100*bac4)+(100*bac5)+((a-400)*bac6);
+                    document.getElementById('result').innerHTML='ban da dung dien tren 400 kWh so tien ban phai tra la:'+tienDien;
+
+
+                }
+        }
+
+    }
+</script>
+</body>
+</html>

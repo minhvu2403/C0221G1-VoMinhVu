@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng</title>
+</head>
+<style>
+    .container{
+        width: 400px;
+        height: 400px;
+        display: block;
+        border: 1px solid;
+    }
+     form{
+         padding: 20px;
+     }
+    form label{
+        width: 150px;
+       float: left;
+    }
+    form input[type="text"]{
+        margin-bottom: 10px;
+        padding: 5px;
+        width: 150px;
+    }
+    .sub{
+        margin-left: 150px;
+        display: inline-block;
+        margin-top: 10px;
+    }
+    .sub button{
+        width: 80px;
+        height: 40px;
+    }
+    .tn{
+        color: red;
+        font-weight: bold;
+    }
+</style>
+<body>
+<div class="container">
+    <form action="">
+        <h3>Chỉ số cân nặng cơ thể</h3>
+        <label>Nhập cân nặng:</label>
+        <input type="text" name="" id="weight">
+        <br>
+        <label>Nhập chiều cao:</label>
+        <input type="text" name="" id="height">
+        <br>
+        <label>Kết quả:</label>
+        <input type="text" name="" id="kq" class="tn">
+        <div class="sub">
+            <button type="button" id="submit" onclick="result()">Kết quả</button>
+            <button type="reset">Làm lại</button>
+        </div>
+    </form>
+</div>
+<script>
+    function result() {
+       let weight =parseInt(document.getElementById('weight').value);
+       let height =parseFloat(document.getElementById('height').value);
+       let bmi =parseFloat(weight/(Math.pow(height,2)));
+       let tx =null;
+       if (bmi<18){
+           tx='Underweight';
+       }
+       else  if(bmi<25.0){
+           tx='Normal';
+       }
+       else  if(bmi<30.0){
+           tx ='Overweight';
+       }
+       else {
+           tx='Obese';
+       }
+       document.getElementById('kq').value=tx;
+    }
+</script>
+</body>
+</html>

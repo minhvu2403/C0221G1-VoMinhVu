@@ -1,0 +1,29 @@
+.container{
+}
+form {
+    padding: 10px;
+}
+.container form input[type="text"]{
+    padding: 5px;
+}
+form input[type="text"]{
+    margin: 0 20px;
+}
+button,.kQ{
+    width: 74px;
+    height: 40px;
+    border-radius: 10px;
+}
+.error-a{
+    margin-left: 70px;
+    color: red;
+    display: inline-block;
+    width: 166px;
+}
+.error-b,.error-c{
+    margin-left: 110px;
+    color: red;
+    display: inline-block;
+    width: 166px;
+}
+
