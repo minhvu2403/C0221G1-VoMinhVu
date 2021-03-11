@@ -6,7 +6,8 @@
 </head>
 <body>
 <script>
-    let n = prompt('Nhap n:')
+    // let n = prompt('Nhap n:')
+    n=20;
     let kq = '';
 
     function tamGiac() {
@@ -31,6 +32,7 @@
         document.write("<pre>" + kq + "</pre>")
     }
 
+    // cach 1
     // function tamgiacPhai() {
     //     kq='';
     //        for (let i=0;i<n;i++){
@@ -87,26 +89,6 @@
         document.write("<pre>" + kq + "</pre>")
 
     }
-
-    function way() {
-        kq = '';
-        let i = 1;
-        let j = 1;
-        while (i <= n) {
-            if (j < i) {
-                kq += '  ';
-            } else {
-                kq += '* '
-            }
-            j++;
-            i++;
-        }
-        kq += '<br>'
-
-        document.write("<pre>" + kq + "</pre>")
-
-    }
-
     tamGiac();
     kq += '<br>';
     tamGiacNguoc();
@@ -114,10 +96,6 @@
     tamGiacPhai();
     kq += '<br>';
     tamGiacPhaiNguoc()
-    kq += '<br>';
-    way();
-
-
 </script>
 </body>
 </html>

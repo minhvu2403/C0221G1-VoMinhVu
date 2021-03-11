@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c8daecd1-2fe2-4f71-8eaa-90f9f0d1af4d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../.idea/C0221G1-VoMinhVu.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/CaseStudy_Module1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bai5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cau_truc_lap_2/Baitap/.idea/Baitap.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cau_truc_lap_2/Baitap/Luyentapvonglap2/testWhile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/Luyentap2/Bai11.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/Luyentap2/Bai11.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/Luyentap2/Bai8.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/Luyentap2/Bai8.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cau_truc_lap_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Cau_truc_lap_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cau_truc_lap_2/Baitap/LuyenTapvonglap1/Bai6.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Cau_truc_lap_2/Baitap/LuyenTapvonglap1/Bai6.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cau_truc_lap_2/Baitap/Luyentapvonglap2/Bai2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Cau_truc_lap_2/Baitap/Luyentapvonglap2/Bai2.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1pahlLovxmDuS358EQeG0zkYf1t" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Cau_truc_lap_2" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.Bai2.html">
+    <configuration name="Bai1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CaseStudy_Module1/Bai1.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="Bai2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CaseStudy_Module1/Bai2.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.Bai2.html" />
+        <item itemvalue="JavaScript Debug.Bai1.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c8daecd1-2fe2-4f71-8eaa-90f9f0d1af4d" name="Default Changelist" comment="" />
+      <created>1615427258569</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1615427258569</updated>
+      <workItem from="1615427259842" duration="9980000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1615457206806">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1615457206806" />
+  </component>
+</project>

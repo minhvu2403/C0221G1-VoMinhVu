@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n =prompt( 'Nhap n: ');
+    let kq ='';
+    for (let i=1;i<=n;i++){
+        for(let j=1 ;j<=i;j++){
+            if(j==1||j==i||i==n){
+                kq += '* '
+            }else{
+                kq += '  ';
+            }
+        }
+        kq+='<br>';
+    }
+    document.write("<pre>" + kq + "</pre>")
+
+
+</script>
+</body>
+</html>

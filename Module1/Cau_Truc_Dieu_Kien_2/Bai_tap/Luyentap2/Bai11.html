@@ -8,7 +8,7 @@
 <body>
 <div class="container">
     <form action="">
-        <h3>Bài 10: Viết chương trình tính giá điện</h3>
+        <h3>Bài 11: Viết chương trình tính thuế thu nhập cá nhân.</h3>
         <label>Input tongThuNhap</label>
         <input type="text" name="" id="a" oninput="input()">
         <input id="submit" onclick="tr()" type="button" class="kQ" value="Ket Qua">
@@ -40,29 +40,28 @@
         if (isNaN(a) == true) {
             document.getElementById('a-error').innerHTML = 'Vui long nhap vao 1 so';
         } else if (a < 0) {
-            document.getElementById('a-error').innerHTML = "So dien khong duoc nho hon 0";
+            document.getElementById('a-error').innerHTML = "So khong duoc nho hon 0";
         } else {
             if (a <= 5) {
                 Sum = (0.05 * a) ;
-            }
-            else if (a > 5 && a <= 10) {
+            }else if (a <= 10) {
                 Sum = ((0.1 * a) - 0.25) ;
             }
-            else if (a > 10 && a <= 18) {
+            else if ( a <= 18) {
                 Sum = ((0.15 * a) - 0.75) ;
             }
-            else if (a > 18 && a <= 32) {
+            else if ( a <= 32) {
                 Sum = ((0.2 * a) - 1.65);
             }
-            else if (a > 32 && a <= 52){
+            else if (  a <= 52){
                 Sum = ((0.25 * a) - 3.25) ;
             }
-            else if (a > 52 && a <= 80) {
+            else if ( a <= 80) {
                 Sum = ((0.3 * a) - 5.85);
             } else {
                 Sum = ((0.35 * a) - 9.85) ;
             }
-            document.getElementById('result').innerHTML = "Tong so tien can phai dong la:" +(Sum*1000);
+            document.getElementById('result').innerHTML = "Luong duoc huong la:" +(Sum*1000);
 
         }
 

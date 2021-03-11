@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt('Nhap ki tu trong bang chu cai:');
+    if (isNaN(input) == true) {
+        let nguyenam = input.toLowerCase();
+        switch (nguyenam) {
+            case 'u':
+            case 'i':
+            case 'a':
+            case 'e': {
+                alert('Ban da nhap mot nguyen am')
+                break;
+            }
+            default:
+                alert('Ban nhap vao la phu am')
+                break;
+        }
+
+    } else {
+        alert('du lieu nhap vao khong hop le !!!')
+    }
+</script>
+</body>
+</html>

@@ -2,23 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4e4aaf7-9847-49a0-9797-c01ccc8bb7ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Baitap/Bai3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baitap/Bai7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baitap/Bang cuu chuong.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baitap/LuyenTapvonglap1/Bai1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baitap/LuyenTapvonglap1/Bai2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baitap/LuyenTapvonglap1/Bai4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baitap/LuyenTapvonglap1/Bai5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baitap/LuyenTapvonglap1/Bai6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baitap/LuyenTapvonglap1/Bai8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baitap/LuyenTapvonglap1/tede.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baitap/Luyentapvonglap2/LaixuatNganhang.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baitap/Luyentapvonglap2/vehinhtraitim.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baitap/gjh.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baitap/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.idea/C0221G1-VoMinhVu.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/.idea/CaseStudy_Module1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/Bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/Bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/Bai3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/Bai4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/Bai5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/Bai6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baitap/Luyentapvonglap2/testWhile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/Luyentap2/Bai11.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/Luyentap2/Bai11.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/Luyentap2/Bai8.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/Luyentap2/Bai8.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Baitap/SNTdautien.html" beforeDir="false" afterPath="$PROJECT_DIR$/Baitap/SNTdautien.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baitap/LuyenTapvonglap1/Bai6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Baitap/LuyenTapvonglap1/Bai6.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +47,9 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/Luyentap2/Bai8.html" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.snt.html">
     <configuration name="Bai1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Cau_truc_lap_2/Baitap/LuyenTapvonglap1/Bai1.html" useBuiltInWebServerPort="true">
@@ -93,6 +94,8 @@
       <workItem from="1615356937069" duration="10045000" />
       <workItem from="1615379586930" duration="4304000" />
       <workItem from="1615389060861" duration="4310000" />
+      <workItem from="1615425353351" duration="2731000" />
+      <workItem from="1615435316416" duration="2870000" />
     </task>
     <servers />
   </component>
@@ -108,10 +111,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1615361651787" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1615361650554">
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1615432512214">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1615361650554" />
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1615432512214" />
     <state width="1344" height="113" key="GridCell.Tab.0.bottom" timestamp="1615367453330">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -189,7 +192,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/Baitap/test.html</url>
+          <url>file://$PROJECT_DIR$/Baitap/snt.html</url>
           <line>15</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
