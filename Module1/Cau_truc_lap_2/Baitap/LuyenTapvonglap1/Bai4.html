@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Hiển thị ra số trong dãy fibonacci chia het cho 5 dau tien</h3>
+<p id="result" style="color: red; font-weight: bold"></p>
+<script>
+    function check() {
+        let res = document.getElementById('result');
+        let n = 2;
+        let kq = null;
+        /* cach 1
+        while (n) {
+            if (Fibonancci(n) % 5 == 0) {
+                res.innerHTML = Fibonancci(n);
+                break;
+            } else {
+                n++;
+            }
+        }
+
+         */
+        /* cach 2
+        while (Fibonancci(n)%5!=0){
+            n++;
+        }
+        res.innerHTML=Fibonancci(n);
+
+        */
+        do {
+            kq = Fibonancci(n);
+            n++;
+        }
+        while (kq % 5 != 0)
+        res.innerHTML = kq;
+    }
+
+    function Fibonancci(n) {
+        if (n < 2) {
+            return 1;
+        } else {
+            return Fibonancci(n - 2) + Fibonancci(n - 1);
+        }
+    }
+
+    check();
+</script>
+</body>
+</html>

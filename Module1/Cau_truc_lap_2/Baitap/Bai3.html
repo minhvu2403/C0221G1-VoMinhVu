@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</h3>
+<p id="result" style="color: red; font-weight: bold"></p>
+<script>
+    function display() {
+        let n = prompt("Nhap so luong so Fibonancci dau tien can hien thi:")
+        let res = document.getElementById('result');
+        let kq = '';
+        for (let i = 1; i <= n; i++) {
+            kq += Fibonancci(i) + "  ;";
+        }
+        res.innerHTML = kq;
+    }
+
+    function Fibonancci(n) {
+        if (n < 2) {
+            return 1;
+        } else {
+            return Fibonancci(n - 2) + Fibonancci(n - 1);
+        }
+    }
+
+    display();
+</script>
+</body>
+</html>

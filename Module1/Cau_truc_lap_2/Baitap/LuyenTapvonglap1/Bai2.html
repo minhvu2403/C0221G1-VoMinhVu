@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    do {
+        number = parseInt(prompt('Nhap vao nhiet do:'));
+    }
+
+    while (isNaN(number))
+    {
+        if (number > 100) {
+            alert('Ban nen giam nhiet do');
+        } else if (number < 20) {
+            alert('Ban nen tang nhiet do');
+        } else {
+            alert('Nhiet do binh thuong')
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = prompt('Nhap n:')
+    let kq = '';
+
+    function tamGiac() {
+        kq = ''
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j <= i; j++) {
+                kq += '* '
+            }
+            kq += '<br>'
+        }
+        document.write("<pre>" + kq + "</pre>")
+    }
+
+    function tamGiacNguoc() {
+        kq = ''
+        for (let i = n; i >= 1; i--) {
+            for (let j = 1; j <= i; j++) {
+                kq += '* '
+            }
+            kq += '<br>'
+        }
+        document.write("<pre>" + kq + "</pre>")
+    }
+
+    // function tamgiacPhai() {
+    //     kq='';
+    //        for (let i=0;i<n;i++){
+    //            for (let j=0;j<i;j++ )
+    //                document.write('a')
+    //        for (let j=i;j<n;j++)
+    //            document.write('*')
+    //            document.write('<br>')
+    //
+    //        }
+    // }
+    function tamGiacPhai() {
+        kq = '';
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n; j++) {
+                if (j <= n - i) {
+                    kq += '  ';
+                } else {
+                    kq += '* '
+                }
+            }
+            kq += '<br>'
+        }
+        document.write("<pre>" + kq + "</pre>")
+    }
+
+    //cach 1
+    // function tamGiacPhaiNguoc() {
+    //     kq ='';
+    //     for (let i=0;i<n;i++){
+    //         for (let j=0;j<i;j++ )
+    //             kq+='  ';
+    //         for (let j=i;j<n;j++)
+    //             kq+='* '
+    //         kq+='<br>'
+    //
+    //     }
+    //     document.write("<pre>"+kq+"</pre>")
+    //
+    // }
+    function tamGiacPhaiNguoc() {
+        kq = '';
+        for (let i = 1; i <= n; i++) {
+            for (let j = 1; j <= n; j++) {
+                if (j < i) {
+                    kq += '  ';
+                } else {
+                    kq += '* '
+                }
+
+            }
+            kq += '<br>'
+        }
+        document.write("<pre>" + kq + "</pre>")
+
+    }
+
+    function way() {
+        kq = '';
+        let i = 1;
+        let j = 1;
+        while (i <= n) {
+            if (j < i) {
+                kq += '  ';
+            } else {
+                kq += '* '
+            }
+            j++;
+            i++;
+        }
+        kq += '<br>'
+
+        document.write("<pre>" + kq + "</pre>")
+
+    }
+
+    tamGiac();
+    kq += '<br>';
+    tamGiacNguoc();
+    kq += '<br>';
+    tamGiacPhai();
+    kq += '<br>';
+    tamGiacPhaiNguoc()
+    kq += '<br>';
+    way();
+
+
+</script>
+</body>
+</html>

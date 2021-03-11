@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = prompt("Nhap chieu dai:");
+    let n = prompt("Nhap chieu rong:");
+    let kq = "";
+    for (let i = 1; i <= n; i++) {
+        for (let j = 1; j <= m; j++) {
+            if (i == 1 || j == 1 || j == m || i == n) {
+                kq += "*";
+            } else {
+                kq += ' ';
+                // kq+='&nbsp:&nbsp';
+            }
+        }
+        kq += "<br>";
+    }
+    // alert(kq)
+    document.write("<pre>" + kq + "</pre>")
+</script>
+</body>
+</html>

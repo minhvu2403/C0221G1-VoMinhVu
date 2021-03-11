@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Tính tổng của 30 số chia hết cho 7 đầu tiên trong các số tự nhiên.</h3>
+<p id="result" style="color: red; font-weight: bold"></p>
+<script>
+    function display() {
+        let n = prompt("Nhap so luong so tu nhien dau tien can hien thi:")
+        let res = document.getElementById('result');
+        let sum = null;
+        let i = 1;
+        //cach 1;
+        // for (let  i= 0;i<=n;i++){
+        //     if (i%7==0){
+        //         document.write(" "+i);
+        //         sum +=i;
+        //     }
+        //
+        // }
+        // res.innerHTML =sum;
+
+
+        // cach 2
+        // while (i<=n){
+        //       if(i%7==0){
+        //           sum+=i;
+        //       }
+        //     i++;
+        // }
+        // res.innerHTML =sum;
+        //cach 3
+        do {
+            if (i % 7 == 0) {
+                sum += i;
+            }
+            i++;
+        }
+        while (i <= n)
+        res.innerHTML = sum;
+
+    }
+
+
+    display();
+</script>
+</body>
+</html>
