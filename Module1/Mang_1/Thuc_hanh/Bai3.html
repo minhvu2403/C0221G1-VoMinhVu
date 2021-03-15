@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let soLuong, index;
+    let arr = new Array(100);
+    let check=false;
+    soLuong = prompt('Nhap vao so luong phan tu:');
+    for (let i = 0; i<soLuong; i++) {
+        arr[i] = prompt('Nhap so thu' + (i + 1) + ':');
+    }
+    let value = prompt("Nhap 1 so can tim:")
+    for (index in arr) {
+        if (value == arr[index]) {
+            check=true;
+            break;
+        }
+    }
+    if(check){
+      alert('Value' + arr[index] + 'found at' + index);
+    }else {
+        alert('khong co phan tu can tim');
+    }
+</script>
+</body>
+</html>

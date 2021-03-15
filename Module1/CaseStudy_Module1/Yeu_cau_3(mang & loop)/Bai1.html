@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr =Array();
+    let number =prompt('Nhap so luong phan tu:');
+    for (let i = 0; i <number ; i++) {
+        arr[i]=parseInt(prompt('Nhap phan tu thu'+i));
+    }
+   function prefixSums(array) {
+      let new_arr=[];
+       for (let i = 0; i <array.length ; i++) {
+           new_arr[i]=0;
+           for (let j = 0; j <i+1 ; j++) {
+               new_arr[i]+=array[j];
+           }
+       }
+       return new_arr;
+   }
+    function disPlays() {
+           alert('tong cua cac so la'+prefixSums(arr));
+    }
+    disPlays();
+</script>
+</body>
+</html>

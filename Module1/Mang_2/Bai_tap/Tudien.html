@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str =prompt('Nhap tu can tim:');
+    let VN =['toi','yeu','ban'];
+    let EN =['I','love','you'];
+    let check=false;
+    for (let i =0;i<EN.length;i++){
+        if (EN[i]==str){
+            check =true;
+            break;
+        }
+    }
+   if (check){
+       alert('tu '+str+ ' co nghia la:'+VN[EN.indexOf(str)]);
+
+   } else{
+       alert('khong co trong tu dien');
+   }
+
+
+</script>
+</body>
+</html>

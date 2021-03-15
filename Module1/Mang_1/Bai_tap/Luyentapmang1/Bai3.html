@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = Array();
+    let number = prompt('Nhập số lượng phần tử mảng:');
+    for (let i = 0; i < number; i++) {
+        arr[i] = parseInt(prompt('nhập phần tử ' + i + ":"));
+    }
+    let max = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    let sum = arr.reduce(function (a, b) {
+        return a + b;
+    });
+    let average = sum / arr.length;
+    alert('Các phân tử trong mảng là:' + arr + '\n' + ''
+        + 'Phần tử lớn nhất trong mảng là:' + max + '\n' + 'Trung bình cộng của mảng là:' + average);
+
+</script>
+</body>
+</html>

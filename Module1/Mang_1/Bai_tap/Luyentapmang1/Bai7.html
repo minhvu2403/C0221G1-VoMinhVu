@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = Array();
+    let number = prompt('Nhap so phan tu mang:');
+    let check = false;
+    for (let i = 0; i < number; i++) {
+        arr[i] = prompt('Nhap phan tu:' + i + ':');
+    }
+    let numberV = prompt('Nhap so phan tu V:');
+    for (let i = 0; i < arr.length; i++) {
+        if (arr.indexOf(numberV) !== -1) {
+            check = true;
+            arr.push(arr.splice(arr.indexOf(numberV), 1)[0]);
+            arr[arr.length - 1] = 0;
+        }
+        // let flag = false;
+        // do {
+        //     if (arr.indexOf(numberV) !== -1) {
+        //         check = true;
+        //         flag = false;
+        //         arr.push(arr.splice(arr.indexOf(numberV), 1)[0]);
+        //         arr[arr.length - 1] = 0;
+        //         break;
+        //     }
+        // }
+        // while (flag)
+    }
+    if (check) {
+        alert('Mang sao khi xoa' + arr)
+    } else {
+        alert('khong tim thay so do trong mang.');
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+      let arr =Array();
+      let characters ='-';
+      let  check=false;
+      let number =prompt('Nhap so luong phan tu mang:');
+      for (let i = 0; i <number ; i++) {
+          arr[i]=prompt('Nhap phan tu :'+i);
+      }
+      for (let i = 0; i <arr.length ; i++) {
+          if (arr.indexOf(characters) !== -1) {
+              check = true;
+              arr[i] = arr[i].replace(/-/g, '_');
+          }
+      }
+      if (check){
+          alert('Mang sau khi thay the:'+arr);
+      }else {
+          alert('Khong co ki tu (-) trong mang')
+      }
+
+</script>
+</body>
+</html>

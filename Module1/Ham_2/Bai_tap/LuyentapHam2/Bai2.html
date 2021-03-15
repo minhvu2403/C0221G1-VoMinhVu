@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm tính diện tích, hàm tính chu vi hình tròn</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhap so radius:');
+    let Pi = 3.14;
+    function acreage(r) {
+        return (Math.pow(r, 2)) * Pi;
+    }
+
+    function perimeter(r) {
+        return 2 * Pi * r;
+    }
+
+    function disPlays() {
+        alert("Dien tich hinh tron la: " + acreage(a) + '\n'
+                + 'Chu vi hinh tron la ' + perimeter(a));
+    }
+
+    disPlays();
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = Array();
+    let number = prompt('Nhap so luong phan tu mang:');
+    let element;
+    for (let i = 0; i < number; i++) {
+        let check = false;
+        do {
+            let nhap = prompt('nhap so thu' + i + ':');
+            if (arr.indexOf(nhap) == -1) {
+                arr[i] = nhap;
+                check = false;
+
+            } else {
+                alert('So nay da co trong mang roi vui long nhap so khac.')
+                check = true;
+            }
+        } while (check);
+    }
+    let max =arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+            element = i;
+        }
+    }
+    //cach 2
+    // function Max(arr){
+    //     return  Math.max.apply(null,arr);
+    // }
+    // let max=Max(arr);
+    alert('mang gom cac phan tu '+arr+'\n'+
+        'so lon nhat trong mang: ' + max + ' vi tri ' + element);
+</script>
+</body>
+</html>

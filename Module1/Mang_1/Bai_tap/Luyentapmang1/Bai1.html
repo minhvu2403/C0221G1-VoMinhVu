@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr =Array();
+    let count=0;
+    let number =prompt('nhap so luong phan tu:')
+    result =[];
+    for (let i = 0; i <number ; i++) {
+        arr[i]= parseInt(prompt('Nhap so luong phan tu'+(i+1)+':'));
+    }
+      for (let i=0;i<arr.length;i++){
+          if (arr[i]>=10){
+              result.push(arr[i]);
+              count++;
+          }
+      }
+
+      if (count==0){
+          alert('khong co so nguyen nao lon hon 10')
+      }else{
+          alert('co '+count+' so nguyen lon hon 10 la'+result);
+      }
+
+</script>
+</body>
+</html>

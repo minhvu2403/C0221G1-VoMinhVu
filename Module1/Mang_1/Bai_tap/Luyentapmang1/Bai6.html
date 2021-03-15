@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = Array();
+    let number = prompt('Nhập số lượng phần tử mảng:');
+    let check = false;
+    for (let i = 0; i < number; i++) {
+        arr[i] = prompt('Nhập phần tử thứ' + i + ':');
+    }
+    let numberV = prompt('Nhap so nguyen V');
+    for (let i = 0; i < arr.length; i++) {
+        if (arr.indexOf(numberV) !== -1) {
+            check = true;
+            break;
+        }
+    }
+    if (check) {
+        alert('V is in the array');
+    } else {
+        alert('V not is in the array');
+    }
+
+</script>
+</body>
+</html>

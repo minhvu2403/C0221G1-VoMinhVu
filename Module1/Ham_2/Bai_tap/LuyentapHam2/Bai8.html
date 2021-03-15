@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm truyền vào mảng số nguyên bất kỳ, sau đó đảo ngược mảng số nguyên đó.</title>
+</head>
+<body>
+<script>
+
+    let arrA = Array();
+    let number = prompt('Nhap so luong phan tu mang:');
+    for (let i = 0; i < number; i++) {
+        arrA[i] = prompt('Nhap phan tu' + i);
+    }
+
+    function permutation(a) {
+        return a.reverse();
+
+    }
+
+    function disPlays() {
+        alert('Mang vua nhay vao '+arrA+'\n Mang sau khi dao nguoc '+ permutation(arrA));
+    }
+
+    disPlays();
+</script>
+</body>
+</html>

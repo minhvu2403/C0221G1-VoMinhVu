@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .container {
+        width: 500px;
+        height: 400px;
+        box-shadow: 3px 3px 4px 3px #ccc;
+        margin: 100px auto;
+        display: block;
+    }
+
+    .container .content {
+        padding: 130px 20px;
+    }
+    .container form label{
+        width: 100px;
+        float: left;
+    }
+    .container form input{
+        padding: 6px;
+    }
+</style>
+<body>
+<div class="container">
+    <div class="content">
+        <h3>Chuyển đổi giữa feet và meters</h3>
+        <form action="">
+            <label>Nhap feet:</label>
+            <input type="text" id="F">
+            <input type="submit" value="Submit" onclick="disPlay()">
+            <br><br>
+            <label>Nhap meet:</label>
+            <input type="text" id="M">
+            <input type="submit" value="Submit" onclick="showInfor()">
+            <br>
+        </form>
+    </div>
+
+</div>
+
+<script>
+    function disPlay() {
+        let F = document.getElementById('F').value;
+        alert('Gia tri cua meet la' + footToMeter(F));
+    }
+
+    function showInfor() {
+        let M = document.getElementById('M').value;
+        alert('Gia tri cua Feet la ' + meetToFoot(M));
+    }
+
+
+    function meetToFoot(meet) {
+        return 3.275 * meet;
+    }
+
+    function footToMeter(foot) {
+        return 0.305 * foot;
+    }
+
+</script>
+</body>
+</html>

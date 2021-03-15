@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr =Array();
+    let x,count=0;
+    let number = prompt('Nhập số lượng phần tử mảng:');
+    for (let i=0;i<number;i++){
+        arr[i] =parseInt(prompt('nhập phần tử thứ '+i+':'));
+    }
+    for (x in arr){
+        if (arr[x]<0){
+            count++;
+        }
+    }
+    alert('Mảng sau khi nhập là: '+arr+'\n'+'số phẩn tử nguyên âm là : '+count);
+</script>
+</body>
+</html>

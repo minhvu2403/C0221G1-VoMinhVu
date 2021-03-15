@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let soLuong,x;
+   let  p=1;
+    let danhSach=new Array(100);
+    soLuong =prompt('Ban can nhap bao nhieu phan tu:');
+    for (let i=0;i<soLuong;i++){
+        danhSach[i]=parseInt(prompt('Nhap so thu nhat'+(i+1)+':'));
+    }
+    //
+    let sum =danhSach.reduce(function (a,b) {
+            return a+b;
+    });
+    let multiply =danhSach.reduce(function (a,b){
+        return a*b;
+    });
+    danhSach.sort();
+    document.write("<h1> Danh sach da sap xep</h1>");
+    for (x in danhSach){
+        document.write(danhSach[x]);
+        document.write("<br>");
+    }
+    document.write('Tong cua mang:'+sum);
+    document.write('Tich  cua mang:'+multiply);
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = Array();
+    let number = prompt('Nhập số lượng phần tử mảng:');
+    let temp;
+    for (let i = 0; i < number; i++) {
+        arr[i] = prompt('Nhập phần tử ' + i + ':')
+    }
+    for (let i = 0; i < arr.length - 1; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            if (arr[i] < arr[j]) {
+                temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+            }
+        }
+    }
+    //cach 2
+    // arr.sort(function (a,b) {
+    //      return b-a;
+    // });
+    alert('mang sau khi duoc sap xep:' + arr);
+</script>
+</body>
+</html>

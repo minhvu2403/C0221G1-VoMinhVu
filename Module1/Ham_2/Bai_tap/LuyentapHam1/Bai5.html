@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arrB = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', ' Leo'];
+
+    function star(input) {
+        for (let i = 0; i < arrA.length; i++) {
+            if (arrA.indexOf(input) !== -1) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function disPlay() {
+        let input = prompt('Nhap vao ngoi sao can tim:');
+        if (star(input)) {
+            alert('chom sao duoc tim thay la:' + arrB[arrA.indexOf(input)]);
+        } else {
+            alert("khong tim thay chom sao nao .")
+        }
+    }
+
+    disPlay();
+</script>
+</body>
+</html>

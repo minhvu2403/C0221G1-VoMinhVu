@@ -2,23 +2,52 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e4e4aaf7-9847-49a0-9797-c01ccc8bb7ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../.idea/C0221G1-VoMinhVu.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/.idea/CaseStudy_Module1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/Bai1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/Bai2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/Bai3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/Bai4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/Bai5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../CaseStudy_Module1/Bai6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baitap/Luyentapvonglap2/testWhile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/Luyentap2/Bai11.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/Luyentap2/Bai11.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/Luyentap2/Bai8.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/Luyentap2/Bai8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Cau_Truc_Dieu_Kien_2/Bai_tap/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/.idea/Ham_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/Bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam1/Bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam1/Bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam1/Bai3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam1/Bai4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam1/Bai5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam2/Bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam2/Bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam2/Bai3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam2/Bai4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam2/Bai5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam2/Bai6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam2/Bai7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam2/Bai8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam2/Bai9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/.idea/Mang_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Bai_tap/Luyentapmang1/Bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Bai_tap/Luyentapmang1/Bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Bai_tap/Luyentapmang1/Bai3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Bai_tap/Luyentapmang1/Bai4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Bai_tap/Luyentapmang1/Bai5.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Bai_tap/Luyentapmang1/Bai6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Bai_tap/Luyentapmang1/Bai7.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Bai_tap/Luyentapmang1/Bai8.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Bai_tap/Luyentapmang1/Bai9.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Mang2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Mang2/index2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Thuc_hanh/Bai1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Thuc_hanh/Bai2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Thuc_hanh/Bai3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Thuc_hanh/Bai4.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Thuc_hanh/kiemnghiem.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_1/Thuc_hanh/text.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_2/.idea/Mang_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mang_2/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CaseStudy_Module1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy_Module1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CaseStudy_Module1/text.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CaseStudy_Module1/text.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Baitap/LuyenTapvonglap1/Bai6.html" beforeDir="false" afterPath="$PROJECT_DIR$/Baitap/LuyenTapvonglap1/Bai6.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +78,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Mang_2" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.snt.html">
     <configuration name="Bai1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Cau_truc_lap_2/Baitap/LuyenTapvonglap1/Bai1.html" useBuiltInWebServerPort="true">
@@ -96,6 +125,10 @@
       <workItem from="1615389060861" duration="4310000" />
       <workItem from="1615425353351" duration="2731000" />
       <workItem from="1615435316416" duration="2870000" />
+      <workItem from="1615457210418" duration="604000" />
+      <workItem from="1615690121524" duration="572000" />
+      <workItem from="1615691486301" duration="623000" />
+      <workItem from="1615727355157" duration="616000" />
     </task>
     <servers />
   </component>
@@ -111,10 +144,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1615361651787" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1615432512214">
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1615727370426">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1615432512214" />
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1615727370426" />
     <state width="1344" height="113" key="GridCell.Tab.0.bottom" timestamp="1615367453330">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

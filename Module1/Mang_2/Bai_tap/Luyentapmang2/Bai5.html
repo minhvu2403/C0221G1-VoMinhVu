@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA = Array();
+    let arrB = Array();
+    let result;
+
+    let number = prompt('Nhap so luong phan tu mang:');
+    for (let i = 0; i < number; i++) {
+        arrA[i] = prompt('Nhap phan tu thu A:' + i);
+    }
+    for (let j = 0; j < number; j++) {
+        arrB[j] = prompt('Nhap phan tu thu B:' + j);
+    }
+    //cach 1
+    // if (JSON.stringify(arrA) == JSON.stringify(arrB)) {
+    //     alert('2 mang bang nhau')
+    // } else {
+    //     alert('2 mang khong bang nhau')
+    // }
+
+    //cach 2
+    function compareArrays(arr1, arr2) {
+        if (arr1.length != arr2.length) {
+            return false;
+        } else {
+            result = false;
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] != arr2[i]) {
+                    return false;
+                } else {
+                    result = true;
+                }
+            }
+            return result;
+        }
+    }
+  result=compareArrays(arrA,arrB);
+    if (result){
+        alert('The arrays have the same elements')
+    }
+    else{
+        alert('The arrays have different elements.')
+    }
+</script>
+</body>
+</html>

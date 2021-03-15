@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.</title>
+</head>
+<body>
+<script>
+    let a =prompt('Nhap vao a:');
+    let b =prompt('Nhap vao b:');
+    let c =prompt('Nhap vao c:');
+    function min(x,y,z) {
+          let min =x;
+          if(min>y){
+              min=y;
+          }
+          if (min>z){
+              min=z;
+          }
+          return min;
+
+    }
+    function disPlays() {
+      alert('So nho nhat la:'+min(a,b,c));
+    }
+    disPlays();
+</script>
+</body>
+</html>

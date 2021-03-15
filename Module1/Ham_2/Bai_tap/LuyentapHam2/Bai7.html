@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thực hiện đổi chỗ hai số nguyên đó.</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhap vao so a:');
+    let b = prompt('Nhap vao so b:');
+
+    function permutation(a, b) {
+        let temp;
+        temp = a;
+        a = b;
+        b = temp;
+        alert(' sau ki hoan vi a=' + a + 'b=' + b);
+    }
+
+    permutation(a, b);
+
+</script>
+</body>
+</html>

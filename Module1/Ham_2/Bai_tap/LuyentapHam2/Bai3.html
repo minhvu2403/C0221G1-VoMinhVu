@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào. </title>
+</head>
+<body>
+<script>
+    let number =prompt('Nhap n:');
+    function factorial(n) {
+         if (n==1)
+             return 1;
+         return n*factorial(n-1);
+    }
+    function disPlay() {
+        alert(' giay thua cua'+number+' la:'+factorial(number));
+    }
+    disPlay();
+</script>
+</body>
+</html>

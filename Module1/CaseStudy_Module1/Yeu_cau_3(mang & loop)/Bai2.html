@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA=[7,2,5,3,5,3];
+    let arrB=[7,2,5,4,6,3,5,3];
+
+        function findMissing(a,b,n,m) {
+            let result=[];
+            for (let i = 0; i <n; i++) {
+                let j;
+                for (j = 0; j <m ; j++)
+                    if (b[i]==a[j])
+                        break;
+                    if (j==m)
+                      result.push(b[i]);
+            }
+            return result;
+        }
+        function disPlays() {
+            let n =arrA.length;
+            let m =arrB.length;
+
+          alert('so phan tu khong co trong mang:'+findMissing(arrA,arrB,n,m));
+        }
+        disPlays();
+</script>
+</body>
+</html>

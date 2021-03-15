@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA = Array();
+    let arrB = Array();
+    let number = prompt('Nhap so phan tu mang');
+    for (let i = 0; i < number; i++) {
+        arrA[i] = prompt('Nhap phan tu A ' + i + ':');
+    }
+    for (let j = 0; j < number; j++) {
+        arrB[j] = prompt('Nhap phan tu B ' + j + ':');
+
+    }
+    let c = arrA.concat(arrB);
+    alert('Mang A:' + arrA + '\n' + 'Mang B:' + arrB + '\n' +
+        'Mang  sau khi duoc noi mang C: ' + c);
+</script>
+</body>
+</html>

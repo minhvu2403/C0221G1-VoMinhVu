@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = Array();
+    let count = 0;
+    let result = [];
+    let check = 0;
+    let number = prompt('Nhap so luong phan tu mang:');
+    for (let i = 0; i < number; i++) {
+        arr[i] = prompt('Nhap so phan tu thu: ' + i);
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (isNaN(arr[i]) == true) {
+            check = 1;
+            result.push(arr[i]);
+            count++;
+
+        }
+    }
+    if (check) {
+        alert('So ki tu la tu trong mang:' + count + '\n' + 'cac tu trong mang la ' + result);
+    } else {
+        alert('Khong co ki tu  la tu trong mang.');
+    }
+
+</script>
+</body>
+</html>

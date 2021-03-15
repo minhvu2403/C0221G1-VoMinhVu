@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrA=[5, 2, 5 ];
+    let arrB =[6, 3, 4];
+    function maxFraction(numerators, denominators)  {
+       let Max =numerators[0]/denominators[0];
+       let index ;
+        for (let i = 0; i <numerators.length ; i++) {
+             if (Max<=numerators[i]/denominators[i]){
+                 Max=numerators[i]/denominators[i];
+                 index =i;
+
+             }
+        }
+        return index;
+    }
+    function disPlays() {
+       alert(maxFraction(arrA,arrB))
+    }
+    disPlays()
+</script>
+</body>
+</html>

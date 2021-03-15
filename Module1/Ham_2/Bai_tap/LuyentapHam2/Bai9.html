@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = Array();
+    let check = false;
+
+    let number = prompt('Nhap vao so luong phan tu:');
+    for (let i = 0; i < number; i++) {
+        arr[i] = prompt('Nhap phan tu ' + i);
+    }
+
+    function checkCharacter(arr, n,count) {
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == n) {
+                count++;
+                check = true;
+
+
+                // let flag = false;
+                // do {
+                //     if (arr[i] == n) {
+                //         count++;
+                //         check = true;
+                //         flag = false;
+                //         break;
+                //     }
+                // } while (flag)
+
+            }
+        }
+        return count;
+    }
+    function disPlays() {
+        let count = 0;
+        let n = prompt('Nhap vao ki tu :');
+        if (checkCharacter(arr,n,count)!=0) {
+            alert('so lan xuat hien cua ki tu:' + n + 'la: ' +checkCharacter(arr,n,count) + ' lan ');
+        } else {
+            alert('khong co ki tu ' + n + ' trong mang');
+        }
+    }
+
+    disPlays();
+</script>
+</body>
+</html>
