@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = parseInt(prompt('Nhap so dong:'));
+    let n = parseInt(prompt('Nhap so cot:'));
+    let array =new Array(m);
+    for (let i = 0; i <array.length ; i++) {
+        array[i]= new Array(n);
+        for (let j = 0; j <array[i].length; j++) {
+            array[i][j]=prompt(`Nhap  vao phan tu [${i}][${j}]`);
+        }
+    }
+    function tinhTong(arr) {
+        let  sum=0;
+        for (let i = 0; i <arr.length ; i++) {
+            for (let j = 0; j <arr[i].length ; j++) {
+                if (arr[i][j]%2==0){
+                    sum+=parseInt(arr[i][j]);
+                }
+
+            }
+        }
+        return sum;
+    }
+     alert('tong cua mang :'+tinhTong(array));
+
+    // for (let i = 0; i <array.length ; i++) {
+    //     for (let j = 0; j <array[i].length ; j++) {
+    //         document.write([array[i][j]]+' ');
+    //     }
+    //     document.write('<br>')
+    // }
+</script>
+</body>
+</html>

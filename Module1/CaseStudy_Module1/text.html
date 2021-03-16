@@ -7,30 +7,24 @@
     <title>bai 29</title>
 </head>
 <body>
-<style>
-    body {padding-top:50px}
-</style>
-<input type="text" id="txtValue"></input>
-<input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"></input>
-<input type="button" id="btnDisplay" value="Display" onclick="display_array();"></input>
-<div id="result"></div>
+
 <script>
-    let x = 0;
-    let array = Array();
-    function add_element_to_array() {
-        array[x] = document.getElementById("txtValue").value;
-        alert("Element: " + array[x] + " Added at index " + x);
-        x++;
-        document.getElementById("txtValue ").value = "";
-        document.getElementById("txtValue").value = "";
-    }
-    function display_array() {
-        let e = "<hr/>";
-        for (let i = 0; i < array.length; i++) {
-            e += "Element " + i + " = " + array[i] + "<br/>";
+    function minArray(arr) {
+        if(arr.length == 0)
+            return -1;
+        let min = arr[0];
+        let index;
+        for(let i = 1; i < arr.length; i++){
+            if(arr[i] < min){
+                index=i;
+                min = arr[i];
+            }
         }
-        document.getElementById("result").innerHTML = e;
+        return index;
     }
+    let arr1 = [1, 5, 1, 8, -4, 7, 8];
+    let min = minArray(arr1);
+    alert(min);
 </script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+     let chuoi=prompt('nhap vao chuoi can toi uu:');
+     function Optimal (s) {
+         let index;
+           s =s.trim();// xoa khoang trang ben trai ben phai
+          let  arrWord=[];
+           arrWord=s.split(" "); //tach theo khoang trang
+           s='';
+         for (index in arrWord) {
+             arrWord[index]=arrWord[index].toLowerCase();//dua ve viet thuong..
+             if (arrWord[index].length>0){
+                 arrWord[index]=arrWord[index].replace(arrWord[index].charAt(0)+'',(arrWord[index].charAt(0)+'').toUpperCase());
+                s+=arrWord[index]+' ';//noi tu vao khoang trang
+             }
+
+         }
+         return s.trim();
+     }
+     function findLongestWord(s) {
+          let str =s.split(' ');
+          let maxLength=0;
+          let word=null;
+         for (let i = 0; i <str.length ; i++) {
+             if (str[i].length>maxLength){
+                 maxLength=str[i].length;
+                 word=str[i];
+             }
+
+         }
+         return word;
+     }
+     function main(){
+         let s =Optimal(chuoi);
+         alert('chuoi chua toi uu: '+chuoi+'\nchuoi sau khi toi uu: '+Optimal(chuoi)+'\n chuoi dai nhat la: '+findLongestWord(s));
+     }
+     main();
+
+
+
+</script>
+</body>
+</html>

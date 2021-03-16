@@ -10,20 +10,22 @@
       let count =0;
       let i=2;
       let result='';
-      while (count<number){
-            if (ispriemNumber(i)){
-                result+=+i+' ;';
-               count++;
-
-            }i++;
+      function printPriemNumber(n) {
+          while (count<n){
+              if (ispriemNumber(i)){
+                  result+=+i+' ;';
+                  count++;
+              }i++;
+          }
+          alert('Ca so nguyen to nho hon  '+n+'la :'+result)
       }
-      alert('Ca so nguyen to nho hon  '+number+'la :'+result)
+        printPriemNumber(number);
       function ispriemNumber(n) {
           if (n<2){
               return false;
           }
           else{
-              for (let i = 2; i <Math.sqrt(n) ; i++) {
+              for (let i = 2; i <=Math.sqrt(n) ; i++) {
                    if (n%i==0){
                        return false;
                    }

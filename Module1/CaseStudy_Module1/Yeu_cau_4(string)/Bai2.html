@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s ='cabca';
+
+    function differentSymbolsNaive( s) {
+        let letterArray=[];
+        s=s.split('');
+        s.forEach((el)=>{
+            if(letterArray.includes(el)===false){
+                letterArray.push(el);
+            }
+        });
+   return  letterArray.length;
+    }
+    alert(differentSymbolsNaive(s));
+</script>
+</body>
+</html>

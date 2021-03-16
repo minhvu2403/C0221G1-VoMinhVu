@@ -8,26 +8,16 @@
 <script>
     let arrA = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
     let arrB = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', ' Leo'];
-
-    function star(input) {
-        for (let i = 0; i < arrA.length; i++) {
-            if (arrA.indexOf(input) !== -1) {
-                return true;
+     let start =prompt('Nhao vao ngoi sao:')
+    function star(start,array1,array2) {
+        for (let i = 0; i < array1.length; i++) {
+            if (arrA.indexOf(start) !== -1) {
+                return array2[i];
             }
         }
-        return false;
+        return 'khong tim thay ';
     }
-
-    function disPlay() {
-        let input = prompt('Nhap vao ngoi sao can tim:');
-        if (star(input)) {
-            alert('chom sao duoc tim thay la:' + arrB[arrA.indexOf(input)]);
-        } else {
-            alert("khong tim thay chom sao nao .")
-        }
-    }
-
-    disPlay();
+     alert('chom sao duoc tim thay la :'+star( start,arrA,arrB))
 </script>
 </body>
 </html>
