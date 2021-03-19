@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let res = document.getElementById('result');
+
+    class Temperature {
+        constructor(c) {
+            this.tempc = c;
+        }
+
+        getC() {
+            return this.tempc;
+        }
+
+        setC(c) {
+            this.tempc = c;
+        }
+
+        converCtoF() {
+            res.innerHTML = `${this.tempc} độ C = ${(this.tempc * 1.8) + 32} độ F  <br> `;
+        }
+
+        converCtoK() {
+            res.innerHTML += `${this.tempc} độ C = ${this.tempc + 273} độ K`
+        }
+
+        setTemperature(c) {
+            this.tempc = c;
+        }
+    }
+
+    let temp = new Temperature(25);
+    temp.converCtoF();
+    temp.converCtoK();
+    temp.setTemperature(30);
+    temp.converCtoF();
+    temp.converCtoK();
+</script>
+</body>
+</html>

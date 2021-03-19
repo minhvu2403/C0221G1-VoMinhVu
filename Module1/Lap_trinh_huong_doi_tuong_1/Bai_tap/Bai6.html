@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>
+    <button type="button" onclick="main4()" style="
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;">DisplayCatInformastion</button>
+
+    <button type="button" onclick="main2()" style="
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> CatSaid </button>
+
+    <button type="button" onclick="main5()" style="
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;">EatMouse</button>
+
+    <button type="button" onclick="main6()"style="
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;">BatChout</button>
+</p>
+
+<p>
+    <button type="button" onclick="main3()" style="
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;">DusplayMouseInformation</button>
+
+    <button type="button" onclick="main()" style="
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;"> MouseSaid </button>
+</p>
+
+<script>
+    class Mouse {
+        constructor(name, mouseweight, mousespeed, mouselife) {
+            this.name = name;
+            this.mouseweight = mouseweight;
+            this.mousespeed = mousespeed;
+            this.mouselife = mouselife;
+        }
+
+        MouseInformation() {
+            alert(" Luu y : Trang thai cua Mouse : true = live & flase = die");
+            document.write(" Name La : " + this.name);
+            document.write(" Weight of Cat la : " + this.mouseweight + "Kg");
+            document.write(" Speed la : " + this.mousespeed + "s");
+
+        };
+
+        MouseSaid() {
+            alert('Ta la chuot: chit chit');
+        }
+
+        //an chuot
+        getMouselife() {
+            this.mouselife = this.mouselife - 1;
+            return this.mouselife;
+        }
+
+        getMousespeed() {
+            return this.mousespeed;
+        }
+    }
+
+    class Cat {
+        constructor(name, catweight, catspeed, Mouse) {
+            this.name = name;
+            this.Catweight = catweight;
+            this.Catspeed = catspeed;
+            this.setMouse = Mouse;
+        }
+
+        CatInformation() {
+            document.write(" Name La : " + this.name);
+            document.write(" Weight of Cat la : " + this.Catweight + "Kg");
+            document.write(" Speed la : " + this.Catspeed + "s");
+        };
+
+        CatSaid() {
+            alert('Ta la meo: Meo Meo');
+        }
+
+        //an thit chuot
+        EatMouse() {
+            if (this.setMouse.getMouselife() > 0) {
+                this.Catweight = this.Catweight + 1;
+                alert('Con meo da an 1 con chuot can nang  hien tai cua con meo:' + this.Catweight);
+            } else {
+                alert('Ko');
+            }
+        }
+
+        //Săn chuột
+        CatMouse() {
+            if (this.Catspeed > this.setMouse.getMousespeed()) {
+                alert('Da bat duoc 1 con chuot bat lai di nha');
+            }
+        }
+    }
+
+    let mouse = new Mouse('Mouse', 100, 100, 100);
+    let cat = new Cat('Cat', 100, 200, mouse);
+
+    function main() {
+        mouse.MouseSaid();
+    }
+
+    function main2() {
+        cat.CatSaid();
+    }
+
+    function main3() {
+        mouse.MouseInformation();
+    }
+
+    function main4() {
+        cat.CatInformation();
+    }
+    function main5() {
+      let a =console.log(cat.EatMouse());
+    }
+    function main6() {
+         cat.CatMouse();
+    }
+</script>
+</body>
+</html>

@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8daecd1-2fe2-4f71-8eaa-90f9f0d1af4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Mang_2_chieu/Bai1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang_2_chieu/Bai2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Mang_2_chieu/Bai3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Yeu_cau_4(string)/Bai1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Yeu_cau_4(string)/Bai2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Yeu_cau_4(string)/Bai3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/ungdung.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Yeu_cau_3(mang &amp; loop)/Bai7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/text.html" beforeDir="false" afterPath="$PROJECT_DIR$/text.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ham_2/Bai_tap/Bai1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/Bai1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yeu_cau_3(mang &amp; loop)/Bai5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Yeu_cau_3(mang &amp; loop)/Bai5.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam1/Bai5.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam1/Bai5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam2/Bai2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam2/Bai2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam2/Bai4.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam2/Bai4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam2/Bai6.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam2/Bai6.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Ham_2/Bai_tap/Ungdungquanlisanpham.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/Ungdungquanlisanpham.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Ham_2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -54,7 +44,7 @@
       <recent name="E:\C0221G1-VoMinhVu\Module1\CaseStudy_Module1\Yeu_cau1_ve_hinh" />
     </key>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Bai1.html (1)">
+  <component name="RunManager" selected="JavaScript Debug.Bai5.html">
     <configuration name="Bai1.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CaseStudy_Module1/Mang_2_chieu/Bai1.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -64,11 +54,15 @@
     <configuration name="Bai2.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CaseStudy_Module1/Yeu_cau1_ve_hinh/Bai2.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="Bai5.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CaseStudy_Module1/Yeu_cau_3(mang &amp; loop)/Bai5.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="text.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CaseStudy_Module1/text.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.Bai5.html" />
         <item itemvalue="JavaScript Debug.Bai1.html (1)" />
         <item itemvalue="JavaScript Debug.text.html" />
         <item itemvalue="JavaScript Debug.Bai2.html" />
@@ -97,6 +91,8 @@
       <workItem from="1615856919315" duration="2029000" />
       <workItem from="1615863834190" duration="5285000" />
       <workItem from="1615875491545" duration="12459000" />
+      <workItem from="1615898287256" duration="10824000" />
+      <workItem from="1615975211404" duration="1323000" />
     </task>
     <servers />
   </component>
@@ -104,6 +100,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="275" y="21" key="#Notifications" timestamp="1615909265781">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="21" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1615909265781" />
     <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1615878026236">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -176,5 +176,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1615879269933" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1615907695525">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1615907695525" />
   </component>
 </project>

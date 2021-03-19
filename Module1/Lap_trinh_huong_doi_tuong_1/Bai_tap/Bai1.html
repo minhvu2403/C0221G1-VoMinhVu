@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="400px" style="border:1px solid #d3d3d3;"></canvas>
+<p id="result"></p>
+<script>
+    let res = document.getElementById('result');
+
+    class Rectangle {
+        constructor(width, height,x,y,color) {
+            this.width = width;
+            this.height = height;
+            this.x =x;
+            this.y=y;
+            this.color=color;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+
+        setWidth(width) {
+            this.width = width;
+        }
+
+        getHeight() {
+            return this.height;
+        }
+
+        setHeight(height) {
+            this.height = height;
+        }
+        getX(){
+            return this.x;
+        }
+        setX(x){
+            this.x=x;
+        }getY(){
+            return this.y;
+        }
+        setY(y){
+            this.y=y;
+        }getColor(){
+            return this.color;
+        }
+        setColor(color){
+            this.color=color;
+        }
+
+        circum() {
+            return 2 * (this.width + this.height);
+        }
+
+        area() {
+            return this.width * this.height;
+        }
+
+        toString() {
+            let canvas = document.getElementById('myCanvas');
+            let context = canvas.getContext("2d");
+            context.fillStyle =this.color;
+            context.fillRect(this.x,this.y, this.width, this.height);
+            context.stroke();
+            res.innerHTML = 'width=' + (this.width) + 'heigth=' + this.height;
+
+        }
+
+        setRectangle(width, height) {
+            this.width = width;
+            this.height = height;
+        }
+
+    }
+
+    let rectangle = new Rectangle(50, 50,30,30,'blue');
+    rectangle.toString();
+    let rectangle2 =new Rectangle(100,100,100,100,'red');
+    //rectangle.setRectangle(60, 60,100,100);
+     rectangle2.toString();
+
+</script>
+</body>
+</html>

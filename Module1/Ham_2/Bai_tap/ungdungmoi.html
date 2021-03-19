@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+        width: 34%;
+    }
+
+    input[type=text] {
+        width: 63%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+
+
+    input[type='submit'],
+    button,
+    [aria-label] {
+        cursor: pointer;
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+    }
+
+    input[type=submit]:hover {
+        background-color: #45a049;
+    }
+
+    /*#spoiler {*/
+    /*    display: none;*/
+    /*}*/
+
+    table {
+        border-collapse: collapse;
+        width: 50%;
+    }
+
+    th {
+        text-align: center;
+        padding: 8px;
+        font-weight: bold;
+    }
+
+    td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2
+    }
+</style>
+<body>
+<h3>Add New Product</h3>
+<div class="container">
+    <input type="text" id="add-name" placeholder="New Product">
+    <input type="submit" onclick="add()" value="Add">
+    <input type="submit" onclick="searchByName()" value="Search">
+
+</div>
+<h3>Display All Product</h3>
+<table>
+    <tr>
+        <th style="text-align: left;">Product Name</th>
+        <th style="text-align: right; color:brown" colspan="2">
+            <p id="counter"></p>
+        </th>
+    </tr>
+    <tr>
+        <td>STT</td>
+        <td>Ten san pham</td>
+        <td>Sua</td>
+        <td>Xoa</td>
+    </tr>
+    <tbody id="products">
+    </tbody>
+</table>
+<script>
+    let listProducts = ['Sony Xperia', 'Samsung Galaxy', 'Nokia 6'];
+    display(listProducts);
+
+    function display(list) {
+        let data = '';
+        list.sort();
+
+            for (let i = 0; i < list.length; i++) {
+                data += '<tr>';
+                data += '<td>' + (i + 1) + '</td>';
+                data += '<td>' + list[i] + '</td>';
+                data += '<td><button onclick="edit(' + i +')">Edit</button></td>';
+                data += '<td><button onclick="deleteProduct(' + i + ')">Delete</button></td>';
+                data += '</tr>';
+            }
+
+        document.getElementById('products').innerHTML = data;
+        count(listProducts.length);
+    }
+
+    function count(data) {
+        let el = document.getElementById('counter');
+        let name = 'product';
+        if (data) {
+            if (data > 1) {
+                name = 'product';
+            }
+            el.innerHTML = data + ' ' + name;
+        } else {
+            el.innerHTML = 'No ' + name;
+        }
+    }
+
+    function add() {
+        let el = document.getElementById("add-name").value;
+        if (el != "") {
+            listProducts.push(el);
+            document.getElementById("add-name").value = "";
+        }
+        display(listProducts);
+    }
+
+    function edit(item) {
+        let editName = prompt("Input new product name" +listProducts[item]);
+        listProducts[item] = editName;
+        display(listProducts);
+
+    }
+
+    function deleteProduct(item) {
+        let conf = confirm(" Do you want to delete  product name " + listProducts[item]);
+        if (conf) {
+            listProducts.splice(item, 1);
+            display(listProducts);
+        } else {
+            alert('Not delete');
+        }
+    }
+
+    function searchByName() {
+        let searchList = [];
+        let searchName = document.getElementById("add-name").value;
+        for (let i = 0; i < listProducts.length; i++) {
+            if (listProducts[i].includes(searchName)) {
+                searchList.push(listProducts[i]);
+            }
+        }
+        display(searchList);
+
+    }
+</script>
+</body>
+</html>

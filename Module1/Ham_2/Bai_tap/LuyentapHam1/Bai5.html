@@ -11,7 +11,8 @@
      let start =prompt('Nhao vao ngoi sao:')
     function star(start,array1,array2) {
         for (let i = 0; i < array1.length; i++) {
-            if (arrA.indexOf(start) !== -1) {
+            let index =array1.indexOf(start)
+            if (index !== -1) {
                 return array2[i];
             }
         }
