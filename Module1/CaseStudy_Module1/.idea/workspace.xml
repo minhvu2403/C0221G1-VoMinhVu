@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c8daecd1-2fe2-4f71-8eaa-90f9f0d1af4d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/ungdung.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeu _cau_6/yeu câu 6.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeu_cau_7/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Yeu_cau_7/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Thuc_hanh/.idea/Thuc_hanh.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Thuc_hanh/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Thuc_hanh/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Thuc_hanh/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Ham_2/Thuc_hanh/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lap_trinh_huong_doi_tuong_1/Bai_tap/QuanLiSV2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lap_trinh_huong_doi_tuong_1/Bai_tap/QuanLiSinhVien.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lap_trinh_huong_doi_tuong_1/Quanlisinh vien2/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lap_trinh_huong_doi_tuong_1/ffhfhfh.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Yeu_cau_3(mang &amp; loop)/Bai5.html" beforeDir="false" afterPath="$PROJECT_DIR$/Yeu_cau_3(mang &amp; loop)/Bai5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam1/Bai5.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/LuyentapHam1/Bai5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Ham_2/Bai_tap/Ungdungquanlisanpham.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/Ungdungquanlisanpham.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yeu_cau_3(mang &amp; loop)/Bai2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Yeu_cau_3(mang &amp; loop)/Bai2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Yeu_cau_3(mang &amp; loop)/Bai4.html" beforeDir="false" afterPath="$PROJECT_DIR$/Yeu_cau_3(mang &amp; loop)/Bai4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text.html" beforeDir="false" afterPath="$PROJECT_DIR$/text.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Ham_2/Bai_tap/ungdungmoi.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Ham_2/Bai_tap/ungdungmoi.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +28,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -24,7 +37,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1pahlLovxmDuS358EQeG0zkYf1t" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -35,10 +50,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lap_trinh_huong_doi_tuong_1" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\C0221G1-VoMinhVu\Module1\CaseStudy_Module1\Yeu _cau_6" />
       <recent name="E:\C0221G1-VoMinhVu\Module1\CaseStudy_Module1\Yeu_cau_4(string)" />
       <recent name="E:\C0221G1-VoMinhVu\Module1\CaseStudy_Module1\Yeu_cau_2( If &amp; switch _case)" />
       <recent name="E:\C0221G1-VoMinhVu\Module1\CaseStudy_Module1\Yeu_cau1_ve_hinh" />
@@ -93,6 +110,16 @@
       <workItem from="1615875491545" duration="12459000" />
       <workItem from="1615898287256" duration="10824000" />
       <workItem from="1615975211404" duration="1323000" />
+      <workItem from="1616375056283" duration="2918000" />
+      <workItem from="1616394258433" duration="4837000" />
+      <workItem from="1616463721396" duration="6427000" />
+      <workItem from="1616482064534" duration="5357000" />
+      <workItem from="1616548476522" duration="7889000" />
+      <workItem from="1616567493291" duration="8696000" />
+      <workItem from="1616635765865" duration="4477000" />
+      <workItem from="1616653388350" duration="610000" />
+      <workItem from="1616684539983" duration="615000" />
+      <workItem from="1616720410045" duration="778000" />
     </task>
     <servers />
   </component>
@@ -104,10 +131,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="21" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1615909265781" />
-    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1615878026236">
+    <state x="463" y="117" key="FileChooserDialogImpl" timestamp="1616684553050">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1615878026236" />
+    <state x="463" y="117" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1616684553050" />
     <state width="1344" height="217" key="GridCell.Tab.0.bottom" timestamp="1615889967458">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -172,13 +199,13 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1344" height="217" key="GridCell.Tab.3.right/0.0.1366.728@0.0.1366.728" timestamp="1615889967459" />
-    <state x="339" y="157" key="run.anything.popup" timestamp="1615879269933">
+    <state x="339" y="157" key="run.anything.popup" timestamp="1616557815739">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1615879269933" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1615907695525">
+    <state x="339" y="157" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1616557815739" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1616557821668">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1615907695525" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1616557821668" />
   </component>
 </project>

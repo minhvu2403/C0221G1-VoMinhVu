@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Student {
+        constructor(id, name, age) {
+            this.id = id;
+            this.name = name;
+            this.age = age;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getAge() {
+            return this.age;
+        }
+
+        setAge(age) {
+            this.age = age;
+        }
+
+        toString() {
+            return "id = " + this.id + " name= " + this.name + " age= " + this.age;
+        }
+
+    }
+
+    let listStudent = [];
+    let student1 = new Student(1, 'Vo Minh Vu', 26);
+    let student2 = new Student(2, 'Nguyen Thi Hue', 24);
+    let student3 = new Student(3, 'Nguyen Van Long', 23);
+    listStudent.push(student1, student2, student3);
+
+    function showListStudent() {
+        let list='';
+        for (let i = 0; i <listStudent.length ; i++) {
+               list+=i+1+"."+listStudent[i].toString()+'\n';
+        }
+        alert(list);
+    }
+
+    function addNewStudent() {
+         let id =prompt('input id :');
+         let name =prompt('input name :');
+         let age =prompt('input age :');
+         listStudent.push(new Student(id,name,age));
+         showListStudent();
+
+    }
+
+    function deleteStudent() {
+        let list='';
+        for (let i = 0; i <listStudent.length ; i++) {
+            list+=i+1+"."+listStudent[i].toString()+'\n';
+        }
+        let chooseDelete=prompt('Choose a student to delete \n'+list);
+        listStudent.splice(chooseDelete-1,1);
+        showListStudent();
+    }
+
+    do {
+        let choosemenu = prompt('Chon Chuc nang \n' +
+            '1. show list student\n' +
+            '2. add new student\n' +
+            '3. delete student\n' +
+            '4. exit'
+        );
+        switch (choosemenu) {
+            case '1':
+                showListStudent();
+                break;
+            case '2':
+                addNewStudent();
+                break;
+            case '3':
+                deleteStudent();
+                break;
+              case '4':
+                    default:
+                        alert('Can on thim da su dung phan mem!!!');
+                    break;
+        }
+    } while (true)
+
+</script>
+</body>
+</html>

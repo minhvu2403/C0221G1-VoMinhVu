@@ -1,0 +1,43 @@
+  *{
+      padding: 0;margin: 0;
+      box-sizing: content-box;
+  }
+  .header{
+      width: 900px;
+      height: auto;
+      border: 1px solid #ccc;
+      display: block;
+      margin: 100px auto;
+  }
+  .header_top{
+      border: 1px solid #ccc;
+        height: 80px;
+  }
+  .header_top .logo{
+      width: 20%;
+      float: left;
+      padding: 12px 20px;
+  }
+  .header_top .title{
+      width: 70%;
+      float: right;
+       line-height: 80px;
+      text-align: center;
+  }
+  .container .container_left{
+      width: 30%;
+      border: 1px solid;
+  }
+  .container_left .choose{
+      padding: 30px 40px 20px;
+  }
+  .choose select{
+      padding: 10px;
+      margin-bottom: 30px;
+  }
+.container_footer{
+    height: 60px;
+    border: 1px solid black;
+    background-color: aqua;
+}
+

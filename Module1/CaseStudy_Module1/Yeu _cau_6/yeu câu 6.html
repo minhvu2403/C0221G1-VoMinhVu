@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xo so vietlot</title>
+</head>
+<style>
+    .container{
+        width: 700px;
+        height: 300px;
+        box-shadow: 1px 2px 5px #ccc;
+        margin: 100px auto;
+        display: block;
+    }
+    .container h3{
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .container span{
+        margin-right: 10px;
+    }
+
+    input{
+        padding: 5px;
+        width: 60px;
+        margin: 7px;
+        border-radius: 10px;
+        outline: none;
+
+    }
+    .container .choose{
+        margin-left: 100px;
+        padding: 15px;
+        margin-top: 50px;
+        border-radius: 10px;
+        outline: none;
+    }
+    .result{
+        display: block;
+    }
+
+</style>
+<body>
+<div class="container">
+    <h3> So xo vietLot</h3>
+    <form action="">
+        <span>Nhap so:</span>
+        <input type="text" id="0">
+        <input type="text" id="1">
+        <input type="text" id="2">
+        <input type="text" id="3">
+        <input type="text" id="4">
+        <input type="text" id="5">
+
+        <br>
+        <span>Ket qua:</span>
+        <input type="text" id="7">
+        <input type="text" id="8">
+        <input type="text" id="9">
+        <input type="text" id="10">
+        <input type="text" id="11">
+        <input type="text" id="12">
+        <br>
+        <button type="button" class="choose" onclick="byTicks()">Enter Number</button>
+        <button type="button" class="choose"  onclick="dial()">Result</button>
+        <button type="reset" class="choose"  id="btn1" >Reset</button>
+        <p id="result"></p>
+    </form>
+</div>
+<script>
+    function byTicks() {
+        array=new Array();
+       let choose =prompt('you have 2 choose:\n 1.optional number\n 2.choose number from random')
+        if(choose ==1){
+             alert('Yourself enter number');
+
+        }
+        if(choose==2){
+            for (let i = 0; i <6 ; i++) {
+                array.push(Math.floor(Math.random()*100));
+
+            }
+            for (let j = 0; j <array.length; j++) {
+                document.getElementById(j).value=array[j];
+            }
+        }
+    }
+    function dial() {
+         array2=new Array();
+        for (let i = 0; i <6; i++) {
+            array2.push(Math.floor(Math.random()*100));
+
+        }
+        for (let j = 0; j <array2.length ; j++) {
+            document.getElementById(j+7).value=array2[j];
+        }
+
+        for (let i = 0; i <6 ; i++) {
+            array[i]= parseInt(document.getElementById(i).value) ;
+
+        }
+        console.log(array);
+        for (let i = 0; i <6 ; i++) {
+            for (let j = 0; j <6 ; j++) {
+                if (array[i]==array2[j]){
+                    array.splice(i,1);
+                }
+            }let check=array.length;
+            if (check==0){
+                document.getElementById('result').innerHTML='Ban da trung 1000ti';
+            }
+            else if(check==1){
+                document.getElementById('result').innerHTML='Ban trung 50 ty';
+            }
+            else{
+                document.getElementById('result').innerHTML='Chuc ban may man lan sau';
+            }
+
+        }
+
+    }
+    // function reset() {
+    //     document.getElementById("result").style.display='none';
+    //
+    // }
+    document.getElementById("btn1").onclick = function () {
+        document.getElementById("result").style.display='none';
+    };
+</script>
+</body>
+</html>

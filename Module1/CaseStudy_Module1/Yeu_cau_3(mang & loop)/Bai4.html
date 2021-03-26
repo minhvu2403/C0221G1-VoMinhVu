@@ -7,19 +7,19 @@
 <body>
 <script>
     let a = "0123456789";
-    let b = ['khong','mot', 'hai', 'ba', 'bon', 'nam', 'sau', 'bay', 'tam', 'chin', ];
-    let  result='';
+    let b = ['khong', 'mot', 'hai', 'ba', 'bon', 'nam', 'sau', 'bay', 'tam', 'chin',];
+    let result = '';
 
     let number = prompt('Nhap vao mot so:');
 
     for (let i = 0; i < number.length; i++) {
-        let index=a.indexOf(number[i]);
+        let index = a.indexOf(number[i]);
         if (index !== -1) {
-           result+=b[index]+' ';
+            result += b[index] + ' ';
         }
     }
 
-        alert(+number + 'thanh chu ' +result );
+    alert(+number + 'thanh chu                                                                                                                                                                                                                                                              ' + result);
 
 </script>
 </body>

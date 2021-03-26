@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous">
+    </script>
+    <script src="paging.js"></script>
 </head>
 <style>
     .container {
@@ -61,6 +66,32 @@
 
     tr:nth-child(even) {
         background-color: #f2f2f2
+    }
+    #paging {
+        padding: 0 20px 20px 20px;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+
+    #paging a {
+        color: #000;
+        background: #e0e0e0;
+        padding: 8px 12px;
+        margin-right: 5px;
+        text-decoration: none;
+    }
+
+    #paging a.aktif {
+        background: #000 !important;
+        color: #fff;
+    }
+
+    #paging a:hover {
+        border: 1px solid #000;
+    }
+
+    .hidden {
+        display: none;
     }
 </style>
 <body>
@@ -159,6 +190,7 @@
         display(searchList);
 
     }
+
 </script>
 </body>
 </html>

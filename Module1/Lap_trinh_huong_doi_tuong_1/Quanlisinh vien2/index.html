@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Student {
+        constructor(id, name, age) {
+            this.id = id;
+            this.age = age;
+            this.name = name;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getAge() {
+            return this.age;
+        }
+
+        setAge(age) {
+            this.age = age;
+        }
+
+        toString() {
+            return 'id= ' + this.id + ' name= ' + this.name + ' age=  ' + this.age;
+        }
+
+    }
+
+    let listStudents = [];
+    let student1 = new Student(1, "Vo minh vu", 26);
+    let student2 = new Student(2, "Nguyen Hoang Long", 27);
+    let student3 = new Student(3, "Truong Cong thuan", 28);
+    listStudents.push(student1, student2, student3);
+
+    function showListStudents() {
+        let list = '';
+        for (let i = 0; i < listStudents.length; i++) {
+            list += +i + 1 + "." + listStudents[i].toString() + '\n';
+        }
+        alert(list);
+    }
+
+    let flag = true;
+
+    function addNewStudents() {
+        let id = prompt("input id:");
+        let name = prompt("input name:");
+        let age = prompt("input age:");
+        if (id.length==0 ||name.length==0||age.length==0){
+            alert('Ban phai nhap vao mot gia tri');
+        }
+        else if(id.length>0&&name.length>0&&age.length>0)
+        listStudents.push(new Student(id, name, age));
+        showListStudents();
+
+    }
+
+    function editStudents() {
+        let list = '';
+        for (let i = 0; i < listStudents.length; i++) {
+            list += +i + 1 + "." + listStudents[i].toString() + '\n';
+        }
+        let id = parseInt(prompt("Nhap id can chinh sua:\n" + list));
+        for (let i = 0; i < listStudents.length; i++) {
+            if (listStudents[i].getId() == id) {
+                let id = prompt("input id:");
+                let name = prompt("input name:");
+                let age = prompt("input age:");
+                listStudents[i].setId(id);
+                listStudents[i].setName(name);
+                listStudents[i].setAge(age);
+            }
+        }
+
+        showListStudents();
+    }
+
+    function deleteStudents() {
+        let list = '';
+        for (let i = 0; i < listStudents.length; i++) {
+            list += +i + 1 + "." + listStudents[i].toString() + '\n';
+        }
+        let chooseDelete = prompt('Nhap id can xoa:');
+        listStudents.splice(chooseDelete - 1, 1);
+        showListStudents();
+    }
+
+    do {
+
+        let choosemenu = prompt("Choose function\n" + "1. show list student\n" + "2.add student\n" +
+            "3.Edit Student\n" + "4.Delete student\n" +
+            "0.nhap phim bat ki de thoat");
+        switch (choosemenu) {
+            case "1":
+                showListStudents();
+                break;
+
+            case "2":
+                addNewStudents();
+                break;
+            case "3":
+                editStudents();
+                break;
+            case"4":
+                deleteStudents();
+                break;
+            default:
+                alert("Cam on thim da dung phan men!");
+                flag = false;
+                break;
+        }
+    }
+    while (flag)
+
+</script>
+</body>
+</html>
