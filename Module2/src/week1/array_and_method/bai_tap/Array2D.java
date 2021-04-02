@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array2D {
+    public static Scanner input = new Scanner(System.in);
     public void inputArray2D(int row, int col, int[][] array) {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
@@ -34,7 +35,7 @@ public class Array2D {
         System.out.println("Max of array 2D: " + max);
     }
 
-    public static Scanner input = new Scanner(System.in);
+
 
     public static void main(String[] args) {
         Array2D array2D = new Array2D();

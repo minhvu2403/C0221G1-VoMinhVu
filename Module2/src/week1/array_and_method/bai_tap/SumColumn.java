@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class SumColumn {
     public static Scanner input = new Scanner(System.in);
+
     public void inputArray2D(int row, int col, int[][] array) {
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
@@ -23,24 +24,23 @@ public class SumColumn {
         }
     }
 
-    public void maxArray2D(int row, int col, int[][] array) {
-         int numn;
-         int sum=0;
+    public void sumArray2D(int row, int[][] array) {
+        int num;
+        int sum = 0;
         System.out.println("Enter n:");
-        numn=input.nextInt();
-        for (int i = 0; i <row ; i++) {
-            sum+=array[i][numn];
+        num = input.nextInt();
+        for (int i = 0; i < row; i++) {
+            sum += array[i][num];
         }
 
 
-        System.out.println("Max of array 2D: "+sum);
+        System.out.println("Sum of array 2D: " + sum);
     }
 
 
-
     public static void main(String[] args) {
-        SumColumn sumnumn = new SumColumn();
-         int row;
+        SumColumn sumcolumn = new SumColumn();
+        int row;
         int col;
         System.out.print("Enter input row:");
         row = input.nextInt();
@@ -48,10 +48,10 @@ public class SumColumn {
         System.out.print("Enter input col:");
         col = input.nextInt();
         int[][] array = new int[row][col];
-        sumnumn.inputArray2D(row, col, array);
+        sumcolumn.inputArray2D(row, col, array);
         // array2D.outputArray2D(n, n, array);
         System.out.println("Property list 2D:" + Arrays.deepToString(array));
-       sumnumn.maxArray2D(row, col, array);
+        sumcolumn.sumArray2D(row, array);
 
     }
 
