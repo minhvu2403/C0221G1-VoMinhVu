@@ -29,13 +29,19 @@ public class Cylinder extends Circle {
 
     @Override
     public String toString() {
-        return super.toString()+"Height " + this.height + " and Volume is"+this.getVolume();
+
+        return "Cylinders{" +
+                "height=" + height +"volume"+getVolume()+
+                '}'+super.toString();
     }
 
     public static void main(String[] args) {
          Cylinder cylinder =new Cylinder();
          cylinder =new Cylinder(6,"black",7);
         System.out.println(cylinder);
+        Circle circle =new Circle(20,"blue");
+        System.out.println(circle);
+
 
     }
 }

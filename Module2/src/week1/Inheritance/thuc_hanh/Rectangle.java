@@ -39,7 +39,7 @@ public class Rectangle extends Shape {
     }
 
     public double Perimeter() {
-        return 2 * (this.width + this.width);
+        return 2 * (this.width + this.length);
     }
 
     @Override

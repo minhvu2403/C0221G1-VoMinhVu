@@ -66,6 +66,7 @@ public class Fan {
         fan1.radius = 10;
         fan1.color = "yellow";
         fan1.on = true;
+
         System.out.println(fan1.toString());
         Fan fan2 = new Fan();
         fan2.speed =fan2.MEDIUM;
