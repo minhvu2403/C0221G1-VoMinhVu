@@ -1,20 +1,18 @@
 package week2.dsa_stack_queue.bai_tap.su_dung_queue;
 
 public class Solution {
-/*
     static Queue queue = new Queue();
 
-    public static void main(String[] args) {
+    public static void enQueue(int data) {
         if (queue.getFront()==null){
             queue.setFront(new Node(data));
             queue.setRear(queue.getFront());
             queue.getFront().setLink((queue.getRear()));
-            queue.getRear().setLink(queue.getFront());
         }else{
             queue.getRear().setLink(new Node(data));
             queue.setRear(queue.getRear().getLink());
-            queue.getRear().setLink(queue.getFront());
         }
+        queue.getRear().setLink(queue.getFront());
     }
     public static Integer deQueue() {
         if (queue.getFront() == null) {
@@ -41,7 +39,9 @@ public class Solution {
 
     }
 
- */
+    public static void main(String[] args) {
+        Queue queue =new Queue();
 
+    }
    
 }

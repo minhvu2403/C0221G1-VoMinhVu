@@ -55,12 +55,15 @@ public class MyListTest<E> implements MyList<E> {
     }
 
     @Override
-    public Object[] clone() {
+    public MyList<E> clone() {
+        MyListTest<E> myList = new MyListTest<E>();
         Object[] clone = new Object[size];
         for (int i = 0; i < this.size; i++) {
             clone[i] = element[i];
         }
-        return clone;
+        myList.size = size;
+        myList.element = clone;
+        return myList;
     }
 
     @Override
@@ -121,6 +124,17 @@ public class MyListTest<E> implements MyList<E> {
         myList.add(3, 4);
         myList.add(4, 16);
         myList.add(20);
+//        Object[] newMyList= new Object[0];
+//        newMyList=myList.clone();
+//        for (int i = 0; i <newMyList.length; i++) {
+//            System.out.println("New MylistTest[" + i + "]=" + newMyList[i]);
+//
+//        }
+        MyListTest<Integer> newMyList = (MyListTest<Integer>) myList.clone();
+        for (int i = 0; i <newMyList.size; i++) {
+            System.out.println("New MylistTest[" + i + "]=" + newMyList.get(i));
+        }
+
         for (int i = 0; i < myList.size; i++) {
             System.out.println("MylistTest[" + i + "]=" + myList.get(i));
         }

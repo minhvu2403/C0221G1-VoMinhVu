@@ -9,6 +9,13 @@ public class Test {
           this.name=name;
       }
 
+    public Test() {
+    }
+
+    public Test(String name) {
+        this.name = name;
+    }
+
     public static void main(String[] args) {
         Test tests =new Test();
         tests.setName("Vu");
