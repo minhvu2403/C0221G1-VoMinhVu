@@ -24,11 +24,12 @@ public class Palindrome {
     public static boolean compare(Stack<String> stack,Queue<String> queue){
         while (!stack.empty()){
             if (!stack.pop().equals(queue.remove())){
-                return false;
+                return true;
             }
         }
-        return true;
+        return false;
     }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter string:");
@@ -40,5 +41,6 @@ public class Palindrome {
         }else {
             System.out.println("Not is Palindrome");
         }
+
     }
 }

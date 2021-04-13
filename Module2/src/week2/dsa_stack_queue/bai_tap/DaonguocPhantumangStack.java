@@ -1,9 +1,6 @@
 package week2.dsa_stack_queue.bai_tap;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 public class DaonguocPhantumangStack {
     static Scanner input = new Scanner(System.in);
@@ -41,9 +38,8 @@ public class DaonguocPhantumangStack {
         System.out.println(result);
 
     }
-
     public static void main(String[] args) {
-//        reverseArray();
+       reverseArray();
         System.out.println("");
         reverseString();
     }
