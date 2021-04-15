@@ -43,11 +43,11 @@ public class Product {
     public void Nhap(){
         Scanner input =new Scanner(System.in);
         System.out.println("Enter id:");
-        String id = input.nextLine();
+         id = input.nextLine();
         System.out.println("Enter name sp:");
-        String name = input.nextLine();
+        name = input.nextLine();
         System.out.println("Enter price:");
-        float price = input.nextFloat();
+        price = input.nextFloat();
     }
 
     @Override

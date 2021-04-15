@@ -23,6 +23,7 @@ public class ChuyenDoiHeThapPhanSangNhiPhan {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter number:");
         int n = input.nextInt();
+        coverDecimaltoBinary(n);
         System.out.println("Result:"+coverDecimaltoBinary(n));
     }
 }

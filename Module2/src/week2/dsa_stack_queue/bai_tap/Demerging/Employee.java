@@ -1,8 +1,11 @@
 package week2.dsa_stack_queue.bai_tap.Demerging;
 
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Employee {
     private String name;
@@ -51,10 +54,24 @@ public class Employee {
     public void setGender(String gender) {
         this.gender = gender;
     }
+  public void Nhap() throws ParseException {
+      Scanner scanner =new Scanner(System.in);
+      System.out.println("Nhap vao ten:");
+      name =scanner.nextLine();
+      System.out.println("Nhap vao tuoi");
+      age =scanner.nextInt();
+      scanner.skip("\\R");
+      System.out.println("Nhap vao ngay sinh:");
+      String birthday =scanner.nextLine();
+      SimpleDateFormat format =new SimpleDateFormat("dd/MM/yyyy");
+      birthDay =format.parse(birthday);
+      System.out.println("Nhap vao gioi tinh :");
+      gender =scanner.nextLine();
+  }
 
-
-    public void disPlay() {
-        DateTimeFormatter formatter =DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        System.out.println("Name: "+name+",Birthday: "+birthDay+",Gender: "+gender);
+    public String disPlay() {
+        DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String strDate = dateFormat.format(this.birthDay);
+        return ("Name: "+name+",Age"+age+",birthday:"+strDate+"Gender:"+gender);
     }
 }

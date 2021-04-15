@@ -9,14 +9,16 @@ public class Controller {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        while (true) {
+        boolean check=true;
+        while (check) {
             System.out.println("Chọn Chức năng\n" +
                     "1.Add\n" +
                     "2.Show list\n" +
                     "3.Edit\n" +
                     "4.Delete\n" +
                     "5.Search\n" +
-                    "6.Exit\n");
+                    "6.sortList\n"+
+                    "7.Exit\n");
             int choose = Integer.parseInt(input.nextLine());
             switch (choose) {
                 case 1:
@@ -35,6 +37,10 @@ public class Controller {
                     productManager.searchByName();
                     break;
                 case 6:
+                    productManager.sortList();
+                    break;
+                case 7:
+                    check=false;
                     break;
             }
         }

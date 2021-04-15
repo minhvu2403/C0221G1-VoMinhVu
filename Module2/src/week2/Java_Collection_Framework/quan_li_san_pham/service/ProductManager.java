@@ -3,30 +3,28 @@ package week2.Java_Collection_Framework.quan_li_san_pham.service;
 import week2.Java_Collection_Framework.quan_li_san_pham.common.FuncWriteAndRead;
 import week2.Java_Collection_Framework.quan_li_san_pham.model.Product;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class ProductManager {
     Scanner input = new Scanner(System.in);
 
     public void addProduct() {
         List<Product> list = new ArrayList<>();
-//        System.out.println("Enter the number of products: ");
-//        int number =Integer.parseInt(input.nextLine());
-//        for (int i = 0; i <number ; i++) {
-//            Product product = new Product();
-//            product.Nhap();
-//            list.add(product);
-//        }
-        System.out.println("Enter id:");
-        String id = input.nextLine();
-        System.out.println("Enter name sp:");
-        String name = input.nextLine();
-        System.out.println("Enter price:");
-        float price = Float.parseFloat(input.nextLine());
-        Product product = new Product(id,name,price);
-        list.add(product);
+        System.out.println("Enter the number of products: ");
+        int number =Integer.parseInt(input.nextLine());
+        for (int i = 0; i <number ; i++) {
+            Product product = new Product();
+            product.Nhap();
+            list.add(product);
+        }
+//        System.out.println("Enter id:");
+//        String id = input.nextLine();
+//        System.out.println("Enter name sp:");
+//        String name = input.nextLine();
+//        System.out.println("Enter price:");
+//        float price = Float.parseFloat(input.nextLine());
+//        Product product = new Product(id,name,price);
+//        list.add(product);
         FuncWriteAndRead.writeProduct(list, true);
     }
 
@@ -90,6 +88,28 @@ public class ProductManager {
             }
 
         }
+    }
+    public void sortList(){
+        List<Product> list =FuncWriteAndRead.readProducts();
+        Collections.sort(list, new Comparator<Product>() {
+            @Override
+            public int compare(Product o1, Product o2) {
+               if (o1.getPrice()<o2.getPrice()){
+                   return 1;
+               }
+               else if (o1.getPrice()==o2.getPrice()){
+                   return 0;
+               }else{
+                   return -1;
+               }
+            }
+        });
+        System.out.println("Sap xep giam dan");
+        for (Product px:list) {
+            System.out.println(px.toString());
+        }
+        FuncWriteAndRead.writeProduct(list, false);
+
     }
 
 
