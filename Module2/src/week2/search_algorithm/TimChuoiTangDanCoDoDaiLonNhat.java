@@ -9,8 +9,8 @@ public class TimChuoiTangDanCoDoDaiLonNhat {
         System.out.println("Enter a string:");
         String strings = input.nextLine();
         LinkedList<Character> max = new LinkedList<>();
+        LinkedList<Character> list = new LinkedList<>();
         for (int i = 0; i < strings.length(); i++) {
-            LinkedList<Character> list = new LinkedList<>();
             list.add(strings.charAt(i));
             for (int j = i + 1; j < strings.length(); j++) {
                 if (strings.charAt(j) > list.getLast()) {

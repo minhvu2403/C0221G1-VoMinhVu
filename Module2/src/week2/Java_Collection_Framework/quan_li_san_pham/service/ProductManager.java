@@ -12,10 +12,26 @@ public class ProductManager {
         List<Product> list = new ArrayList<>();
         System.out.println("Enter the number of products: ");
         int number =Integer.parseInt(input.nextLine());
+
         for (int i = 0; i <number ; i++) {
             Product product = new Product();
             product.Nhap();
-            list.add(product);
+            boolean check=true;
+            while (check){
+                List<Product> lists = FuncWriteAndRead.readProducts();
+                if (lists.stream().noneMatch(std -> std.getId().contains(product.getId()))){
+                    list.add(product);
+                    if (check){
+                        break;
+                    }
+                  }
+                else {
+                    System.err.println("Ban da nhap trung id!!!");
+                    System.out.println("Nhap lai id");
+                    String id =input.nextLine();
+                     product.setId(id);
+                }
+            }
         }
 //        System.out.println("Enter id:");
 //        String id = input.nextLine();
@@ -25,7 +41,7 @@ public class ProductManager {
 //        float price = Float.parseFloat(input.nextLine());
 //        Product product = new Product(id,name,price);
 //        list.add(product);
-        FuncWriteAndRead.writeProduct(list, true);
+       FuncWriteAndRead.writeProduct(list, true);
     }
 
     public void showProductList() {
