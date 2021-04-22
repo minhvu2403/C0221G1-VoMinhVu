@@ -1,5 +1,7 @@
 package case_study.models;
 
+import case_study.controllers.main_menu.MainController;
+
 public class Customer extends Person implements Comparable<Customer> {
     private String customerTye;
     private Services services;
@@ -13,6 +15,14 @@ public class Customer extends Person implements Comparable<Customer> {
         this.services =null;
         this.serviceGoWith=null;
         this.contract=null;
+    }
+
+    public Customer(String fullName, String dateOfBirth, String sex, String idCard, String numberPhone, String email, String address, String customerTye, Services services, ServiceGoWith serviceGoWith, Contract contract) {
+        super(fullName, dateOfBirth, sex, idCard, numberPhone, email, address);
+        this.customerTye = customerTye;
+        this.services = services;
+        this.serviceGoWith = serviceGoWith;
+        this.contract = contract;
     }
 
     public String getCustomerTye() {
@@ -49,17 +59,32 @@ public class Customer extends Person implements Comparable<Customer> {
 
     @Override
     public String toString() {
-        return "Customer{" +super.toString()+
-                "customerTye='" + customerTye + '\'' +
-                ", services=" + services +
-                ", serviceGoWith=" + serviceGoWith +
-                ", contract=" + contract +
-                '}';
+        return getFullName() + MainController.COMA +
+                getDateOfBirth() + MainController.COMA +
+                getSex() + MainController.COMA +
+                getIdCard() + MainController.COMA +
+                getNumberPhone() + MainController.COMA +
+                getEmail() + MainController.COMA +
+                getAddress() + MainController.COMA +
+                getCustomerTye() + MainController.COMA +
+                getServices().getId() + MainController.COMA +
+                getServiceGoWith().getName() + MainController.COMA +
+                getContract().getNumberContract();
     }
 
     @Override
-    public void showInfor() {
-        System.out.println(this.toString());
+    public String showInfor() {
+        return "\nFull name: " + getFullName() +
+                "\nDate of birth: " + getDateOfBirth() +
+                "\nRent type: " + getSex() +
+                "\nID card: " + getIdCard() +
+                "\nNumber phone: " + getNumberPhone() +
+                "\nEmail: " + getEmail() +
+                "\nAddress: " + getAddress() +
+                "\nCustomer type: " + getCustomerTye() +
+                "\nUse service: " + getServices() +
+                "\nService go with: " + getServiceGoWith() +
+                "\nContract: " + getContract() + " $\n";
     }
 
     @Override

@@ -1,5 +1,7 @@
 package case_study.models;
 
+import case_study.controllers.main_menu.MainController;
+
 public class Employee extends Person {
  private String idEmployee;
  private  String level;
@@ -58,17 +60,34 @@ public class Employee extends Person {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "idEmployee='" + idEmployee + '\'' +
-                ", level='" + level + '\'' +
-                ", location='" + location + '\'' +
-                ", department='" + department + '\'' +
-                ", salary=" + salary +
-                '}';
+        return getIdEmployee() + MainController.COMA +
+                getFullName() + MainController.COMA +
+                getDateOfBirth() + MainController.COMA +
+                getSex() + MainController.COMA +
+                getIdCard() + MainController.COMA +
+                getNumberPhone() + MainController.COMA +
+                getEmail() + MainController.COMA +
+                getAddress() + MainController.COMA +
+                getLevel() + MainController.COMA +
+                getLocation() + MainController.COMA +
+                getDepartment() + MainController.COMA +
+                getSalary();
     }
 
     @Override
-    public void showInfor() {
-        System.out.println(this.toString());
+    public String showInfor() {
+        return "\nID employee: " + getIdEmployee() +
+                "\nFull name: " + getFullName() +
+                "\nDate of birth: " + getDateOfBirth() +
+                "\nRent type: " + getSex() +
+                "\nID card: " + getIdCard() +
+                "\nNumber phone: " + getNumberPhone() +
+                "\nEmail: " + getEmail() +
+                "\nAddress: " + getAddress() +
+                "\nLevel: " + getLevel() +
+                "\nLocation: " + getLocation() +
+                "\nDepartment: " + getDepartment() +
+                "\nSalary: " + getSalary() + " $\n";
     }
+
 }

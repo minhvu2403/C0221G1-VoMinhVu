@@ -70,18 +70,6 @@ public abstract class Services implements Serializable {
         this.typeRent = typeRent;
     }
 
-    @Override
-    public String toString() {
-        return "Services{" +
-                "id='" + id + '\'' +
-                ", nameServices='" + nameServices + '\'' +
-                ", areaUse=" + areaUse +
-                ", rentCost=" + rentCost +
-                ", amountOfPeoples=" + amountOfPeoples +
-                ", typeRent='" + typeRent + '\'' +
-                '}';
-    }
-
-    public abstract void showInfor();
+    public abstract String showInfor();
 
 }

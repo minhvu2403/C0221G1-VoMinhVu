@@ -15,8 +15,8 @@ public abstract class Person implements Serializable {
         this.fullName = fullName;
         this.dateOfBirth = dateOfBirth;
         Sex = sex;
-        this.idCard = idCard;
-        this.numberPhone = numberPhone;
+        this.idCard = idCard.replaceFirst("(\\d{3})(\\d{3})(\\d{3})", "$1-$2-$3");
+        this.numberPhone = numberPhone.replaceFirst("(\\d{4})(\\d{3})(\\d{3})","$1-$2-$3");
         this.email = email;
         this.address = address;
     }
@@ -76,5 +76,5 @@ public abstract class Person implements Serializable {
     public void setAddress(String address) {
         this.address = address;
     }
-    public abstract void showInfor();
+    public abstract String showInfor();
 }

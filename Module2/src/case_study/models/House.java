@@ -1,5 +1,7 @@
 package case_study.models;
 
+import case_study.controllers.main_menu.MainController;
+
 public class House extends Services implements Comparable<House> {
     private String standardRoom;
     private String otherDescription;
@@ -47,16 +49,43 @@ public class House extends Services implements Comparable<House> {
 
     @Override
     public String toString() {
-        return "House{" + super.toString() +
-                "standardRoom='" + standardRoom + '\'' +
-                ", otherDescription='" + otherDescription + '\'' +
-                ", numberOfFloors=" + numberOfFloors +
+        return "Service{" +
+                "ID Service='" + getId() + '\'' +
+                ", Name service='" + getNameServices() + '\'' +
+                ", Area=" + getAreaUse() +
+                ", Cost=" + getRentCost() +
+                ", Amount of people=" + getAmountOfPeoples() +
+                ", Rent type='" + getTypeRent() + '\'' +
+                "Standard room='" + getStandardRoom() + '\'' +
+                ", Description='" + getOtherDescription() + '\'' +
+                ", Number of floor=" + getNumberOfFloors() +
                 '}';
     }
+    public String addFileCSV(){
+        return getId()+ MainController.COMA+
+                getNameServices()+MainController.COMA+
+                getAreaUse()+MainController.COMA+
+                getRentCost()+MainController.COMA+
+                getAmountOfPeoples()+MainController.COMA+
+                getTypeRent()+MainController.COMA+
+                getStandardRoom()+MainController.COMA+
+                getOtherDescription()+MainController.COMA+
+                getNumberOfFloors();
 
+
+    }
     @Override
-    public void showInfor() {
-        System.out.println(this.toString());
+    public String showInfor() {
+        return "\nID Service: " + getId() +
+                "\nName Service: " + getNameServices() +
+                "\nArea Used: " + getAreaUse() + " m^2" +
+                "\nRent Type: " + getTypeRent() +
+                "\nDescription: " + getOtherDescription() +
+                "\nStandard Room: " + getStandardRoom() +
+                "\nCost: " + getRentCost() + " $" +
+                "\nAmount Of People: " + getAmountOfPeoples() +
+                "\nNumber Of Floor: " + getNumberOfFloors() + "\n";
+
     }
 
     @Override
