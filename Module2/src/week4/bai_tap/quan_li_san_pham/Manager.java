@@ -69,21 +69,22 @@ public class Manager {
                 break;
             case 3:
                 check =false;
+                List<Product>product=IOFile.takeData(URL_FILE,products);
                 System.out.println("Nhap id san pham can xoa:");
                 String newId=scanner.nextLine();
-                for (Product product:products) {
-                    if (product.getMaSP().equals(newId)){
-                        products.remove(product);
-                        IOFile.writeInFile(URL_FILE, products, product);
+                for (Product pr:product) {
+                    if (pr.getMaSP().equals(newId)){
+                        product.remove(pr);
                         check=true;
                         break;
+
                     }
                 }
                 if (!check){
                     System.out.println("Khong tim thay san pham co id la" + newId + ":");
 
                 }
-
+                IOFile.writeInFile(URL_FILE,product, (Product) products);
                 findProduct();
                 break;
             case 4:
