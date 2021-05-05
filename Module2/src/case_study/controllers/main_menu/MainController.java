@@ -58,7 +58,7 @@ public class MainController {
                     break;
                 case 3:
                     AddNewCustomer.addNewCustomer();
-                break;
+                    break;
                 case 4:
                     ShowInforCusTomer.showInforCustomer();
                     break;
@@ -87,7 +87,7 @@ public class MainController {
         }
     }
 
-   public static void readFileVilla() {
+    public static void readFileVilla() {
         villaList = new ArrayList<>();
         List<String> stringList = FuncWriteAndRead.readFile(MainController.PATH_FILE_VILLA);
         for (String str : stringList) {
@@ -96,10 +96,12 @@ public class MainController {
                     Double.parseDouble(split[3]), Integer.parseInt(split[4]), split[5],
                     split[6], split[8], Double.parseDouble(split[7]), Integer.parseInt(split[9]));
             villaList.add(villa);
+
         }
     }
+
     public static void readFileHouse() {
-       houseList = new ArrayList<>();
+        houseList = new ArrayList<>();
         List<String> stringList = FuncWriteAndRead.readFile(MainController.PATH_FILE_HOUSE);
         for (String str : stringList) {
             String[] split = str.split(",");
@@ -109,6 +111,7 @@ public class MainController {
             houseList.add(house);
         }
     }
+
     public static void readFileRoom() {
         roomList = new ArrayList<>();
         List<String> stringList = FuncWriteAndRead.readFile(MainController.PATH_FILE_ROOM);
@@ -120,6 +123,7 @@ public class MainController {
             roomList.add(room);
         }
     }
+
     public static void readFileCustomer() {
         customerList = new ArrayList<>();
         List<String> stringList = FuncWriteAndRead.readFile(MainController.PATH_CUSTOMER_FILE);
@@ -129,6 +133,7 @@ public class MainController {
             customerList.add(customer);
         }
     }
+
     public static void readFileContract() {
         contractList = new ArrayList<>();
         List<String> stringList = FuncWriteAndRead.readFile(MainController.PATH_CONTRACT_FILE);
@@ -138,6 +143,7 @@ public class MainController {
             contractList.add(contract);
         }
     }
+
     public static void readFileBooking() {
         MainController.readFileContract();
         MainController.readFileVilla();
@@ -145,7 +151,7 @@ public class MainController {
         MainController.readFileRoom();
         customerBooking = new ArrayList<>();
         List<String> stringList = FuncWriteAndRead.readFile(MainController.PATH_FILE_BOOKING);
-         Services book = null;
+        Services book = null;
         Contract contractbook = null;
         for (String s : stringList) {
             String[] split = s.split(",");
@@ -171,10 +177,11 @@ public class MainController {
                 }
             }
             Customer customerBooking = new Customer(split[0], split[1], split[2], split[3], split[4],
-                    split[5], split[6], split[7], book,new ServiceGoWith(split[9]),contractbook);
+                    split[5], split[6], split[7], book, new ServiceGoWith(split[9]), contractbook);
             MainController.customerBooking.add(customerBooking);
         }
     }
+
     public static void readFileEmployee() {
         employeeMap = new TreeMap<>();
         List<String> stringList = FuncWriteAndRead.readFile(PATH_EMPLOYEE_FILE);
@@ -182,7 +189,7 @@ public class MainController {
             String[] split = s.split(",");
             Employee employee = new Employee(split[0], split[1], split[2], split[3], split[4], split[5],
                     split[6], split[7], split[8], split[9], split[10], Double.parseDouble(split[11]));
-            employeeMap.put(split[0],employee);
+            employeeMap.put(split[0], employee);
         }
     }
 }

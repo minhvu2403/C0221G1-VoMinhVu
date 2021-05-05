@@ -17,7 +17,7 @@ public class AddNewCustomer {
         do {
             flag = true;
             try {
-                System.out.print("Enter fulln name: ");
+                System.out.print("Enter full name: ");
                 fullName = sc.nextLine();
                 RegularException.regexName(fullName);
             } catch (NameException e) {
