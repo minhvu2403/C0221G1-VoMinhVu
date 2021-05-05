@@ -1,6 +1,6 @@
 package texth;
 
-package thi_modul2_lan2;
+
 
 import java.io.*;
 import java.util.ArrayList;
@@ -9,8 +9,8 @@ import java.util.Scanner;
 
 public class ChayChuongTrinh {
     public static final String COMNA = ",";
-    public static final String FILE_XUATKHAU = "D:\\CodeGym\\CO320G1-NguyenKhoa\\module2\\src\\thi_modul2_lan2\\xuatkhau.csv";
-    public static final String FILE_NHAPKHAU = "D:\\CodeGym\\CO320G1-NguyenKhoa\\module2\\src\\thi_modul2_lan2\\nhapkhau.csv";
+    public static final String FILE_XUATKHAU = "src\\texth\\xuatkhau.csv";
+    public static final String FILE_NHAPKHAU = "src\\texth\\nhapkhau.csv";
 
     public static void chucNang() {
         Scanner scanner = new Scanner(System.in);
@@ -224,7 +224,7 @@ public class ChayChuongTrinh {
         Validata validata = new Validata();
         Scanner scanner = new Scanner(System.in);
         docFileXuatKhau(FILE_XUATKHAU);
-        id = xuatKhauList.get(xuatKhauList.size() - 1).id + 1;
+        id = xuatKhauList.get(xuatKhauList.size()-1).id + 1;
         xuatKhauList.clear();
         while (true) {
             System.out.print("nhập mã sản phẩm: ");

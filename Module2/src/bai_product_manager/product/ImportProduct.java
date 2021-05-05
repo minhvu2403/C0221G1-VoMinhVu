@@ -1,5 +1,7 @@
 package bai_product_manager.product;
 
+import bai_product_manager.commons.ReadAndWriteProduct;
+
 public class ImportProduct extends Product {
     String priceImport;
     String nameProvince;

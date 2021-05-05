@@ -1,4 +1,0 @@
-package quan_li_san_pham_update.controller;
-
-public class MainController {
-}

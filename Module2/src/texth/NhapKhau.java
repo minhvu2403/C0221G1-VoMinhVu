@@ -1,6 +1,5 @@
 package texth;
 
-package thi_modul2_lan2;
 
 public class NhapKhau extends QuanLySanPham {
     String giaNhapKhau;

@@ -4,8 +4,9 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class FuncWriteAndRead<T> {
-    private static final String PATH = "src/data/";
+    private static final String PATH = "src\\bai_tap_lam_them\\data\\";
     public void writeFile(String fileName, List<T> list, boolean writeMode) {
         File file = new File(PATH + fileName);
         BufferedWriter bufferedWriter = null;
@@ -58,5 +59,6 @@ public class FuncWriteAndRead<T> {
         }
         return list;
     }
+
 
 }

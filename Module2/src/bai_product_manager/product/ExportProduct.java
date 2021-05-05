@@ -1,5 +1,7 @@
 package bai_product_manager.product;
 
+import bai_product_manager.commons.ReadAndWriteProduct;
+
 public class ExportProduct extends Product {
     String idExport;
     String priceExport;
@@ -52,4 +54,3 @@ public class ExportProduct extends Product {
         ReadAndWriteProduct.writeFile("export");
     }
 }
-© 2021 GitHub, Inc.
