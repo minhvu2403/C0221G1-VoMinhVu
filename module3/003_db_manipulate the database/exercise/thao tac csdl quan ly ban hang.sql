@@ -54,5 +54,6 @@ VALUES(1,'1','2006-12-3'),
  SELECT C.cID,C.cname,C.cage,P.pname ,odQTY FROM customer C INNER JOIN orders O ON C.cID=O.cID INNER JOIN OrderDetail Q on O.oID=Q.oID INNER JOIN product P on Q.pID=P.pID;
  /*Hiển thị mã hóa đơn, ngày bán và giá tiền của từng hóa đơn (giá một hóa đơn được tính bằng tổng giá bán của từng loại mặt hàng xuất hiện trong hóa đơn. 
  Giá bán của từng loại được tính = odQTY*pPrice)*/
- -- SELECT O.oID,O.oDate ,O.oTotalPrice FROM Orders O INNER JOIN 
+SELECT O.oID,O.oDate ,sum(p.pPrice*D.odQTY ) as'tong tien' FROM Orders O INNER JOIN orderdetail D on O.oID=D.oID INNER JOIN product P ON D.pID=P.pID 
+GROUP BY O.oId ;
  
