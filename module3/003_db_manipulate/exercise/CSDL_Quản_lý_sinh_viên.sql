@@ -74,7 +74,7 @@ SELECT *  FROM class C WHERE month(Start_Date)=12;
 /*Hiển thị tất cả các thông tin môn học có credit trong khoảng từ 3-5.*/
 SELECT * FROM subject S WHERE S.Credit BETWEEN 3 AND 5;
 /*Thay đổi mã lớp(ClassID) của sinh viên có tên ‘Hung’ là 2.*/
-UPDATE student  SET Class_ID='2'  WHERE student.Student_ID=1;
+UPDATE student  SET Class_ID='2'  WHERE student.Student_Name='Hung';
 /*Hiển thị các thông tin: StudentName, SubName, Mark. Dữ liệu sắp xếp theo điểm thi (mark) giảm dần. nếu trùng sắp theo tên tăng dần.*/
 SELECT T. Student_Name, S.Sub_Name, M.Mark FROM student T INNER JOIN mark M  on M.Student_ID=T.Student_ID  INNER JOIN  subject S  ON S.Sub_ID=M.Sub_ID 
 WHERE T.Student_ID=M.Student_ID
