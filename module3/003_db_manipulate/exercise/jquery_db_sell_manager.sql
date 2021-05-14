@@ -49,11 +49,21 @@ VALUES(1,'1','2006-12-3'),
  
  /*truy van du lieu*/
  /*Hiển thị tên những khách hàng không mua bất kỳ một sản phẩm nào*/
- SELECT cID,cname,cage FROM customer where NOT EXISTS(SELECT cID FROM orders WHERE cID=customer.cID);
+ SELECT cID,cname,cage
+    FROM customer
+       where NOT EXISTS(SELECT cID
+           FROM orders WHERE cID=customer.cID);
  /*Hiển thị danh sách các khách hàng đã mua hàng, và danh sách sản phẩm được mua bởi các khách*/
- SELECT C.cID,C.cname,C.cage,P.pname ,odQTY FROM customer C INNER JOIN orders O ON C.cID=O.cID INNER JOIN OrderDetail Q on O.oID=Q.oID INNER JOIN product P on Q.pID=P.pID;
+ SELECT C.cID,C.cname,C.cage,P.pname ,odQTY 
+   FROM customer C
+      INNER JOIN orders O ON C.cID=O.cID 
+      INNER JOIN OrderDetail Q on O.oID=Q.oID
+	  INNER JOIN product P on Q.pID=P.pID;
  /*Hiển thị mã hóa đơn, ngày bán và giá tiền của từng hóa đơn (giá một hóa đơn được tính bằng tổng giá bán của từng loại mặt hàng xuất hiện trong hóa đơn. 
  Giá bán của từng loại được tính = odQTY*pPrice)*/
-SELECT O.oID,O.oDate ,sum(p.pPrice*D.odQTY ) as'tong tien' FROM Orders O INNER JOIN orderdetail D on O.oID=D.oID INNER JOIN product P ON D.pID=P.pID 
-GROUP BY O.oId ;
+SELECT O.oID,O.oDate ,sum(p.pPrice*D.odQTY ) as'tong tien' 
+    FROM Orders O
+       INNER JOIN orderdetail D on O.oID=D.oID 
+	   INNER JOIN product P ON D.pID=P.pID 
+	     GROUP BY O.oId ;
  
