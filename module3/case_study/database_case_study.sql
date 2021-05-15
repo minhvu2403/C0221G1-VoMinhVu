@@ -137,11 +137,11 @@ values
 
 insert into KhachHang(id_loai_khach,ho_ten,ngay_sinh,so_cmnd,sdt,email,dia_chi)
 values
-(1,'Độc Cô Cầu Bại','1700-1-1',2015282890,0905123456,'bai@gmail.com','Sài Gòn '),
+(1,'Độc Cô Cầu Bại','1700-1-1',2015282890,0905123456,'bai@gmail.com','Quảng Ngãi '),
 (1,'Trương Vô Kỵ','1993-1-1',2015282890,0905654321,'ky@gmail.com','Đà Nẵng'),
-(1,'Lý Mạc Sầu','1992-1-1',2015282890,0905222222,'sau@gmail.com','Sài Gòn '),
+(1,'Lý Mạc Sầu','1992-1-1',2015282890,0905222222,'sau@gmail.com','Vinh '),
 (3,'Trương Tam Phong','1929-1-1',2015282890,0905144444,'phongo@gmail.com','Sài Gòn '),
-(1,'Tống Thanh Thư','1924-1-1',2015282890,0905777777,'thu@gmail.com','Sài Gòn '),
+(1,'Tống Thanh Thư','1924-1-1',2015282890,0905777777,'thu@gmail.com','Quảng Ngãi '),
 (2,'Mộ Dung Phục','1987-2-2',201922222,0905111111,'phuc@gmail.com','Huế'),
 (5,'Nguyen Van hoa','1993-2-1',2015282890,0560512456,'hoa@gmail.com','Vinh ');
 
@@ -174,6 +174,7 @@ values
 (2,6,2,'2019-11-11','2021-2-21',200,2000),
 (3,2,2,'2021-1-11','2021-1-21',100,1500);
 
+
 insert into DichVuDiKem(ten_dich_vu_kem_theo,gia,don_vi,trang_thai_kha_dung)
 values 
 ('Massage',15,'USD','Đang khả dụng'),
@@ -190,8 +191,9 @@ insert into HopDongChiTiet(id_hop_dong,id_dich_vu_kem_theo,so_luong)
 values
 (1,2,2),
 (2,2,2),
-(1,1,1),
-(2,2,2);
+(3,1,1),
+(4,2,2),
+(8,2,2);
 
 /*try van*/
 /*2.Hiển thị thông tin của tất cả nhân viên có trong hệ thống có tên bắt đầu là một trong
@@ -269,7 +271,7 @@ SELECT
 		 WHERE (year(hopdong.ngay_lam_hop_dong)=2018) AND NOT year(hopdong.ngay_lam_hop_dong)=2019;
  /*cach xoa noi dung bang khi co khoa ngoai)*/
  SET SQL_SAFE_UPDATES = 0;
- DELETE FROM hopdongchitiet;
+ DELETE FROM hopdong;
  SET SQL_SAFE_UPDATES = 1;
  /*8.	Hiển thị thông tin HoTenKhachHang có trong hệ thống, với yêu cầu HoThenKhachHang không trùng nhau.
 Học viên sử dụng theo 3 cách khác nhau để thực hiện yêu cầu trên
@@ -286,12 +288,97 @@ SELECT khachhang.ho_ten
 	SELECT khachhang.ho_ten
 	FROM khachhang ;
 
+/*9.Thực hiện thống kê doanh thu theo tháng, 
+nghĩa là tương ứng với mỗi tháng trong năm 2019 thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.*/
+SELECT month(hopdong.ngay_lam_hop_dong) as 'so thang',
+	count(month(hopdong.ngay_lam_hop_dong)) as'so khach da dat phong'
+	   FROM hopdong
+	        WHERE hopdong.ngay_lam_hop_dong=2019
+              GROUP BY month(hopdong.ngay_lam_hop_dong);
+/*10.Hiển thị thông tin tương ứng với từng Hợp đồng thì đã sử dụng bao nhiêu Dịch vụ đi kèm.
+ Kết quả hiển thị bao gồm IDHopDong, NgayLamHopDong, NgayKetthuc, TienDatCoc, SoLuongDichVuDiKem
+ (được tính dựa trên việc count các IDHopDongChiTiet).*/   
+ SELECT hopdong.id_hop_dong,
+ ngay_lam_hop_dong,
+ ngay_ket_thuc,
+ tien_dat_coc,
+count(hopdongchitiet.id_hop_dong_chi_tiet) as 'so luong dich vu kem theo'
+	FROM hopdong
+		INNER JOIN hopdongchitiet on hopdongchitiet.id_hop_dong=hopdong.id_hop_dong
+		INNER JOIN dichvudikem on dichvudikem.id_dich_vu_kem_theo=hopdongchitiet.id_dich_vu_kem_theo
+		 GROUP BY hopdong.id_hop_dong;
 
+ /*11.	Hiển thị thông tin các Dịch vụ đi kèm đã được sử dụng bởi những Khách hàng có TenLoaiKhachHang là “Diamond” 
+và có địa chỉ là “Vinh ” hoặc “Quảng Ngãi”.*/
+ SELECT khachhang.ho_ten,
+ loaikhach.id_loai_khach,ten_loai_khach,
+ dichvudikem.ten_dich_vu_kem_theo,
+ khachhang.id_khach_hang,
+ khachhang.dia_chi
+	FROM dichvudikem
+       INNER JOIN hopdongchitiet on hopdongchitiet.id_dich_vu_kem_theo=dichvudikem.id_dich_vu_kem_theo
+       INNER JOIN hopdong on hopdongchitiet.id_hop_dong=hopdong.id_hop_dong
+       INNER JOIN khachhang on hopdong.id_khach_hang=khachhang.id_khach_hang
+       INNER JOIN loaikhach on khachhang.id_loai_khach=loaikhach.id_loai_khach
+         WHERE (loaikhach.ten_loai_khach='Diamond')
+          AND  khachhang.dia_chi in ('Quảng Ngãi','Vinh');
 
-
-
-
-
+ /*12.	Hiển thị thông tin IDHopDong, TenNhanVien, TenKhachHang, SoDienThoaiKhachHang, 
+ TenDichVu, SoLuongDichVuDikem (được tính dựa trên tổng Hợp đồng chi tiết), 
+ TienDatCoc của tất cả các dịch vụ đã từng được khách hàng đặt vào 3 tháng cuối năm 2019
+ nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2019.*/
+ SELECT 
+ hopdong.id_hop_dong,
+ khachhang.id_khach_hang,
+ nhanvien.ho_ten as 'ten nhan vien',
+ khachhang.ho_ten as 'ten khach hang',
+ khachhang.sdt,
+ dichvu.ten_dich_vu,
+ count(hopdongchitiet.id_hop_dong_chi_tiet) as 'so luong dich vu di kiem',
+ hopdong.tien_dat_coc
+      FROM hopdong 
+          INNER JOIN nhanvien on hopdong.id_nhan_vien=nhanvien.id_nhan_vien
+          INNER JOIN khachhang on hopdong.id_khach_hang=khachhang.id_khach_hang
+          INNER JOIN dichvu on hopdong.id_dich_vu =dichvu.id_dich_vu
+          INNER JOIN hopdongchitiet on hopdong.id_hop_dong=hopdongchitiet.id_hop_dong
+          INNER JOIN dichvudikem on hopdongchitiet.id_dich_vu_kem_theo=dichvudikem.id_dich_vu_kem_theo
+             WHERE year(hopdong.ngay_lam_hop_dong)=2019
+			 AND month(hopdong.ngay_lam_hop_dong)IN (10,11,12)
+             AND NOT month(hopdong.ngay_lam_hop_dong)IN (1,2,3,4,5,6)
+             GROUP BY hopdongchitiet.id_hop_dong_chi_tiet;
+ 
+/*13.Hiển thị thông tin các Dịch vụ đi kèm được sử dụng nhiều nhất bởi các Khách hàng đã đặt phòng.
+ (Lưu ý là có thể có nhiều dịch vụ có số lần sử dụng nhiều như nhau).*/
+ 
+ SELECT 
+ dichvudikem.id_dich_vu_kem_theo,
+ dichvudikem.ten_dich_vu_kem_theo,
+ count(dichvudikem.id_dich_vu_kem_theo) as so_lan_su_dung
+ FROM dichvudikem
+      JOIN hopdongchitiet on hopdongchitiet.id_dich_vu_kem_theo=dichvudikem.id_dich_vu_kem_theo
+      GROUP BY dichvudikem.id_dich_vu_kem_theo
+      HAVING count(dichvudikem.id_dich_vu_kem_theo)
+      =(SELECT max(so_lan_su_dung)
+           FROM (SELECT ten_dich_vu_kem_theo ,count(dichvudikem.id_dich_vu_kem_theo)as so_lan_su_dung 
+                         FROM dichvudikem
+                               JOIN hopdongchitiet on dichvudikem.id_dich_vu_kem_theo=hopdongchitiet.id_dich_vu_kem_theo
+                               GROUP BY dichvudikem.id_dich_vu_kem_theo ) as t);
+ 
+     /*14.Hiển thị thông tin tất cả các Dịch vụ đi kèm chỉ mới được sử dụng một lần duy nhất. 
+ Thông tin hiển thị bao gồm IDHopDong, TenLoaiDichVu, TenDichVuDiKem, SoLanSuDung.*/    
+ SELECT
+ hopdong.id_hop_dong,
+loaidichvu.ten_loai_dich_vu,
+dichvudikem.ten_dich_vu_kem_theo,
+count(dichvudikem.id_dich_vu_kem_theo) as so_lan_su_dung
+    FROM dichvudikem
+      INNER JOIN hopdongchitiet on dichvudikem.id_dich_vu_kem_theo=hopdongchitiet.id_dich_vu_kem_theo
+      INNER JOIN hopdong on hopdongchitiet.id_hop_dong=hopdong.id_hop_dong
+      INNER JOIN dichvu on hopdong.id_dich_vu=dichvu.id_dich_vu
+      INNER JOIN loaidichvu on dichvu.id_loai_dich_vu=loaidichvu.id_loai_dich_vu
+         GROUP BY dichvudikem.id_dich_vu_kem_theo
+         HAVING so_lan_su_dung=1;
+        
 
 
 
