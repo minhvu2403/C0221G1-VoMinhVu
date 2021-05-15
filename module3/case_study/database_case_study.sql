@@ -198,32 +198,35 @@ values
 /*try van*/
 /*2.Hiển thị thông tin của tất cả nhân viên có trong hệ thống có tên bắt đầu là một trong
  các ký tự “H”, “T” hoặc “K” và có tối đa 15 ký tự.*/
- SELECT * FROM nhanvien 
-	 where ho_ten regexp '[:space:][T|H|K][a-z]*$'
-	 AND CHAR_LENGTH(ho_ten) < 15;
+ SELECT *
+	 FROM nhanvien 
+		 where ho_ten regexp '[:space:][T|H|K][a-z]*$'
+		 AND CHAR_LENGTH(ho_ten) < 15;
  /*cach 2:*/
  SELECT * 
     FROM nhanvien
        WHERE (ho_ten  LIKE 'H%' OR ho_ten LIKE 'T%' OR ho_ten LIKE 'K%' )AND char_length(ho_ten)<15;
  /*3.Hiển thị thông tin của tất cả khách hàng có độ tuổi từ 18 đến 50 tuổi và có địa chỉ ở “Đà Nẵng” hoặc “Quảng Trị”.*/
- SELECT * FROM khachhang
-	 WHERE (year(now())-year(ngay_sinh)>18)
-	  and  (year(now())-year(ngay_sinh)<50) 
-	  AND (dia_chi IN ('Đà Nẵng','Quảng Trị'));
+ SELECT *
+ FROM khachhang
+		 WHERE (year(now())-year(ngay_sinh)>18)
+		  and  (year(now())-year(ngay_sinh)<50) 
+		  AND (dia_chi IN ('Đà Nẵng','Quảng Trị'));
  /*cach 2*/
  SELECT * 
    FROM khachhang
-	 WHERE (timestampdiff(YEAR,ngay_sinh,curdate())>18
-	 and timestampdiff(YEAR,ngay_sinh,curdate())<50)
-	 and (dia_chi in('Đà Nẵng','Quảng Trị'));
+		 WHERE (timestampdiff(YEAR,ngay_sinh,curdate())>18
+		 and timestampdiff(YEAR,ngay_sinh,curdate())<50)
+		 and (dia_chi in('Đà Nẵng','Quảng Trị'));
  /*4.	Đếm xem tương ứng với mỗi khách hàng đã từng đặt phòng bao nhiêu lần. Kết quả hiển thị được sắp xếp tăng dần theo số lần đặt phòng của khách hàng.
  Chỉ đếm những khách hàng nào có Tên loại khách hàng là “Diamond”.*/
- SELECT khachhang.ho_ten, Count(hopdong.id_hop_dong) as 'so lan dat phong'
- FROM khachhang 
-	 INNER JOIN hopdong on hopdong.id_khach_hang=khachhang.id_khach_hang
-	 WHERE khachhang.id_loai_khach=1 
-     GROUP BY khachhang.id_khach_hang 
-     ORDER BY so_lan_dat_phong ASC;
+ SELECT
+ khachhang.ho_ten, Count(hopdong.id_hop_dong) as 'so lan dat phong'
+   FROM khachhang 
+		 INNER JOIN hopdong on hopdong.id_khach_hang=khachhang.id_khach_hang
+		 WHERE khachhang.id_loai_khach=1 
+		 GROUP BY khachhang.id_khach_hang 
+		 ORDER BY so_lan_dat_phong ASC;
 /*cach 2*/
 SELECT khachhang.ho_ten ,count(hopdong.id_hop_dong)as 'so lan dat phong' 
 FROM khachhang 
@@ -242,28 +245,33 @@ SELECT
 	 dichvu.ten_dich_vu,
 	 hopdong.ngay_lam_hop_dong,ngay_ket_thuc,
 	 sum(chi_phi_thue+so_luong*gia) as tong_tien
- FROM khachhang 
-	 LEFT JOIN loaikhach on khachhang.id_loai_khach=khachhang.id_loai_khach
-	 LEFT JOIN hopdong on khachhang.id_khach_hang=hopdong.id_khach_hang
-	 LEFT JOIN dichvu on hopdong.id_dich_vu=dichvu.id_dich_vu
-	 LEFT JOIN hopdongchitiet on hopdong.id_hop_dong=hopdongchitiet.id_hop_dong
-	 LEFT JOIN dichvudikem on hopdongchitiet.id_dich_vu_kem_theo=dichvudikem.id_dich_vu_kem_theo
-	 GROUP BY hopdong.id_hop_dong  
-	 ORDER BY khachhang.id_khach_hang ASC;
+	 FROM khachhang 
+			 LEFT JOIN loaikhach on khachhang.id_loai_khach=khachhang.id_loai_khach
+			 LEFT JOIN hopdong on khachhang.id_khach_hang=hopdong.id_khach_hang
+			 LEFT JOIN dichvu on hopdong.id_dich_vu=dichvu.id_dich_vu
+			 LEFT JOIN hopdongchitiet on hopdong.id_hop_dong=hopdongchitiet.id_hop_dong
+			 LEFT JOIN dichvudikem on hopdongchitiet.id_dich_vu_kem_theo=dichvudikem.id_dich_vu_kem_theo
+			 GROUP BY hopdong.id_hop_dong  
+			 ORDER BY khachhang.id_khach_hang ASC;
  /*6.Hiển thị IDDichVu, TenDichVu, DienTich, ChiPhiThue, 
  TenLoaiDichVu của tất cả các loại Dịch vụ chưa từng được Khách hàng thực hiện đặt từ quý 1 của năm 2019 (Quý 1 là tháng 1, 2, 3).*/
- SELECT dichvu.id_dich_vu,ten_dich_vu,dien_tich,chi_phi_thue,
+ SELECT 
+ dichvu.id_dich_vu,ten_dich_vu,
+ dien_tich,chi_phi_thue,
  loaidichvu.ten_loai_dich_vu 
-    FROM dichvu
-		 LEFT JOIN loaidichvu on dichvu.id_loai_dich_vu=loaidichvu.id_loai_dich_vu
-		 LEFT JOIN hopdong on hopdong.id_dich_vu=dichvu.id_dich_vu
-		 WHERE ( (year(hopdong.ngay_lam_hop_dong)>=2019) and month(hopdong.ngay_lam_hop_dong) in(1,2,3));
+		FROM dichvu
+			 LEFT JOIN loaidichvu on dichvu.id_loai_dich_vu=loaidichvu.id_loai_dich_vu
+			 LEFT JOIN hopdong on hopdong.id_dich_vu=dichvu.id_dich_vu
+			 WHERE ( (year(hopdong.ngay_lam_hop_dong)>=2019) and month(hopdong.ngay_lam_hop_dong) in(1,2,3));
 
  /*7.Hiển thị thông tin IDDichVu, TenDichVu, DienTich, SoNguoiToiDa, ChiPhiThue, TenLoaiDichVu 
 	của tất cả các loại dịch vụ đã từng được Khách hàng 
  đặt phòng trong năm 2018 nhưng chưa từng được Khách hàng đặt phòng  trong năm 2019.*/
 
- SELECT dichvu.id_dich_vu,ten_dich_vu,dien_tich,so_nguoi_toi_da,chi_phi_thue,
+ SELECT
+ dichvu.id_dich_vu,ten_dich_vu,
+ dien_tich,so_nguoi_toi_da,
+ chi_phi_thue,
  loaidichvu.ten_loai_dich_vu
 	 FROM dichvu
 		 LEFT JOIN loaidichvu on loaidichvu.id_loai_dich_vu=dichvu.id_loai_dich_vu
@@ -285,8 +293,8 @@ SELECT khachhang.ho_ten
 -- cach 3
 SELECT khachhang.ho_ten
 	FROM khachhang UNION
-	SELECT khachhang.ho_ten
-	FROM khachhang ;
+		SELECT khachhang.ho_ten
+		FROM khachhang ;
 
 /*9.Thực hiện thống kê doanh thu theo tháng, 
 nghĩa là tương ứng với mỗi tháng trong năm 2019 thì sẽ có bao nhiêu khách hàng thực hiện đặt phòng.*/
@@ -320,8 +328,8 @@ và có địa chỉ là “Vinh ” hoặc “Quảng Ngãi”.*/
        INNER JOIN hopdong on hopdongchitiet.id_hop_dong=hopdong.id_hop_dong
        INNER JOIN khachhang on hopdong.id_khach_hang=khachhang.id_khach_hang
        INNER JOIN loaikhach on khachhang.id_loai_khach=loaikhach.id_loai_khach
-         WHERE (loaikhach.ten_loai_khach='Diamond')
-          AND  khachhang.dia_chi in ('Quảng Ngãi','Vinh');
+			WHERE (loaikhach.ten_loai_khach='Diamond')
+			AND  khachhang.dia_chi in ('Quảng Ngãi','Vinh');
 
  /*12.	Hiển thị thông tin IDHopDong, TenNhanVien, TenKhachHang, SoDienThoaiKhachHang, 
  TenDichVu, SoLuongDichVuDikem (được tính dựa trên tổng Hợp đồng chi tiết), 
@@ -376,9 +384,10 @@ count(dichvudikem.id_dich_vu_kem_theo) as so_lan_su_dung
       INNER JOIN hopdong on hopdongchitiet.id_hop_dong=hopdong.id_hop_dong
       INNER JOIN dichvu on hopdong.id_dich_vu=dichvu.id_dich_vu
       INNER JOIN loaidichvu on dichvu.id_loai_dich_vu=loaidichvu.id_loai_dich_vu
-         GROUP BY dichvudikem.id_dich_vu_kem_theo
-         HAVING so_lan_su_dung=1;
+			 GROUP BY dichvudikem.id_dich_vu_kem_theo
+			 HAVING so_lan_su_dung=1;
         
-
+/*15.	Hiển thi thông tin của tất cả nhân viên bao gồm IDNhanVien, HoTen, TrinhDo, TenBoPhan, SoDienThoai, DiaChi
+ mới chỉ lập được tối đa 3 hợp đồng từ năm 2018 đến 2019.*/
 
 
