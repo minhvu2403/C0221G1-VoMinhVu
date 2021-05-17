@@ -4,7 +4,7 @@ USE case_study;
  SELECT *
 	 FROM nhanvien 
 		 where ho_ten regexp '[:space:][T|H|K][a-z]*$'
-		 AND CHAR_LENGTH(ho_ten) < 15;
+		 AND CHAR_LENGTH(ho_ten) <= 15;
  /*cach 2:*/
  SELECT * 
     FROM nhanvien
