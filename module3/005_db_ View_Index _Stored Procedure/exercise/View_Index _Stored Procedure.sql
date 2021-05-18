@@ -35,8 +35,7 @@ INSERT into view_product( product_Code, product_Name, product_Price, product_Sta
 ('SP7','Du du',1700,'con hang');
 -- update view
 update view_product set  product_Code  ='SP5' where product_Code ='SP6';
-
-UPDATE products_view SET product_Status='con hang' WHERE productCode='SP3';
+UPDATE view_product SET product_Status='con hang' WHERE productCode='SP3';
 DROP VIEW products_view;
 
 -- tao store product
@@ -89,7 +88,7 @@ end //
  select * from products
  where id =20;
  select * from products;
-
+-- Tạo store procedure xoá sản phẩm theo id
 delimiter //
 create procedure delete_product(in id_product int)
 begin
