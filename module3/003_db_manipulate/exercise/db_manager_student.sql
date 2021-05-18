@@ -81,8 +81,8 @@ SELECT *
      WHERE S.Credit BETWEEN 3 AND 5;
 /*Thay đổi mã lớp(ClassID) của sinh viên có tên ‘Hung’ là 2.*/
 SET SQL_SAFE_UPDATES=0;
-UPDATE student  SET Class_ID=5 
- WHERE Student_Name='Hung';
+UPDATE student  SET Class_ID=234
+ WHERE Student_Name LIKE'Hung';
 SET SQL_SAFE_UPDATES=1;
 /*Hiển thị các thông tin: StudentName, SubName, Mark. Dữ liệu sắp xếp theo điểm thi (mark) giảm dần. nếu trùng sắp theo tên tăng dần.*/
 SELECT T. Student_Name, S.Sub_Name, M.Mark 

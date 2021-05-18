@@ -8,7 +8,7 @@ USE case_study;
 		FROM dichvu
 			 LEFT JOIN loaidichvu on dichvu.id_loai_dich_vu=loaidichvu.id_loai_dich_vu
 			 LEFT JOIN hopdong on hopdong.id_dich_vu=dichvu.id_dich_vu
-			 WHERE ( (year(hopdong.ngay_lam_hop_dong)>=2019) and month(hopdong.ngay_lam_hop_dong) in(1,2,3));
+			 WHERE ( (year(hopdong.ngay_lam_hop_dong)=2019) and month(hopdong.ngay_lam_hop_dong) in(1,2,3));
 
  /*7.Hiển thị thông tin IDDichVu, TenDichVu, DienTich, SoNguoiToiDa, ChiPhiThue, TenLoaiDichVu 
 	của tất cả các loại dịch vụ đã từng được Khách hàng 
@@ -20,9 +20,12 @@ USE case_study;
  chi_phi_thue,
  loaidichvu.ten_loai_dich_vu
 	 FROM dichvu
-		 LEFT JOIN loaidichvu on loaidichvu.id_loai_dich_vu=dichvu.id_loai_dich_vu
-		 LEFT JOIN hopdong on hopdong.id_dich_vu=dichvu.id_dich_vu
-		 WHERE (year(hopdong.ngay_lam_hop_dong)=2018) AND NOT year(hopdong.ngay_lam_hop_dong)=2019;
+		 JOIN loaidichvu on loaidichvu.id_loai_dich_vu=dichvu.id_loai_dich_vu
+         JOIN hopdong on hopdong.id_dich_vu =dichvu.id_dich_vu
+         WHERE  year(hopdong.ngay_lam_hop_dong )=2018
+         and hopdong.id_dich_vu not in(SELECT hopdong.id_dich_vu FROM hopdong WHERE year(hopdong.ngay_lam_hop_dong )=2019);
+
+         
  /*cach xoa noi dung bang khi co khoa ngoai)*/
  SET SQL_SAFE_UPDATES = 0;
  DELETE FROM hopdong;
