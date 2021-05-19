@@ -31,7 +31,7 @@ và có địa chỉ là “Vinh ” hoặc “Quảng Ngãi”.*/
  TenDichVu, SoLuongDichVuDikem (được tính dựa trên tổng Hợp đồng chi tiết), 
  TienDatCoc của tất cả các dịch vụ đã từng được khách hàng đặt vào 3 tháng cuối năm 2019
  nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2019.*/
- SELECT 
+  SELECT 
  hopdong.id_hop_dong,
  khachhang.id_khach_hang,
  nhanvien.ho_ten as 'ten nhan vien',
@@ -46,7 +46,6 @@ và có địa chỉ là “Vinh ” hoặc “Quảng Ngãi”.*/
           INNER JOIN dichvu on hopdong.id_dich_vu =dichvu.id_dich_vu
           INNER JOIN hopdongchitiet on hopdong.id_hop_dong=hopdongchitiet.id_hop_dong
           INNER JOIN dichvudikem on hopdongchitiet.id_dich_vu_kem_theo=dichvudikem.id_dich_vu_kem_theo
-             WHERE year(hopdong.ngay_lam_hop_dong)=2019
-			 AND month(hopdong.ngay_lam_hop_dong)IN (10,11,12)
-             AND NOT month(hopdong.ngay_lam_hop_dong)IN (1,2,3,4,5,6)
-             GROUP BY hopdongchitiet.id_hop_dong_chi_tiet;
+          WHERE NOT EXISTS( SELECT hopdong.id_hop_dong WHERE hopdong.ngay_lam_hop_dong BETWEEN '2019-01-01' and '2019-06-31')
+          and  EXISTS(SELECT hopdong.id_hop_dong WHERE hopdong.ngay_lam_hop_dong BETWEEN '2019-09-01' and '2019-12-31')
+            GROUP BY hopdongchitiet.id_hop_dong_chi_tiet;
