@@ -29,7 +29,7 @@ USE case_study;
 		 INNER JOIN hopdong on hopdong.id_khach_hang=khachhang.id_khach_hang
 		 WHERE khachhang.id_loai_khach=1 
 		 GROUP BY khachhang.id_khach_hang 
-		 ORDER BY so_lan_dat_phong ASC;
+		 ORDER BY Count(hopdong.id_hop_dong) ASC;
 /*cach 2*/
 SELECT khachhang.ho_ten ,count(hopdong.id_hop_dong)as 'so lan dat phong' 
 FROM khachhang 
@@ -37,7 +37,7 @@ FROM khachhang
 	 JOIN loaikhach  on khachhang.id_loai_khach = loaikhach.id_loai_khach 
      WHERE loaikhach.ten_loai_khach='Diamond' 
      GROUP BY khachhang.id_khach_hang 
-     ORDER BY so_lan_dat_phong ASC;
+     ORDER BY Count(hopdong.id_hop_dong) ASC;
 /*5.Hiển thị IDKhachHang, HoTen, TenLoaiKhach, IDHopDong, TenDichVu, NgayLamHopDong, NgayKetThuc, 
 TongTien (Với TongTien được tính theo công thức như sau: ChiPhiThue + SoLuong*Gia, với SoLuong và Giá là từ bảng DichVuDiKem) 
 cho tất cả các Khách hàng đã từng đặt phỏng. (Những Khách hàng nào chưa từng đặt phòng cũng phải hiển thị ra).*/

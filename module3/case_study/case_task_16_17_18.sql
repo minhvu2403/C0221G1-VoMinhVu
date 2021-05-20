@@ -14,7 +14,7 @@ UPDATE khachhang,
            FROM khachhang 
                 INNER JOIN hopdong on khachhang.id_khach_hang=hopdong.id_hop_dong
                 GROUP BY khachhang.id_khach_hang
-                HAVING count(hopdong.tong_tien)>100000000 AND year(hopdong.ngay_lam_hop_dong)in(2019) ) as Platinium_len_Diamond
+                HAVING SUM(dichvu.chi_phi_thue+hopdongchitiet.so_luong*dichvudikem.gia)>100000000 AND year(hopdong.ngay_lam_hop_dong)in(2019) ) as Platinium_len_Diamond
                     SET khachhang.id_loai_khach=2
                     WHERE khachhang.id_khach_hang=Platinium_len_Diamond.id_khach_hang;
  SET SQL_SAFE_UPDATES = 1;
