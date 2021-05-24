@@ -1,0 +1,317 @@
+body {
+    margin: 0 auto;
+    font-family: Verdana;
+    font-size: 15px;
+    width: 1000px;
+    border: gray solid 2px;
+}
+
+#banner {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    z-index: 1;
+}
+
+#banner img {
+    width: 1000px;
+    height: 250px;
+    opacity: 0.6;
+    position: relative;
+    z-index: 2;
+}
+
+#banner #logo {
+    width: 320px;
+    height: 280px;
+    background-image: url(##/images/logoGaoranger#png);
+    position: relative;
+    z-index: 3;
+    top: -325px;
+    left: 40px;
+}
+
+#banner #title {
+    font-weight: bold;
+    font-size: 25px;
+    color: red;
+    text-shadow: 2px 2px 5px yellow, 0px 2px 5px yellow, -2px 0px 5px yellow, -2px -2px 5px yellow;
+    position: relative;
+    z-index: 3;
+    top: -400px;
+    left: 23px;
+}
+
+#banner #button1,
+#button2 {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: bold;
+    position: relative;
+    z-index: 3;
+    top: -550px;
+    left: 780px;
+}
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul li {
+    list-style: none;
+    float: left;
+}
+
+#banner #link {
+    width: 1000px;
+    height: 30px;
+    position: absolute;
+    z-index: 3;
+    top: 219px;
+    left: 640px;
+}
+
+#banner #link ul li a {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    display: block;
+    padding: 0px 0px 0px 10px;
+    text-shadow: 2px 2px 5px white, 0px 2px 5px white, -2px 0px 5px white, -2px -2px 5px white;
+    text-decoration: none;
+}
+
+#menu_bar {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, whitesmoke, rgb(3, 22, 131));
+    position: relative;
+    z-index: 1;
+}
+
+#menu_bar #menu_top {
+    width: 1000px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+    top: 10px;
+}
+
+#menu_bar #menu_top ul li a {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0px 10px 0px 10px;
+    text-shadow: 2px 2px 2px gray, 0px 2px 2px gray, -2px 0px 2px gray, -2px -2px 2px gray;
+    border-left: whitesmoke solid 2px;
+}
+
+#menu_bar #menu_top #home {
+    border-left: none;
+}
+
+#menu_bar #menu_top ul li a:hover {
+    background-color: red;
+    border-radius: 10px;
+}
+
+#menu_bar #menu_top ul li a:active {
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+#main {
+    width: 100%;
+    height: 1000px;
+    background-color: whitesmoke;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: darkblue;
+    border-bottom: darkblue solid 2px;
+}
+
+#main #left {
+    width: 75%;
+    height: 1000px;
+    background-color: whitesmoke;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+
+#main #left #product {
+    width: 720px;
+    height: 500px;
+    background-color: whitesmoke;
+    position: absolute;
+    left: 15px;
+    z-index: 2;
+}
+
+#main #left #product img {
+    width: 300px;
+    height: 230px;
+    position: absolute;
+    z-index: 3;
+}
+
+#main #left #product #describe {
+    width: 408px;
+    height: 230px;
+    font-size: 18px;
+    text-align: justify;
+    position: absolute;
+    z-index: 3;
+    left: 312px;
+}
+
+#main #left #product #listImg {
+    width: 720px;
+    height: 190px;
+    position: absolute;
+    z-index: 3;
+    top: 312px;
+    border: gray solid 1px;
+}
+
+#main #left #product #listImg ul li {
+    width: 130px;
+    height: 176px;
+    display: block;
+    border: gray solid 2px;
+    margin: 5px;
+}
+
+#main #left #product #listImg img {
+    width: 130px;
+    height: 176px;
+}
+
+#main #left #news {
+    width: 720px;
+    height: 474px;
+    background-color: whitesmoke;
+    font-size: 18px;
+    position: absolute;
+    z-index: 2;
+    left: 15px;
+    top: 512px;
+}
+
+#main #left #news ul li {
+    width: 100%;
+    height: 70px;
+    clear: left;
+    border-bottom: gray dotted 2px;
+}
+
+#main #left #news img {
+    width: 720px;
+    height: 190px;
+    position: relative;
+    top: 8px;
+    opacity: 0.7;
+}
+
+#main #left #product #describe p {
+    font-size: 20px;
+    color: crimson;
+    font-weight: bold;
+    margin-bottom: -20px;
+    margin-top: 0px;
+}
+
+#main #left #news ul li b {
+    color: blue;
+}
+
+#main #right {
+    width: 25%;
+    height: 1000px;
+    background-color: whitesmoke;
+    float: left;
+    position: relative;
+    z-index: 1;
+}
+
+#main #right #link01 {
+    width: 235px;
+    height: 300px;
+    background-color: whitesmoke;
+    position: absolute;
+    z-index: 2;
+}
+
+#main #right #link01 ul li img {
+    width: 10px;
+    height: 10px;
+    margin-right: 4px;
+}
+
+#main #right #link01 ul li a {
+    clear: left;
+    font-size: 17px;
+    text-indent: 17px;
+    text-decoration: none;
+}
+
+#main #right #link02 {
+    width: 235px;
+    height: 672px;
+    background-color: whitesmoke;
+    position: absolute;
+    z-index: 2;
+    top: 313px;
+}
+
+#main #right #link02 img {
+    width: 227px;
+    height: 112px;
+    clear: left;
+    border: gray solid 2px;
+    margin: 2px 2px 2px 0px;
+}
+
+#footer {
+    clear: left;
+    width: 100%;
+    height: 150px;
+    background: darkblue;
+    border-top: gray solid 2px;
+}
+
+#footer #info {
+    line-height: 22px;
+    color: white;
+    padding-left: 12px;
+    padding-top: 12px;
+    font-size: 16px;
+}
+
+#footer #link {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    top: -90px;
+    left: 715px;
+}
+
+#footer #link ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 2px 0px 2px;
+}
+
+#footer #link p {
+    color: white;
+    text-indent: 20px;
+    margin-top: 2px;
+}
