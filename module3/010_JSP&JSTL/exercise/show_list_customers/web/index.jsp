@@ -15,6 +15,6 @@
 </head>
 <body>
 Index
- <c:redirect url="/product"></c:redirect>
+ <c:redirect url="/customer"></c:redirect>
 </body>
 </html>

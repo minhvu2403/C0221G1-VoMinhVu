@@ -1,0 +1,116 @@
+*, body {
+    margin: 0;
+    padding: 0;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.container-fluid {
+    background-image: url("../images/anh-nen.jpg");
+    background-position: -1471px -171px;
+    object-fit: cover;
+}
+
+.header {
+    height: 143px;
+    object-fit: cover;
+    position: relative;
+
+}
+
+.header img {
+    width: 93px;
+    height: 93px;
+    box-shadow: 0 0 0 4px rgb(199 247 7);
+    border-radius: 50%;
+    margin-top: 23px;
+    margin-left: 100px;
+}
+
+.container .content {
+    width: 400px;
+    height: 500px;
+    box-shadow: -3px -3px 7px #41e40c, 3px 5px 5px #41e40c;
+
+
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    background: white;
+
+}
+
+.header-list {
+}
+
+ul {
+    list-style: none;
+}
+
+.scroll {
+    height: 350px;
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: .3s ease;
+    padding: 10px 22px 10px;
+}
+
+.scroll:hover {
+    overflow-y: scroll;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 6px;
+
+}
+
+.scroll::-webkit-scrollbar-button {
+    width: 25px;
+    height: 25px;
+}
+
+.scroll::-webkit-scrollbar-button {
+    width: 25px;
+    height: 25px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbbbbb;
+    border-radius: 10px;
+
+}
+
+.footer {
+    margin-top: 6px;
+    float: right;
+    width: 100%;
+    height: 57px;
+    background: #d2cececf;
+    padding: 11px 12px 0;
+    text-align: right;
+}
+
+.btn {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h1 {
+    padding: 19px;
+    display: flex;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.75rem crimson;
+    box-shadow: -3px -3px 7px #ffffff73, 3px 5px 5px rgba(94, 104, 121, 0.288);
+    justify-content: center;
+}
+
+.nen {
+    background-image: url("../images/khu-nghi-duong-furama.jpg");
+    background-position: -96px -451px;
+    object-fit: cover;
+}

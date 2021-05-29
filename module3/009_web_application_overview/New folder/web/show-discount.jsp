@@ -8,9 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<h3>
+    description: ${desc};
+</h3>
+<p>
+    Discount Amount : ${amo};
+</p>
+<p>
+    Discount Price : ${price};
+</p>
 </body>
 </html>

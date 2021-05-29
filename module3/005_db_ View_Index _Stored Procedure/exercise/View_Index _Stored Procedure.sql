@@ -51,19 +51,32 @@ CALL SelectProductstabledata();
 drop proc SelectProductstabledata;
 -- tao procedure Insert
 delimiter //
-CREATE PROCEDURE InsertProductstabledata()
+CREATE PROCEDURE InsertProductstabledata(
+										product_Code VARCHAR(45) ,
+										product_Name VARCHAR(45),
+										product_Price DOUBLE,
+										product_Amount  INT,
+										product_Description VARCHAR(45),
+										product_Status  VARCHAR(45)
+                                        )
 begin
 INSERT INTO Products(product_Code ,product_Name,product_Price,product_Amount,product_Description,product_Status)
- VALUES  ( 'SP9','Xoai',1200,3,'ngon','con hang');
+ VALUES  ( product_Code ,product_Name,product_Price,product_Amount,product_Description,product_Status);
 end //
 delimiter ;
 
 
-call InsertProductstabledata();
+call InsertProductstabledata(  'SP10','Chuoi',1500,0,'ngon','het hang');
 select * from products;
  -- store procedure  sua thong tin san pham id
  delimiter //
- create procedure edittProductstabledata( id_product int)
+ create procedure edittProductstabledata( id_product int,
+ 	                                    product_Code VARCHAR(45) ,
+										product_Name VARCHAR(45),
+										product_Price DOUBLE,
+										product_Amount  INT,
+										product_Description VARCHAR(45),
+										product_Status  VARCHAR(45)) 
  begin
  update products
  set

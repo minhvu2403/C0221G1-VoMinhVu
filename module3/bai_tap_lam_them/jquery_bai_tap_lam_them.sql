@@ -48,8 +48,8 @@ FROM faculty INNER JOIN intructor on intructor.faculty_id=faculty.faculty_id
   /*6.Cho biết thông tin về sinh viên không tham gia thực tập*/
   SELECT SV.student_id,student_name,date_of_birth,plaxe_of_birth 
   FROM student SV 
-  INNER JOIN intructor_student  ITS on SV.student_id=ITS.student_id
-  INNER JOIN project PJ on  ITS.project_id=PJ.project_id
+  left JOIN intructor_student  ITS on SV.student_id=ITS.student_id
+  left JOIN project PJ on  ITS.project_id=PJ.project_id
   WHERE PJ.project_id is NULL;
   
   
@@ -87,7 +87,8 @@ FROM faculty INNER JOIN intructor on intructor.faculty_id=faculty.faculty_id
   HAVING COUNT(intructor_student.student_id)>3;
   
   /*4.Cho biết mã số, tên đề tài của đề tài có kinh phí cao nhất*/
-  SELECT project.project_id,project_name,max(project.expense) as 'kinh phi'FROM project;
+  SELECT project.project_id,project_name FROM project
+   WHERE project.expense=(SELECT max(project.expense) FROM project)  ;
   
   
 /*5.Cho biết mã số và tên các đề tài có nhiều hơn 2 sinh viên tham gia thực tập*/

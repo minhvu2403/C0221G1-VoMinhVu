@@ -1,0 +1,76 @@
+*,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container-full.banner {
+    height: 143px;
+    border: 1px solid;
+    background-image: url("../images/hinh-nen.jpg");
+    background-position: -100px -290px;
+    object-fit: cover;
+}
+
+.container-full.banner img {
+    width: 93px;
+    height: 93px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    margin-top: 20px;
+    box-shadow: 0 0 0 4px rgb(199 247 7);
+    border-radius: 50%;
+}
+.name{
+    margin-top: 59px;
+}
+.form-inline input{
+    width: 200px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    outline: none;
+    border: 1px solid #f3f20a;
+    border-right: none !important;
+    padding: 6px;
+}
+.form-inline button{
+    margin-left: -5px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #fffe10;
+    background-color: #f9e106;
+    cursor: pointer;
+    border-left: none !important;
+    outline: none;
+    padding: 6px;
+}
+.nen{
+    background: #08f195;
+}
+.nen li a{
+    font-size: 17px;
+    color: #222;
+
+}
+.container .fa{
+    color: #ffff;
+    font-size: 20px;
+}
+.container .navbar-toggler{
+    background-color: #ffba24;
+}
+@media(max-width: 600px){
+    .name h5{
+        display: none;
+
+    }
+}
+.main-content .col-md-3{
+    background: #f3f20a;
+    height: 1000px;
+}
+.footer{
+    height: 200px;
+    background-color: green;
+}

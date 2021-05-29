@@ -1,6 +1,6 @@
 package servlet;
 
-import controller.Calculator;
+import service.Calculator;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

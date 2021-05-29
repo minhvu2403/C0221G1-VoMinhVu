@@ -25,30 +25,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40781221-a65d-4c74-8779-37f9785614fb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../New folder/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../New folder/.idea/artifacts/New_folder_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../New folder/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../New folder/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../New folder/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../New folder/New folder.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../New folder/src/controller/CountServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../New folder/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../New folder/web/show-discount.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/exercises.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/CountServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/show-discount.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/.idea/case_study_JSP_Servlet.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/Module2_AccountName_WBE/Module2_AccountName_WBE.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/Module2_AccountName_WBE/web/customer/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/Module2_AccountName_WBE/web/customer/css/creat_customer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/Module2_AccountName_WBE/web/customer/css/customer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/Module2_AccountName_WBE/web/customer/customerlist.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/Module2_AccountName_WBE/web/customer/js/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../010_JSP&amp;JSTL/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../010_JSP&amp;JSTL/.idea/010_JSP&amp;JSTL.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../010_JSP&amp;JSTL/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../010_JSP&amp;JSTL/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../010_JSP&amp;JSTL/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../010_JSP&amp;JSTL/show_list_customers/src/controller/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../010_JSP&amp;JSTL/show_list_customers/src/servlet/ServletProduct.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../010_JSP&amp;JSTL/show_list_customers/web/product/ListProduct.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../.idea/C0221G1-VoMinhVu.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Module1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module1/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../Module1/CaseStudy_Module1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Module1/CaseStudy_Module1/.idea/vcs.xml" afterDir="false" />
@@ -116,6 +100,7 @@
       <change beforePath="$PROJECT_DIR$/../../../009_/.idea/009_.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../009_/exercises/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../009_/exercises/Product_Discount_Calculator/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../009_/exercises/Product_Discount_Calculator/.idea/Product_Discount_Calculator.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../009_/exercises/Product_Discount_Calculator/.idea/artifacts/Product_Discount_Calculator_war_exploded.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../009_/exercises/Product_Discount_Calculator/.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../009_/exercises/Product_Discount_Calculator/.idea/modules.xml" beforeDir="false" />
@@ -144,13 +129,11 @@
       <change beforePath="$PROJECT_DIR$/../../../009_/pratice/simple_login/src/LoginServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../009_/pratice/simple_login/web/WEB-INF/web.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../009_/pratice/src/ServerTimeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../New folder/src/controller/CountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../New folder/src/controller/CountServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../New folder/web/show-discount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../New folder/web/show-discount.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/exercises.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/exercises.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Product_Discount_Calculator_war_exploded/WEB-INF/classes/controller/Servlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Product_Discount_Calculator_war_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Product_Discount_Calculator_war_exploded/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Product_Discount_Calculator/controller/Servlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Servlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Product_Discount_Calculator_war_exploded/show-discount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Product_Discount_Calculator_war_exploded/show-discount.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../bai_tap_lam_them/jquery_bai_tap_lam_them.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bai_tap_lam_them/jquery_bai_tap_lam_them.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../case_study_JSP/creat_customer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_JSP/creat_customer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../case_study_JSP/css/creat_customer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_JSP/css/creat_customer.css" afterDir="false" />
@@ -161,6 +144,10 @@
       <change beforePath="$PROJECT_DIR$/../../../case_study_JSP/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_JSP/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../case_study_JSP/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_JSP/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../case_study_JSP/service.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_JSP/service.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/Module2_AccountName_WBE/web/customer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/Module2_AccountName_WBE/web/customer/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/Module2_AccountName_WBE/web/customer/css/creat_customer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/Module2_AccountName_WBE/web/customer/css/creat_customer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/Module2_AccountName_WBE/web/customer/css/customer.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/Module2_AccountName_WBE/web/customer/css/customer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/Module2_AccountName_WBE/web/customer/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study_JSP_Servlet/Module2_AccountName_WBE/web/customer/js/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../src/Demo.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../src/week1/array_and_method/bai_tap/DeleteArray.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../src/week1/array_and_method/thuc_hanh/FindStudent.java" beforeDir="false" />
@@ -219,6 +206,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.21" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.21" ALTERNATIVE_JRE_ENABLED="false">
@@ -305,6 +293,7 @@
       <option name="presentableId" value="Default" />
       <updated>1622040581639</updated>
       <workItem from="1622040585474" duration="336000" />
+      <workItem from="1622099800897" duration="90000" />
     </task>
     <servers />
   </component>
@@ -321,59 +310,60 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622040760620">
+    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622099816892">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1622040760620" />
-    <state width="904" height="174" key="GridCell.Tab.0.bottom" timestamp="1622040925206">
+    <state x="137" y="17" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1622099816892" />
+    <state width="904" height="174" key="GridCell.Tab.0.bottom" timestamp="1622099890361">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1622040925206" />
-    <state width="904" height="174" key="GridCell.Tab.0.center" timestamp="1622040925206">
+    <state width="904" height="174" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1622099890361" />
+    <state width="904" height="174" key="GridCell.Tab.0.center" timestamp="1622099890361">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1622040925206" />
-    <state width="904" height="174" key="GridCell.Tab.0.left" timestamp="1622040925206">
+    <state width="904" height="174" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1622099890361" />
+    <state width="904" height="174" key="GridCell.Tab.0.left" timestamp="1622099890361">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1622040925206" />
-    <state width="904" height="174" key="GridCell.Tab.0.right" timestamp="1622040925206">
+    <state width="904" height="174" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1622099890361" />
+    <state width="904" height="174" key="GridCell.Tab.0.right" timestamp="1622099890361">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1622040925206" />
-    <state width="904" height="174" key="GridCell.Tab.1.bottom" timestamp="1622040925206">
+    <state width="904" height="174" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1622099890361" />
+    <state width="904" height="174" key="GridCell.Tab.1.bottom" timestamp="1622099890362">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="174" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1622040925206" />
-    <state width="904" height="174" key="GridCell.Tab.1.center" timestamp="1622040925206">
+    <state width="904" height="174" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1622099890362" />
+    <state width="904" height="174" key="GridCell.Tab.1.center" timestamp="1622099890362">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="174" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1622040925206" />
-    <state width="904" height="174" key="GridCell.Tab.1.left" timestamp="1622040925206">
+    <state width="904" height="174" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1622099890362" />
+    <state width="904" height="174" key="GridCell.Tab.1.left" timestamp="1622099890362">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="174" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1622040925206" />
-    <state width="904" height="174" key="GridCell.Tab.1.right" timestamp="1622040925206">
+    <state width="904" height="174" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1622099890362" />
+    <state width="904" height="174" key="GridCell.Tab.1.right" timestamp="1622099890362">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="174" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1622040925206" />
-    <state width="904" height="174" key="GridCell.Tab.2.bottom" timestamp="1622040925206">
+    <state width="904" height="174" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1622099890362" />
+    <state width="904" height="174" key="GridCell.Tab.2.bottom" timestamp="1622099890362">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="174" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1622040925206" />
-    <state width="904" height="174" key="GridCell.Tab.2.center" timestamp="1622040925206">
+    <state width="904" height="174" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1622099890362" />
+    <state width="904" height="174" key="GridCell.Tab.2.center" timestamp="1622099890362">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="174" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1622040925206" />
-    <state width="904" height="174" key="GridCell.Tab.2.left" timestamp="1622040925206">
+    <state width="904" height="174" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1622099890362" />
+    <state width="904" height="174" key="GridCell.Tab.2.left" timestamp="1622099890362">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="174" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1622040925206" />
-    <state width="904" height="174" key="GridCell.Tab.2.right" timestamp="1622040925206">
+    <state width="904" height="174" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1622099890362" />
+    <state width="904" height="174" key="GridCell.Tab.2.right" timestamp="1622099890362">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="904" height="174" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1622040925206" />
+    <state width="904" height="174" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1622099890362" />
   </component>
 </project>

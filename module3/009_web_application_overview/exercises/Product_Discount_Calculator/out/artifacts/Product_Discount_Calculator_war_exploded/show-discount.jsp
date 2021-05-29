@@ -12,7 +12,7 @@
 </head>
 <body>
 <h3>
-    description: ${desc};
+    description: ${desc}
 </h3>
 <p>
     Discount Amount : ${amo};
