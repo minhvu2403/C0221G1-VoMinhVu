@@ -35,6 +35,7 @@ public class UserServlet extends HttpServlet {
             case "search":
                 searchByCountry(request, response);
                 break;
+
         }
 
     }

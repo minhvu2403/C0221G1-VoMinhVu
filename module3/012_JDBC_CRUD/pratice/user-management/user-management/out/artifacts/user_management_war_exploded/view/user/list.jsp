@@ -44,6 +44,7 @@
                         <span>Add New User</span></a>
                     <a href="#deleteServiceModal" id="btn" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xe92b;</i>
                         <span>Delete</span></a>
+                    <button  class="sort" type="submit"><a href="user?action=sort"><i class="fa fa-sort"> Sort</i></a></button>
                 </div>
             </div>
         </div>

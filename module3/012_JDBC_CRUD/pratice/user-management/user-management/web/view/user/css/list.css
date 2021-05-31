@@ -361,3 +361,18 @@ ul{
     border: none;
     background: none;
 }
+.sort{
+    background: #dc3545;
+    border: none;
+    position: absolute;
+    height: 33px;
+    width: 52px;
+}
+.sort a>.fa{
+    color:#fff;
+    font-size: 15px;
+}
+.sort:hover{
+    background: none;
+    border: 1px solid green;
+}
