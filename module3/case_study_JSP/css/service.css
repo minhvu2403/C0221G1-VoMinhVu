@@ -30,6 +30,8 @@ body {
 .table-title h2 {
     margin: 5px 0 0;
     font-size: 24px;
+    display: inline-block;
+
 }
 
 .table-title .btn-group {
@@ -373,4 +375,24 @@ ul {
     outline: none;
     border: none;
     background: none;
+}
+.sort img{
+    width: 20px;
+    height: 20px;
+
+}
+.sort{
+    background: #dc3545;
+    border: none;
+    position: absolute;
+    height: 33px;
+    width: 52px;
+}
+.sort a>.fa{
+    color:#fff;
+    font-size: 15px;
+}
+.sort:hover{
+    background: none;
+    border: 1px solid green;
 }
