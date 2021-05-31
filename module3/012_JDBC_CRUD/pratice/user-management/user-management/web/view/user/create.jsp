@@ -30,10 +30,6 @@
                             <h1>Creat User</h1>
                             <div class="list">
                                 <form method="post" action="../user">
-<%--                                    <div class="form-group">--%>
-<%--                                        <label>ID</label>--%>
-<%--                                        <input type="text" class="form-control" required name="id" id="id">--%>
-<%--                                    </div>--%>
                                     <div class="form-group">
                                         <label>Name</label>
                                         <input type="text" class="form-control" required name="name" id="name">
