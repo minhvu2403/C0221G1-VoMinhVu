@@ -121,18 +121,18 @@ public class UserServlet extends HttpServlet {
 
     }
     private void addUser(HttpServletRequest request, HttpServletResponse response) {
-        int id = Integer.parseInt(request.getParameter("id"));
+//        int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String  email = request.getParameter("email");
         String country = request.getParameter("country");
-        User user =new User(id,name,email,country);
+        User user =new User(name,email,country);
         userService.add(user);
         showUserList(request, response);
     }
 
     private void  showFormCreate (HttpServletRequest request, HttpServletResponse response) {
         try {
-            response.sendRedirect("view/user/create.jsp");
+            response.sendRedirect("/view/user/create.jsp");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -154,7 +154,7 @@ public class UserServlet extends HttpServlet {
     }
     private void sortByName(HttpServletRequest request, HttpServletResponse response) {
         List<User> user= userService.findByAll();
-        Collections.sort(user);
+//        Collections.sort(user);
         request.setAttribute("users", user);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/list.jsp");
         try {

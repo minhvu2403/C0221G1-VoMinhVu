@@ -11,8 +11,7 @@ import java.util.List;
 
 public class UserRepository {
     BaseRepository baseRepository = new BaseRepository();
-    private static final String INSERT_USERS_SQL = "INSERT INTO users" + "  (name, email, country) VALUES " +
-            " (?, ?, ?);";
+    public static final String INSERT_NEW_USER = "insert into users (name, email, country) value (?, ?, ?)";
     private static final String SELECT_USER_BY_ID = "select id,name,email,country from users where id =?";
     private static final String SELECT_ALL_USERS = "select * from users";
     private static final String DELETE_USERS_SQL = "delete from users where id = ?;";
@@ -100,7 +99,7 @@ public class UserRepository {
     public void add(User user) {
         Connection connection = baseRepository.connectDataBase();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL);
+            PreparedStatement preparedStatement = connection.prepareStatement(INSERT_NEW_USER);
             preparedStatement.setString(1, user.getName());
             preparedStatement.setString(2, user.getEmail());
             preparedStatement.setString(3, user.getCountry());

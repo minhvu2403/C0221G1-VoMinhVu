@@ -64,22 +64,22 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="content mt-2">
-                    <form method="post" action="../user">
+                    <form method="post" action="/user">
                         <div class="header-list">
                             <h1>Creat User</h1>
                             <div class="list">
-                                <form method="post">
-                                    <div class="form-group">
-                                        <label>ID</label>
-                                        <input type="text" class="form-control" required name="id" id="id">
-                                    </div>
+                                <form method="post" action="../user">
+<%--                                    <div class="form-group">--%>
+<%--                                        <label>ID</label>--%>
+<%--                                        <input type="text" class="form-control" required name="id" id="id">--%>
+<%--                                    </div>--%>
                                     <div class="form-group">
                                         <label>Name</label>
                                         <input type="text" class="form-control" required name="name" id="name">
                                     </div>
                                     <div class="form-group">
                                         <label>Email</label>
-                                        <input type="email" class="form-control" required name="mail" id="mail">
+                                        <input type="email" class="form-control" required name="email" id="email">
                                     </div>
                                     <div class="form-group">
                                         <label>Country</label>
@@ -88,7 +88,7 @@
                                 </form>
                             </div>
                             <div class="footer">
-                                <input type="hidden" name="action" value="create">
+                                <input type="hidden" name="action" value="add">
                                 <input type="submit" class="btn btn-success" value="Add" >
                                 <a href="/user"><input type="button" class="btn btn-danger"value="Back"></a>
                             </div>

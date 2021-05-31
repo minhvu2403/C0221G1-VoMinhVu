@@ -40,7 +40,7 @@
 
                 </div>
                 <div class="col-sm-4">
-                    <a href="user?action=create" class="btn btn-success"><i class="material-icons">&#xE147;</i>
+                    <a href="user?action=add" class="btn btn-success"><i class="material-icons">&#xE147;</i>
                         <span>Add New User</span></a>
                     <a href="#deleteServiceModal" id="btn" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xe92b;</i>
                         <span>Delete</span></a>
