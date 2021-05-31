@@ -60,6 +60,8 @@ public class UserServlet extends HttpServlet {
             case "sort":
                 sortByName(request, response);
                 break;
+            case "search":
+                searchByCountry(request,response);
             default:
                 showUserList(request,response);
                 break;
@@ -121,7 +123,6 @@ public class UserServlet extends HttpServlet {
 
     }
     private void addUser(HttpServletRequest request, HttpServletResponse response) {
-//        int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         String  email = request.getParameter("email");
         String country = request.getParameter("country");
@@ -138,24 +139,20 @@ public class UserServlet extends HttpServlet {
         }
     }
     private void searchByCountry(HttpServletRequest request, HttpServletResponse response) {
-        String country = request.getParameter("country");
+        String country = request.getParameter("name");
         List<User> user = userService.findByCountry(country);
-        if (user.isEmpty()) {
-            showUserList(request, response);
-        } else {
-            request.setAttribute("user", userService.findByCountry(country));
+            request.setAttribute("user", user);
             RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/list.jsp");
             try {
                 dispatcher.forward(request, response);
             } catch (ServletException | IOException e) {
                 e.printStackTrace();
             }
-        }
     }
     private void sortByName(HttpServletRequest request, HttpServletResponse response) {
         List<User> user= userService.findByAll();
 //        Collections.sort(user);
-        request.setAttribute("users", user);
+        request.setAttribute("user", user);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/list.jsp");
         try {
             dispatcher.forward(request, response);

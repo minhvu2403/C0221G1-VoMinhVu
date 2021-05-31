@@ -28,7 +28,7 @@
                     <h2>Manage <b>User</b></h2>
                 </div>
                 <div class="col-sm-4">
-                    <form action="" method="">
+                    <form action="../user" method="post">
                         <div class="search-box">
                             <input class="search-txt" type="text" name="name" placeholder="Type to search">
                             <input type="hidden" name="action" value="search">
