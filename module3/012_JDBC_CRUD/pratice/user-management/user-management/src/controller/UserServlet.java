@@ -151,7 +151,7 @@ public class UserServlet extends HttpServlet {
     }
     private void sortByName(HttpServletRequest request, HttpServletResponse response) {
         List<User> user= userService.findByAll();
-//        Collections.sort(user);
+        Collections.sort(user);
         request.setAttribute("user", user);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/list.jsp");
         try {
