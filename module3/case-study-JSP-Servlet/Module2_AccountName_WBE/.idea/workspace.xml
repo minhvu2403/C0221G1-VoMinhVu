@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="febd5bca-0fea-42bc-9934-7aa79d586b8a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module2_AccountName_WBE/web/js/home.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Module2_AccountName_WBE/web/view/user/css/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_JSP/css/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_JSP/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study_JSP_Servlet/Module2_AccountName_WBE/web/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/C0221G1-VoMinhVu.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/CaseStudy_Module1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/CaseStudy_Module1/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/CaseStudy_Module1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/CaseStudy_Module1/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/CaseStudy_Module1/Yeu_cau1_ve_hinh/Bai1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/CaseStudy_Module1/Yeu_cau1_ve_hinh/Bai1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/CaseStudy_Module1/Yeu_cau1_ve_hinh/Bai2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/CaseStudy_Module1/Yeu_cau1_ve_hinh/Bai2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/CaseStudy_Module1/Yeu_cau1_ve_hinh/Bai3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/CaseStudy_Module1/Yeu_cau1_ve_hinh/Bai3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/CaseStudy_Module1/Yeu_cau_3(mang &amp; loop)/Bai5.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/CaseStudy_Module1/Yeu_cau_3(mang &amp; loop)/Bai5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/CaseStudy_Module1/Yeu_cau_4(string)/Bai3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/CaseStudy_Module1/Yeu_cau_4(string)/Bai3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/Cau_truc_lap_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/Cau_truc_lap_2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/Cau_truc_lap_2/Baitap/Bai7.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/Cau_truc_lap_2/Baitap/Bai7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/Mang_1/Thuc_hanh/text.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/Mang_1/Thuc_hanh/text.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/THI/Bai2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/THI/Bai2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/THI/Bai3.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/THI/Bai3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/THI/Bai4.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/THI/Bai4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/THI/bai1.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/THI/bai1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/THI/text.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/THI/text.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/case_study/data/Booking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/case_study/data/Booking.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_danh_ba/commons/NotFound_Exception.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_danh_ba/commons/NotFound_Exception.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_danh_ba/commons/ValidateException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_danh_ba/commons/ValidateException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_danh_ba/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_danh_ba/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_danh_ba/data/gioitinh.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_danh_ba/data/gioitinh.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_danh_ba/data/quanlidanhba.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_danh_ba/model/DanhBa.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_danh_ba/model/DanhBa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_danh_ba/service/QuanLiDanhBa.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_danh_ba/service/QuanLiDanhBa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_ngan_hang/commons/FuncWriteAndRead.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_ngan_hang/commons/FuncWriteAndRead.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_ngan_hang/commons/ValidateException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_ngan_hang/commons/ValidateException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_ngan_hang/model/GuiDaiHan.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_ngan_hang/model/GuiDaiHan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_ngan_hang/model/GuiVoThoiHan.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_ngan_hang/model/GuiVoThoiHan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_ngan_hang/model/KhachHang.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_ngan_hang/model/KhachHang.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_ngan_hang/model/SoTietKiem.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_ngan_hang/model/SoTietKiem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_ngan_hang/model/SoTietKiemCoThoiHan.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_ngan_hang/model/SoTietKiemCoThoiHan.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_sinh_vien/commons/ValidateException.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_sinh_vien/commons/ValidateException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_sinh_vien/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_sinh_vien/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_sinh_vien/data/classroom.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_sinh_vien/data/classroom.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_sinh_vien/data/gioitinh.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_sinh_vien/model/GioiTinh.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_sinh_vien/model/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_sinh_vien/model/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_sinh_vien/service/StudentManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/quan_li_sinh_vien/service/StudentManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/text/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/text/bbb.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/text_SV/du_lieu/sinhvien.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/text_SV/du_lieu/sinhvien.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/Module2/week3/sorting_algorithms/bai_tap/SortAlgorithms.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/Module2/week3/sorting_algorithms/bai_tap/SortAlgorithms.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/case_study/data/Booking.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/case_study/data/Booking.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/quan_li_danh_ba/commons/ValidateException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/quan_li_danh_ba/commons/ValidateException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/quan_li_danh_ba/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/quan_li_danh_ba/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/quan_li_danh_ba/service/QuanLiDanhBa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/quan_li_danh_ba/service/QuanLiDanhBa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/quan_li_danh_ba/service/QuanLiGioiTinh.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/quan_li_danh_ba/service/QuanLiGioiTinh.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/quan_li_ngan_hang/controller/MainControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/quan_li_ngan_hang/controller/MainControler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/quan_li_ngan_hang/data/fileKhachHang.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/quan_li_ngan_hang/data/fileKhachHang.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/quan_li_ngan_hang/data/fileSoTietKiem.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/quan_li_ngan_hang/data/fileSoTietKiem.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/quan_li_ngan_hang/service/QuanLiSoTietKiem.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/quan_li_ngan_hang/service/QuanLiSoTietKiem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/quan_li_sinh_vien/commons/ValidateException.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/quan_li_sinh_vien/commons/ValidateException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/quan_li_sinh_vien/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/quan_li_sinh_vien/controller/MenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/quan_li_sinh_vien/data/classroom.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/quan_li_sinh_vien/data/classroom.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/quan_li_sinh_vien/data/student.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/quan_li_sinh_vien/data/student.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/quan_li_sinh_vien/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/quan_li_sinh_vien/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/quan_li_sinh_vien/service/StudentManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/quan_li_sinh_vien/service/StudentManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/text/MyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/text/MyClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/text_SV/du_lieu/sinhvien.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/text_SV/du_lieu/sinhvien.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/src/week3/sorting_algorithms/bai_tap/SortAlgorithms.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/src/week3/sorting_algorithms/bai_tap/SortAlgorithms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../007_web_layout_design/exercise/Devoloping_website_watch_anime/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../007_web_layout_design/exercise/Devoloping_website_watch_anime/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../011_MVC_model/Product-management/out/artifacts/exercise_war_exploded/WEB-INF/classes/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../011_MVC_model/Product-management/out/artifacts/exercise_war_exploded/WEB-INF/classes/controller/ProductServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../011_MVC_model/Product-management/out/artifacts/exercise_war_exploded/view/product/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../011_MVC_model/Product-management/out/artifacts/exercise_war_exploded/view/product/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../011_MVC_model/Product-management/out/production/exercise/controller/ProductServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../011_MVC_model/Product-management/out/production/exercise/controller/ProductServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../011_MVC_model/Product-management/src/controller/ProductServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../011_MVC_model/Product-management/src/controller/ProductServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../011_MVC_model/Product-management/web/view/product/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../011_MVC_model/Product-management/web/view/product/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../012_JDBC_CRUD/pratice/user-management/user-management/out/artifacts/user_management_war_exploded/view/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../012_JDBC_CRUD/pratice/user-management/user-management/out/artifacts/user_management_war_exploded/view/user/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../012_JDBC_CRUD/pratice/user-management/user-management/web/view/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../012_JDBC_CRUD/pratice/user-management/user-management/web/view/user/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_JSP/ffgg.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_JSP/ffgg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_JSP_Servlet/Module2_AccountName_WBE/out/artifacts/Module2_AccountName_WBE_war_exploded/view/customer/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_JSP_Servlet/Module2_AccountName_WBE/out/artifacts/Module2_AccountName_WBE_war_exploded/view/customer/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study_JSP_Servlet/Module2_AccountName_WBE/out/artifacts/Module2_AccountName_WBE_war_exploded/view/customer/customerlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study_JSP_Servlet/Module2_AccountName_WBE/out/artifacts/Module2_AccountName_WBE_war_exploded/view/customer/customerlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/Demo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/array_and_method/bai_tap/DeleteArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/array_and_method/thuc_hanh/FindStudent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/array_and_method/thuc_hanh/MaxArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/array_and_method/thuc_hanh/MinArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/array_and_method/thuc_hanh/ReverseArray.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/array_and_method/thuc_hanh/TemperatureSwitch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/introduction_to_Java/bai_tap/LoiChao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/introduction_to_Java/bai_tap/ReadNumber.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/introduction_to_Java/thuc_hanh/BMI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/introduction_to_Java/thuc_hanh/CurrencyConversion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/introduction_to_Java/thuc_hanh/LeapYear.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/introduction_to_Java/thuc_hanh/LinearEquationResolver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/introduction_to_Java/thuc_hanh/NumberDayInMonth.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/introduction_to_Java/thuc_hanh/RectangleProgram.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/introduction_to_Java/thuc_hanh/UseVariables.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/loop_in_Java/bai_tap/DrawingMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/loop_in_Java/bai_tap/First20Prime.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/loop_in_Java/bai_tap/PrimeThan100.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/loop_in_Java/thuc_hanh/CommonDivisor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/loop_in_Java/thuc_hanh/Prime.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../src/week1/loop_in_Java/thuc_hanh/TotalOfInterest.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1tLkNu4YprjvuAaVa2qx78CdMQ0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="febd5bca-0fea-42bc-9934-7aa79d586b8a" name="Default Changelist" comment="" />
+      <created>1622555720532</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622555720532</updated>
+      <workItem from="1622555721784" duration="718000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="462" y="104" key="FileChooserDialogImpl" timestamp="1622555854687">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="462" y="104" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1622555854687" />
+    <state x="65" y="0" key="new project wizard" timestamp="1622555772709">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="65" y="0" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1622555772709" />
+  </component>
+</project>
