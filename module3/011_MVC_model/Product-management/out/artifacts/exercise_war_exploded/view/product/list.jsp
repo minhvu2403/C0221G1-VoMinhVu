@@ -42,7 +42,7 @@
                 <div class="col-sm-4">
                     <a href="product?action=create" class="btn btn-success"><i class="material-icons">&#xE147;</i>
                         <span>Add New Product</span></a>
-                    <a href="#deleteServiceModal" id="btn" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xe92b;</i>
+                    <a href="product?action=deleteAll" id="btn" class="btn btn-danger" onclick="forceStop()" data-toggle="modal"><i class="material-icons">&#xe92b;</i>
                         <span>Delete</span></a>
                 </div>
             </div>
@@ -64,12 +64,12 @@
                 <th>Actions</th>
             </tr>
             </thead>
-
+            <form action="../product" method="post">
             <tbody class="bg-white"><c:forEach items='${products}' var="product">
                 <tr>
                     <td>
                     <span class="custom-checkbox">
-                        <input type="checkbox" id="${product.id}" name="checkbox"value="${product.id}">
+                        <input type="checkbox" id="${product.id}" name="toBeDeleted"value="${product.id}">
                         <label for="${product.id}"></label>
                     </span>
                     </td>
@@ -86,6 +86,7 @@
                 </tr>
             </c:forEach>
             </tbody>
+            </form>
         </table>
     </div>
 </div>
@@ -122,22 +123,48 @@
 <script src="../../datatables/js/dataTables.bootstrap4.min.js"></script>
 <script src="../../js/index.js"></script>
 <script language="JavaScript">
-    document.getElementById('btn').onclick = function()
+    // document.getElementById('btn').onclick = function()
+    // {
+    //     let checkbox = document.getElementsByName('checkbox');
+    //     let result = "";
+    //
+    //
+    //     for (let i = 0; i < checkbox.length; i++){
+    //         if (checkbox[i].checked === true){
+    //             result += ' [' + checkbox[i].value + ']';
+    //         }
+    //     }
+    //     alert("checkbox: " + result);
+    // };
+    // $(window).unload(function() {
+    //     document.location.href='/test/dataentry';
+    // });
+    function forceStop()
     {
-        let checkbox = document.getElementsByName('checkbox');
-        let result = "";
 
-
-        for (let i = 0; i < checkbox.length; i++){
-            if (checkbox[i].checked === true){
-                result += ' [' + checkbox[i].value + ']';
+        let checkboxes = document.getElementsByName('toBeDeleted');
+        let selected = new Array();
+        for (let i=0; i<checkboxes.length; i++) {
+            if (checkboxes[i].checked===true) {
+                selected.push(checkboxes[i].value);
             }
         }
-        alert("checkbox: " + result);
-    };
-    $(window).unload(function() {
-        document.location.href='/test/dataentry';
-    });
+        for (let i=0 ;i<selected.length;i++){
+            console.log(selected[i]);
+        }
+
+
+        $.ajax({
+            url:"PlayerController",
+            type:"POST",
+            dataType:'json',
+            data: {toDelete:selected},
+            success:function(data){
+                alert("SUCCESS");
+            },
+        });
+
+    }
 </script>
 </body>
 

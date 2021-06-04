@@ -34,7 +34,21 @@ public class ProductServlet extends HttpServlet {
             case "search":
                 searchProduct(request, response);
                 break;
+
         }
+    }
+
+    private void deleteAllProduct(HttpServletRequest request, HttpServletResponse response) {
+        String [] toDelete=request.getParameterValues("toDelete[]");
+        int[] toBeDeleted= new int[toDelete.length];
+        for (int i=0;i<toBeDeleted.length;i++){
+            toBeDeleted[i]=Integer.parseInt(toDelete[i]);
+        }
+        for (int i=0;i<toBeDeleted.length;i++){
+            productService.remove(i);
+        }
+        listProducts(request, response);
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -58,6 +72,10 @@ public class ProductServlet extends HttpServlet {
             case "search":
                 searchProduct(request, response);
                 break;
+            case "deleteAll":
+                deleteAllProduct(request,response);
+                break;
+
             default:
                 listProducts(request, response);
                 break;

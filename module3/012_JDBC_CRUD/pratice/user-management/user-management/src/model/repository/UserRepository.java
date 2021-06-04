@@ -41,7 +41,6 @@ public class UserRepository {
     }
 
     public User findById(int id) {
-
         Connection connection = baseRepository.connectDataBase();
         User user = null;
         try {

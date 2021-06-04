@@ -109,7 +109,7 @@ public class UserServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         User user =userService.findById(id);
         request.setAttribute("user",user);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/view/user/view.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("view/user/view.jsp");
         try {
             dispatcher.forward(request, response);
         } catch (ServletException | IOException e) {

@@ -64,7 +64,6 @@
                 <th>Actions</th>
             </tr>
             </thead>
-
             <tbody class="bg-white">
             <c:forEach items='${user}' var="user">
                 <tr>
