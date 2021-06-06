@@ -43,10 +43,13 @@
           <a href="/customer">Customer </a>
         </li>
         <li>
-          <a href="#">Service </a>
+          <a href="/service">Service </a>
         </li>
         <li>
-          <a href="#">Contract</a>
+          <a href="/contract">Contract</a>
+        </li>
+        <li>
+          <a href="/contract_detail">Contract-detail</a>
         </li>
         <li class="search">
           <div class="tt">

@@ -64,7 +64,10 @@
                                                 <li>
                                                     <div class="form-group">
                                                         <label>Gender</label>
-                                                        <input type="text" class="form-control" required name="gender"  value="${customer.gender}">
+                                                        <select name="gender" class="form-control">
+                                                            <option value="1"  ${customer.gender==1?"selected":""}>Nam</option>
+                                                            <option value="0"  ${customer.gender==0?"selected":""}>Nữ</option>
+                                                        </select>
                                                     </div>
                                                 </li>
                                             <li>
@@ -125,8 +128,6 @@
         </div>
     </section>
 </div>
-
-
 </body>
 </html>
 </html>

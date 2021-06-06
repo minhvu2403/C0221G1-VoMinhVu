@@ -34,64 +34,68 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="content mt-2">
-                    <form method="post" action="../customer">
+                    <form method="post">
                         <div class="header-list">
-                            <h1>Creat Customer</h1>
+                            <h1>Creat Contract</h1>
                             <div class="list">
-                                <form action="../customer" method="post">
+                                <c:if test="${message!=null}">
+                                    <span style="color: #07f607; font-size: 18px;font-weight: bold; text-align: center;display: block">${message}</span>
+                                </c:if>
+                                <form  method="post">
                                 <div class="scroll">
                                     <ul class="scroll-page ">
                                         <li>
                                             <div class="form-group">
-                                                <label>Name</label>
-                                                <input type="text" class="form-control" required name="name" id="name" >
+                                                <label>contractStartDate</label>
+                                                <input type="date" class="form-control" required name="contractStartDate" id="contractStartDate" >
                                             </div>
                                         </li>
                                         <li>
                                             <div class="form-group">
-                                                <label>Date of birth</label>
-                                                <input type="date" class="form-control" required name="birthday" id="birthday">
+                                                <label>contractEndDate</label>
+                                                <input type="date" class="form-control" required name="contractEndDate" id="contractEndDate">
                                             </div>
                                         </li>
                                         <li>
                                             <div class="form-group">
-                                                <label>Gender</label>
-                                                <select name="gender" class="custom-select">
-                                                    <option value="1">Nam</option>
-                                                    <option value="0">Nữ</option>
+                                                <label>contractDeposit</label>
+                                                <input type="text" class="form-control" required name="contractDeposit" id="contractDeposit">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group">
+                                                <label>contractTotalMoney</label>
+                                                <input type="text" class="form-control" required name="contractTotalMoney" id="contractTotalMoney">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="form-group">
+                                                <label>employee name</label>
+                                                <select name="employeeId" class="custom-select">
+                                                    <c:forEach var="employee" items="${employee}">
+                                                        <option value="${employee.id}">${employee.name}</option>
+                                                    </c:forEach>
                                                 </select>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="form-group">
-                                                <label>ID Card</label>
-                                                <input type="text" class="form-control" required name="idCard" id="idCard">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="form-group">
-                                                <label>Phone number</label>
-                                                <input type="number" class="form-control" required name="phone" id="phone">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="form-group">
-                                                <label>Email</label>
-                                                <input type="email" class="form-control" required name="email" id="email">
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="form-group">
-                                                <label>Address</label>
-                                                <textarea class="form-control" required name="address" id="address"></textarea>                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="form-group">
-                                                <label>customer_type_name</label>
-                                                <select name="customerTypeId" class="custom-select">
-                                                    <c:forEach var="customerType" items="${customerTypes}">
-                                                        <option value="${customerType.id}">${customerType.name}</option>
+                                                <label>Customer name</label>
+                                                <select name="customerId" class="custom-select">
+                                                    <c:forEach var="customer" items="${customer}">
+                                                        <option value="${customer.id}">${customer.name}</option>
                                                     </c:forEach>
+                                                </select>
+                                            </div>
+                                        </li>
+
+                                        <li>
+                                            <div class="form-group">
+                                                <label>service name</label>
+                                                <select name="serviceId" class="custom-select">
+                                                <c:forEach var="services" items="${services}">
+                                                    <option value="${services.id}">${services.name}</option>
+                                                </c:forEach>
                                                 </select>
                                             </div>
                                         </li>
@@ -99,9 +103,8 @@
                                 </div>
                                 </form>
                                 <div class="footer">
-                                    <input type="hidden" name="action" value="add">
-                                    <input type="submit" class="btn btn-success" value="Add">
-                                    <a href="/customer"><input type="button" class="btn btn-danger" data-dismiss="modal" value="Back"></a>
+                                    <input type="submit" class="btn btn-success" name="action" value="Add">
+                                    <a href="/"><input type="button" class="btn btn-danger" data-dismiss="modal" value="Back"></a>
                                 </div>
                             </div>
                         </div>

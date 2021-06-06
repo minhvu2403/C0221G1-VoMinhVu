@@ -52,27 +52,27 @@ input {
 }
 
 .list-menu {
-    width:75%;
+    width: 78%;
     height: 56px;
     float: left;
     position: relative;
 }
 
- .list-menu ul li {
+.list-menu ul li {
     display: inline-block;
     padding: 16px;
-    margin-left: 30px;
+    margin-left: 18px;
 }
- .list-menu ul li:nth-last-child(1){
+.list-menu ul li:nth-last-child(1){
     padding:0 !important ;
 }
- .list-menu ul li:nth-last-child(1) .tt input,button{
+.list-menu ul li:nth-last-child(1) .tt input,button{
     padding: 7px;
 
 }
- .tt{
-     margin-left: 40px;
- }
+.tt{
+    margin-left: 40px;
+}
 
 .list-menu ul li a {
     padding: 7px 0;
@@ -82,7 +82,7 @@ input {
 
 }
 
- .list-menu ul li a:after {
+.list-menu ul li a:after {
     content: '';
     height: 3px;
     width: 0;
@@ -94,7 +94,7 @@ input {
     transition: all 0.5s ease-in-out;
 }
 
- .list-menu ul li a:hover:after {
+.list-menu ul li a:hover:after {
     width: 50%;
     transform: translateX(100%);
 }
