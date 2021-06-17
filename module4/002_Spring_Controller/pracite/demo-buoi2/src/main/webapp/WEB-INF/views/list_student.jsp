@@ -13,6 +13,8 @@
 </head>
 <body>
  <h2>List Student</h2>
+ <a href="/student/create">Create new student</a>
+ <p style="color: green">${msg}</p>
  <table border="1">
      <tr>
          <th>No</th>

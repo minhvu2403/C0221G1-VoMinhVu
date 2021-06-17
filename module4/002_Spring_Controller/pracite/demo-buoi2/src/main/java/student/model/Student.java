@@ -16,6 +16,10 @@ public class Student {
         this.dateOfBirth = dateOfBirth;
     }
 
+    public Student() {
+
+    }
+
     public Integer getId() {
         return id;
     }
