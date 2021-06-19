@@ -18,26 +18,25 @@
                     <h2>Manage <b>Product</b></h2>
                 </div>
                 <div class="col-sm-4">
-                    <form action="../product" method="post">
+                    <form action="/search" method="get">
                         <div class="search-box">
                             <input class="search-txt" type="text" name="name" placeholder="Type to search">
-                            <input type="hidden" name="action" value="search">
-                            <a  class="search-btn" href="">
-                                <button class="submit"> <i class="fa fa-search"></i> </button>
+                            <input type="hidden" name="name">
+                            <a class="search-btn" href="">
+                                <button class="submit"><i class="fa fa-search"></i></button>
                             </a>
                         </div>
                     </form>
-
                 </div>
                 <div class="col-sm-4">
-                    <a href="#addEmployeeModal" class="add btn btn-success" data-toggle="modal"><i class="material-icons"  title="add">&#xE147;</i><span>Add New Product</span></a>
-
-                    <a href="product?action=deleteAll" id="btn" class="btn btn-danger" onclick="forceStop()" data-toggle="modal"><i class="material-icons">&#xe92b;</i>
-                        <span>Delete</span></a>
+                    <a href="#addEmployeeModal" class="add btn btn-success" data-toggle="modal"><i
+                            class="material-icons" title="add">&#xE147;</i><span>Add New Product</span></a>
+                    <span style="color: #dc2613; font-weight: bold;text-transform: uppercase;margin-top: 10px; display: block;"
+                          th:text="${msg}"></span>
                 </div>
             </div>
         </div>
-        <table class="table table-striped table-hover"id="makeEditable" >
+        <table class="table table-striped table-hover">
             <thead>
             <tr>
                 <th>STT</th>
@@ -48,80 +47,95 @@
                 <th>Actions</th>
             </tr>
             </thead>
-                <tbody class="bg-white">
-                    <tr th:each="productObj,loop:${products}">
-                        <td th:text="${loop.count}"></td>
-                        <td th:text="${productObj.id}"></td>
-                        <td th:text="${productObj.nameProduct}"></td>
-                        <td th:text="${productObj.priceProduct}"></td>
-                        <td th:text="${productObj.producerProduct}"></td>
-                        <td>
-                            <a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                            <a href="#deleteServiceModal" onclick="setIdDelete(${Product.id})" class="delete"
-                               data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
-                        </td>
-                    </tr>
-
-                </tbody>
-
+            <tbody class="bg-white">
+            <tr th:each="productObj,loop:${products}">
+                <td th:text="${loop.count}"></td>
+                <td th:text="${productObj.id}"></td>
+                <td th:text="${productObj.nameProduct}"></td>
+                <td th:text="${productObj.priceProduct}"></td>
+                <td th:text="${productObj.producerProduct}"></td>
+                <td>
+                    <a href="#editEmployeeModal"
+                       th:onclick="|setIdEdit('${productObj.id}','${productObj.nameProduct}','${productObj.priceProduct}','${productObj.producerProduct}')|"
+                       class="edit eBtn" data-toggle="modal"><i class="material-icons" data-toggle="tooltip"
+                                                                title="Edit">&#xE254;</i></a>
+                    <a href="#deleteServiceModal" th:onclick="|productSetId('${productObj.id}')|" class="delete"
+                       data-toggle="modal"><i class="material-icons" data-toggle="tooltip"
+                                              title="Delete">&#xE872;</i></a>
+                </td>
+            </tr>
+            </tbody>
         </table>
     </div>
 </div>
 <!-- Delete Modal HTML-->
-<div id="deleteServiceModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Delete Product</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            </div>
-            <div class="modal-body">
-                <p>Are you sure you want to delete these Records?</p>
-                <p class="text-warning"><small>This action cannot be undone.</small></p>
-            </div>
-            <div class="modal-footer">
-                <input type="button" class="btn btn-dark" data-dismiss="modal" value="Cancel">
-                <a href="" id="deleteList"><input type="button" class="btn btn-danger" value="Delete"></a>
+<div class="MyDelete">
+    <form action="/delete" method="post">
+        <div id="deleteServiceModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Delete Product</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Are you sure you want to delete these Records?</p>
+                        <p class="text-warning"><small>This action cannot be undone.</small></p>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-dark" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-danger" value="Delete">
+                        <input type="hidden" name="id" id="idProduct">
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 </div>
 <!--Edit Modal HTML-->
-<div id="editEmployeeModal" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <form>
-                <div class="modal-header">
-                    <h4 class="modal-title">Edit Employee</h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control" required>
+<div class="myForm">
+    <form action="/update" method="post" th:object="${product}">
+        <div id="editEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Edit Employee</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
-                    <div class="form-group">
-                        <label>Price</label>
-                        <input type="text" class="form-control" required>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input readonly type="text" class="form-control" required name="id" id="idEdit" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" required name="nameProduct" id="nameEdit" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input type="text" class="form-control" required name="priceProduct" id="priceEdit"
+                                   value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label>producerProduct</label>
+                            <input type="text" class="form-control" required name="producerProduct" id="producerEdit"
+                                   value=""/>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>producerProduct</label>
-                        <input type="text" class="form-control" required>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-info" value="Save">
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-                    <input type="submit" class="btn btn-info" value="Save">
-                </div>
-            </form>
+            </div>
         </div>
-    </div>
+    </form>
 </div>
 <!--add Modal HTML-->
 <div id="addEmployeeModal" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="/product/save" th:object="${product}">
+            <form action="/save" th:object="${product}">
                 <div class="modal-header">
                     <h4 class="modal-title">Add Employee</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -148,9 +162,10 @@
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
@@ -158,6 +173,17 @@
         integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
         crossorigin="anonymous"></script>
 <script src="../../../resources/bootstrap-4.6.0-dist/js/index.js"></script>
+<script>
+    function productSetId(id) {
+        document.getElementById("idProduct").value = id;
+    }
 
+    function setIdEdit(id, name, price, producer) {
+        document.getElementById("idEdit").value = id;
+        document.getElementById("nameEdit").value = name;
+        document.getElementById("priceEdit").value = price;
+        document.getElementById("producerEdit").value = producer;
+    }
+</script>
 </body>
 </html>

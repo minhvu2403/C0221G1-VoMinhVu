@@ -1,10 +1,3 @@
-function setIdDelete(id) {
-    document.getElementById("deleteList").href="product?action=delete&id="+id;
-};
-function addProduct(){
-
-
-}
 
 $(document).ready(function()
 {
@@ -37,12 +30,3 @@ $(document).ready(function()
         }
     });
 });
-$(document).ready(function() {
-    $('#tableProduct').dataTable( {
-        "dom": 'lrtip',
-        "lengthChange": false,
-        "pageLength": 5
-    } );
-
-
-} );

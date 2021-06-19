@@ -343,7 +343,6 @@ ul{
     background: none;
     outline: none;
     float: left;
-    /*padding: 10px 30px;*/
     color: black;
     font-size: 16px;
     transition: 0.4s;
@@ -360,4 +359,24 @@ ul{
     outline: none;
     border: none;
     background: none;
+}
+
+
+.alert-box {
+    color: #555;
+    border :1px solid;
+    border-radius: 10px;
+    font-family: Tahoma,Geneva,Arial,sans-serif;
+    font-size: 11px;
+    padding: 8px 34px;
+    width: 50%;
+}
+.alert-box span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.success {
+    background: #e9ffd9 url('../../../resources/bootstrap-4.6.0-dist/images/success.png') no-repeat 10px 50%;
+    border-color: #a6ca8a;
 }
