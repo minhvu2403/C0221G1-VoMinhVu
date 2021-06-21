@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+</head>
+<body>
+<h3>Customers</h3>
+<p>
+    <a th:href="@{/customer/create}">
+        Add new customer
+    </a>
+</p>
+<div class="notify">
+    <div th:if="${msg}">
+        <span th:text="${msg}"></span>
+    </div>
+</div>
+<table id = "customers">
+    <thead>
+    <tr>
+        <th>Stt</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Edit</th>
+        <th>Delete</th>
+        <th>View</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="customerObj,loop : ${listCustomer}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${customerObj.getName()}"></td>
+        <td th:text="${customerObj.getEmail()}"></td>
+        <td th:text="${customerObj.getAddress()}"></td>
+        <td><a th:href="@{/customer/{id}/edit(id=${customerObj.getId()})}">edit</a></td>
+        <td><a th:href="@{/customer/{id}/delete(id=${customerObj.getId()})}">delete</a></td>
+        <td><a th:href="@{/customer/{id}/view(id=${customerObj.getId()})}">view</a></td>
+    </tr>
+    </tbody>
+</table>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
