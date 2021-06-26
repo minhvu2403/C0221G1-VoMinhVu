@@ -13,93 +13,34 @@
     <link rel="stylesheet" href="/bootstrap-4.6.0-dist/css/index.css">
     <title>Blog Management</title>
 
-    <style type="text/css">
-        .main-menu{
-            background-color: #fff;
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
-            box-shadow: 0px 0px 20px #d4d4d4;
-
-            height: 100vh;
-
-            position: fixed;
-            top:0;
-            left:0;
-
-            overflow-x: hidden;
-            overflow-y: hidden;
-            white-space: nowrap;
-
-            transition: .3s ease;
-            width : 250px;
-            margin-top: 57px;  overflow-y: scroll;
-        }
-
-
-        .main-menu .menu-item{
-            padding: 10px;
-        }
-        .main-menu .menu-item:hover{
-            background-color: #d6d6d6;
-            cursor: pointer;
-        }
-
-        .main-menu .menu-item {
-            color: gray;
-            font-size: 25px;
-            padding: 10px;
-            height: 74px;
-            width: 203px;
-        }
-
-        .main-menu .menu-item:hover {
-            color: #1d0daa;
-        }
-        ::-webkit-scrollbar {
-            width: 5px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: transparent !important;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #bbbbbb;
-            border-radius: 10px;
-        }
-        .content-menu{
-            margin-left: 250px;
-            width: 1099px;
-        }
-        .nav{
-            display: block;
-        }
-        .btn{
-            margin-left: 10px;
-        }
-
-
-    </style>
 </head>
 <body>
 <!-- Navigation Bar -->
+
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark" th:fragment="navbar">
-    <!-- Brand -->
-    <a class="navbar-brand" th:href="@{/product}">BLOG</a>
-    <!-- Links -->
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-            <a class="nav-link" th:href="@{/}">Blog Posts</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" th:href="@{/}">Categories</a>
-        </li>
-    </ul>
-    <!-- Search -->
-<!--    <form class="form-inline mr-0" th:action="@{/blog}">-->
-<!--        <input class="form-control mr-sm-2" type="text" name="key" placeholder="Search">-->
-<!--        <button class="btn btn-success" type="submit"><i class="fas fa-search"></i></button>-->
-<!--    </form>-->
+    <div class="container">
+                <a class="navbar-brand " style="text-transform: uppercase;color: red" th:href="@{/static}">Product</a>
+                <!-- Links -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/static}">Product Posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/}">Categories</a>
+                    </li>
+                </ul>
+
+            <!-- Brand -->
+
+            <!-- Search -->
+            <form class="form-inline mr-0" th:action="@{/product}">
+                <input class="form-control mr-sm-2 search" type="text" name="key" placeholder="Search">
+                <button class="btn searchList " type="submit"><i class="fas fa-search"></i></button>
+            </form>
+
+
+    </div>
+
 </nav>
 
 <!-- Side Category Menu -->
@@ -111,7 +52,7 @@
 <!--    </ul>-->
 <!--</div>-->
 
-<!-- Delete Confirm Modal
+<!-- Delete Confirm Modal -->
 <div th:fragment="deleteModal (entity)">
     <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="delete-confirm-label"
          aria-hidden="true">
@@ -139,17 +80,62 @@
             </div>
         </div>
     </div>
+    <div th:fragment="addModal (entity)">
+    <!--add Modal HTML-->
+    <div id="addEmployeeModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="/product/save" th:object="${product}" method="post">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add Employee</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text"th:field="*{nameProduct}"  class="form-control" required/>
+                        </div>
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input type="text" th:field="*{priceProduct}" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>producerProduct</label>
+                            <input type="text" th:field="*{producer}" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>CategoryProduct</label>
+                            <select class="custom-select w-50" th:field="*{category.id}">
+                                <option th:each="category : ${categories}" th:value="${category.id}"
+                                        th:text="${category.name}"></option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-success" value="Add">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
     <script>
         function parseId(id) {
             document.getElementById("idDeleted").value = id;
         }
     </script>
 </div>
--->
 <div th:fragment="script">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+            integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+            crossorigin="anonymous"></script>
+    <script src="/bootstrap-4.6.0-dist/js/index.js"></script>
 </div>
 
 </body>

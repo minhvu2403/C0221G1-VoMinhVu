@@ -46,9 +46,10 @@ public class ProductController {
     }
 
     @GetMapping(value = "/search")
-    public String searchByName(@RequestParam String name){
-        productService.searchByName(name);
-        return "redirect:/";
+    public String searchByName(@RequestParam String name,Model model){
+        List<Product> productList=productService.searchByName(name);
+        model.addAttribute("products",productList);
+        return "index";
     }
 
 }

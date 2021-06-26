@@ -43,6 +43,6 @@ public class UserController {
         User user=new User();
         BeanUtils.copyProperties(userDto,user);
         this.userService.save(user);
-        return "redirect:/"
+        return "redirect:/";
     }
 }

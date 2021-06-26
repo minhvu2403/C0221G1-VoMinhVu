@@ -1,35 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<!--    <link rel="stylesheet" href="bootstrap-4.6.0-dist/css/bootstrap.min.css">-->
-    <link rel="stylesheet" href="/bootstrap-4.6.0-dist/css/bootstrap.min.css">
-<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">-->
-    <link rel="stylesheet" href="/bootstrap-4.6.0-dist/css/index.css">
-</head>
+<head th:replace="/layout::head"></head>
 <body>
+<nav th:replace="/layout :: navbar"></nav>
 <div class="container">
     <div class="table-wrapper">
         <div class="table-title">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <h2>Manage <b>Product</b></h2>
                 </div>
-                <div class="col-sm-4">
-                    <form action="/search" method="get">
-                        <div class="search-box">
-                            <input class="search-txt" type="text" name="name" placeholder="Type to search">
-                            <a class="search-btn" href="">
-                                <button class="submit"><i class="fa fa-search"></i></button>
-                            </a>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <a href="#addEmployeeModal" class="add btn btn-success" data-toggle="modal"><i
                             class="material-icons" title="add">&#xE147;</i><span>Add New Product</span></a>
                     <span style="color: #dc2613; font-weight: bold;text-transform: uppercase;margin-top: 10px; display: block;"
@@ -45,55 +26,174 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>producerProduct</th>
+                <th>DateProduct</th>
+                <th>Category</th>
                 <th>Actions</th>
             </tr>
             </thead>
             <tbody class="bg-white">
-<!--            <tr th:each="productObj,loop:${}">-->
-<!--                <td th:text="${loop.count}"></td>-->
-<!--                <td th:text="${productObj.id}"></td>-->
-<!--                <td th:text="${productObj.nameProduct}"></td>-->
-<!--                <td th:text="${productObj.priceProduct}"></td>-->
-<!--                <td th:text="${productObj.producerProduct}"></td>-->
-<!--                <td>-->
+            <tr th:each="productObj,loop:${products}">
+                <td th:text="${loop.count}"></td>
+                <td th:text="${productObj.id}"></td>
+                <td th:text="${productObj.nameProduct}"></td>
+                <td th:text="${productObj.priceProduct}"></td>
+                <td th:text="${productObj.producer}"></td>
+                <td th:text="${productObj.dateProduct}"></td>
+                <td th:text="${productObj.category.name}"></td>
+                <td>
 <!--                    <a href="#editEmployeeModal"-->
-<!--                       th:onclick="|setIdEdit('${productObj.id}','${productObj.nameProduct}','${productObj.priceProduct}','${productObj.producerProduct}')|"-->
-<!--                       class="edit eBtn" data-toggle="modal"><i class="material-icons" data-toggle="tooltip"-->
-<!--                                                                title="Edit">&#xE254;</i></a>-->
-<!--                    <a href="#deleteServiceModal" th:onclick="|productSetId('${productObj.id}')|" class="delete"-->
-<!--                       data-toggle="modal"><i class="material-icons" data-toggle="tooltip"-->
-<!--                                              title="Delete">&#xE872;</i></a>-->
-<!--                </td>-->
-<!--            </tr>-->
+<!--                       th:data-parameter1="${productObj.id}"-->
+<!--                       th:data-parameter2="${productObj.nameProduct}"-->
+<!--                       th:data-parameter3="${productObj.priceProduct}"-->
+<!--                       th:data-parameter4="${productObj.producer}"-->
+<!--                       th:data-parameter5="${productObj.dateProduct}"-->
+<!--                       th:data-parameter6="${productObj.category.name}"-->
+
+<!--                       th:onclick="setIdEdit(this.getAttribute('data-parameter1'),this.getAttribute('data-parameter2'),this.getAttribute('data-parameter3')-->
+<!--                        ,this.getAttribute('data-parameter4'),this.getAttribute('data-parameter5'),this.getAttribute('data-parameter6'))" class="edit eBtn" data-toggle="modal">-->
+<!--                        <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>-->
+<!--                    </a>-->
+                    <a th:href="@{/product/edit(id=${productObj.id})}" class="edit eBtn" data-toggle="modal">
+                        <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
+                    </a>
+<!--                    <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"-->
+<!--                            th:onclick="|parseId('${productObj.id}')|">-->
+<!--                        <i class="fas fa-ban"></i>-->
+<!--                    </button>-->
+                    <a href="#"
+                       th:onclick="|parseId('${productObj.id}')|" class="delete"
+                       data-toggle="modal" data-target="#deleteModal">
+                        <i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i>
+                    </a>
+                </td>
+
+            </tr>
             </tbody>
         </table>
+       <ul class="pagination">
+           <li class="page-item">
+               <a th:if="${products.hasPrevious()}"
+                  th:href="@{/product/list(page=${products.number - 1}, keyword=${keywordValue})}">Previous</a>
+           </li>
+          <li class="page-item" th:each="pageNo: ${#numbers.sequence(0, products.totalPages - 1)}">
+              <a th:href="@{/product/list(page=${pageNo})}" th:text="${pageNo + 1}"></a>
+          </li>
+       <li class="page-item">
+           <a th:if="${products.hasNext()}" th:href="@{/product/list(page=${products.number +1}, keyword=${keywordValue})}">
+               Next
+           </a>
+       </li>
+       </ul>
     </div>
 </div>
-<!-- Delete Modal HTML-->
+
 <!--Edit Modal HTML-->
+<div class="myForm">
+    <form action="/product/edit" method="post" th:object="${product}">
+        <div id="editEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Edit Employee</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>ID</label>
+                            <input readonly type="text" class="form-control" required name="id" id="idEdit" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label>Name</label>
+                            <input type="text" class="form-control" required name="nameProduct" id="nameEdit" value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input type="text" class="form-control" required name="priceProduct" id="priceEdit"
+                                   value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label>producerProduct</label>
+                            <input type="text" class="form-control" required name="producer" id="producerEdit"
+                                   value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label>DateProduct</label>
+                            <input readonly type="text" class="form-control" required name="dateProduct" id="dateEdit"
+                                   value=""/>
+                        </div>
+                        <div class="form-group">
+                            <label>CategoryProduct</label>
+                            <input type="text" class="form-control" required name="category" id="categoryEdit"
+                                   value=""/>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                        <input type="submit" class="btn btn-info" value="Save">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
 <!--add Modal HTML-->
+<div id="addEmployeeModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="/product/save" th:object="${product}" method="post">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add Employee</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text"th:field="*{nameProduct}"  class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="text" th:field="*{priceProduct}" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>producerProduct</label>
+                        <input type="text" th:field="*{producer}" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label>CategoryProduct</label>
+                        <select class="custom-select w-50" th:field="*{category.id}">
+                            <option th:each="category : ${categories}" th:value="${category.id}"
+                                    th:text="${category.name}"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                    <input type="submit" class="btn btn-success" value="Add">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
-
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
-        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
-        crossorigin="anonymous"></script>
-<script src="bootstrap-4.6.0-dist/js/index.js"></script>
+<div th:replace="/layout :: addModal ('proudct')"></div>
+<div th:replace="/layout :: deleteModal ('product')"></div>
+<div th:replace="/layout :: script"></div>
+<!--
 <script>
     function productSetId(id) {
         document.getElementById("idProduct").value = id;
     }
 
-    function setIdEdit(id, name, price, producer) {
+    function setIdEdit(id, name, price, producer,date,category) {
         document.getElementById("idEdit").value = id;
         document.getElementById("nameEdit").value = name;
         document.getElementById("priceEdit").value = price;
         document.getElementById("producerEdit").value = producer;
+        document.getElementById("dateEdit").value = date;
+        document.getElementById("categoryEdit").value = category;
+
     }
 </script>
+-->
 </body>
 </html>

@@ -62,7 +62,7 @@ public class BlogController {
     public String edit(@RequestParam int id,Pageable pageable, Model model){
         model.addAttribute("categories",categoryService.findAll(pageable));
         model.addAttribute("blog",blogService.findById(id));
-        return "redirect:/";
+        return "blog/edit";
     }
     @PostMapping("/update")
     public String update(Blog blog, RedirectAttributes redirect){

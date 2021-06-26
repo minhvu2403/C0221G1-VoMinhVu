@@ -1,7 +1,7 @@
 package com.example.product.model;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.sql.Date;
 
 @Entity
 @Table

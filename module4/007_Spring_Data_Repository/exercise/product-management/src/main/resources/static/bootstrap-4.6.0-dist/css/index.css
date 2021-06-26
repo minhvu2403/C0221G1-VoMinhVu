@@ -130,19 +130,23 @@ table.table .avatar {
 
 .pagination li a {
     border: none;
-    font-size: 13px;
+    font-size: 15px;
     min-width: 30px;
     min-height: 30px;
-    color: #999;
+    color: #1438e8;
     margin: 0 2px;
     line-height: 30px;
     border-radius: 1px !important;
     text-align: center;
-    padding: 0 6px;
+    padding: 0 9px;
+    text-decoration: none;
 }
 
 .pagination li a:hover {
     color: #666;
+}
+.pagination li:hover{
+    background: #02CCC5;
 }
 
 .pagination li.active a, .pagination li.active a.page-link {
@@ -376,7 +380,86 @@ ul{
     text-transform: uppercase;
 }
 
-.success {
-    background: #e9ffd9 url('../../../resources/bootstrap-4.6.0-dist/images/success.png') no-repeat 10px 50%;
-    border-color: #a6ca8a;
+/* layout*/
+.main-menu{
+    background-color: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 20px #d4d4d4;
+
+    height: 100vh;
+
+    position: fixed;
+    top:0;
+    left:0;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    transition: .3s ease;
+    width : 250px;
+    margin-top: 57px;  overflow-y: scroll;
 }
+
+
+.main-menu .menu-item{
+    padding: 10px;
+}
+.main-menu .menu-item:hover{
+    background-color: #d6d6d6;
+    cursor: pointer;
+}
+
+.main-menu .menu-item {
+    color: gray;
+    font-size: 25px;
+    padding: 10px;
+    height: 74px;
+    width: 203px;
+}
+
+.main-menu .menu-item:hover {
+    color: #1d0daa;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #bbbbbb;
+    border-radius: 10px;
+}
+.content-menu{
+    margin-left: 250px;
+    width: 1099px;
+}
+.nav{
+    display: block;
+}
+.btn{
+    margin-left: 10px;
+}
+.search{
+    width: 200px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    outline: none;
+    border: 1px solid #02CCC5;
+    border-right: none !important;
+}
+.searchList{
+    margin-left: -12px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid #02CCC5;
+    background-color: #02CCC5;
+    cursor: pointer;
+    border-left: none !important;
+    width: 57px;
+}
+
