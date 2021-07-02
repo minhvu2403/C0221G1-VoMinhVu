@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head">
+
+</head>
+<body>
+<div class="container">
+<div class="row bg-primary p-3">
+        <div class="col-md-6 float-start text-white">
+            <h3  th:text="#{header_list}"></h3>
+        </div>
+         <div class="col-md-6 ">
+<!--             <div class="language float-end text-white">-->
+<!--                 <a class="text-white"  href="?lang=en" th:text="#{lang_en}"></a> | <a class="text-white"  href="?lang=vi" th:text="#{lang_vi}"></a>-->
+<!--             </div>-->
+             <div class="float-end bg-white ">
+                 <ul class="navbar-nav">
+                     <!-- Icon dropdown -->
+                     <li class="nav-item dropdown">
+                         <a class="nav-link dropdown-toggle"
+                                 href="#"
+                                 id="navbarDropdown"
+                                 role="button"
+                                 data-mdb-toggle="dropdown"
+                                 aria-expanded="false">
+                             <i class="united kingdom flag m-0"></i>
+                         </a>
+                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                             <li>
+                                 <a class="dropdown-item" href="?lang=en"><i class="united kingdom flag"th:text="#{lang_en}"></i></a>
+                             </li>
+                             <li><hr class="dropdown-divider" /></li>
+                             <li>
+                                 <a class="dropdown-item"  href="?lang=vi"><i class="flag-vietnam " th:text="#{lang_vi}"></i></a>
+                             </li>
+
+
+                         </ul>
+                     </li>
+                 </ul>
+             </div>
+
+         </div>
+
+</div>
+
+<div class="notify" style="float: right">
+    <div th:if="${success}">
+        <span th:text="#{remove_success}"></span>
+    </div>
+</div>
+    <button type="button" class="btn btn-success btn-rounded m-2"> <a class=" text-white" th:href="@{/create}" th:text="#{func_add}"></a></button>
+
+<table id="customers" class="table">
+    <thead class="table-danger">
+    <tr>
+        <th th:text="#{customer_name_label}"></th>
+        <th th:text="#{customer_email_label}"></th>
+        <th th:text="#{customer_address_label}"></th>
+        <th th:text="#{func_edit}"></th>
+        <th th:text="#{func_delete}"></th>
+        <th th:text="#{func_view}"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="row,rowStat : ${customers}">
+        <td th:text="${row.name}"></td>
+        <td th:text="${row.email}"></td>
+        <td th:text="${row.address}"></td>
+        <td>
+            <button type="button" class="btn btn-success btn-sm px-3 btn-rounded">
+                <i class="fas fa-edit"><a class=" ms-1 text-white" th:href="@{/edit/{id}(id=${row.id})}" th:text="#{func_edit}"></a></i>
+            </button>
+
+        </td>
+        <td>
+            <button type="button" class="btn btn-danger btn-sm px-3 btn-rounded">
+                <i class="fas fa-trash-alt"><a class=" ms-1 text-white" th:href="@{/delete/{id}(id=${row.id})}" th:text="#{func_delete}"></a></i>
+            </button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-info btn-sm px-3 btn-rounded">
+                <i class="fas fa-eye"><a class=" ms-1 text-white" th:href="@{/view/{id}(id=${row.id})}"  th:text="#{func_view}"></a></i>
+            </button>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<footer th:replace="/layout :: footer"></footer>
+</div>
+</body>
+</html>
