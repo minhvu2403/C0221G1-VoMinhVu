@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security" >
+<head th:replace="/layout :: head">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+</head>
+<body>
+
+<div th:replace="layout :: nav"></div>
+
+<header>
+    <div id="carouselExampleIndicators" class="carousel slide my-carousel my-carousel" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active" style="background-image: url('https://images.wallpaperscraft.com/image/tropical_palm_trees_sea_86292_1920x1080.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Furama Resort</h2>
+                    <p class="lead">Nếu quyết định chọn Đà Nẵng làm chốn dừng chân và để có một kì nghỉ dưỡng trọn vẹn, hãy đưa Furama Resort vào danh sách "nơi nhất định phải nghỉ ngơi" cho chuyến đi của bạn. Nằm dọc theo bãi biển Hà My, sự rộng lớn, thoáng đãng của Furama Resort chắc chắn sẽ khiến bạn bị mê hoặc.</p>
+                </div>
+            </div>
+            <div class="carousel-item " style="background-image: url('https://images.wallpaperscraft.com/image/tropical_resort_palm_trees_90876_1920x1080.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Furama Resort</h2>
+                    <p class="lead">Đây cũng là một trong những resort sang trọng bậc nhất của Việt Nam, thế nên, giá phòng cũng thuộc vào hàng "ngất ngưởng" nhưng những dịch vụ ở "thiên đường" này chắc chắn hoàn toàn xứng đáng với khoản chi phí bạn đã bỏ ra cho kì nghỉ.</p>
+                </div>
+            </div>
+            <div class="carousel-item " style="background-image: url('https://images.wallpaperscraft.com/image/tropical_resort_palm_trees_swimming_pool_90871_1920x1080.jpg')">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2 class="display-4">Furama Resort</h2>
+                    <p class="lead">Nếu đang có định dẫn người yêu "đi trốn" vài ngày, thì khu nghỉ dưỡng này chắc chắn sẽ là một nơi trú ẩn hoàn toàn phù hợp. Lãng mạn, chu đáo, thiết kế phòng tinh tế, riêng tư,... nhiêu đây thôi chắc cũng đủ khiến các đôi tình nhân đắm chìm trong thế giới yêu đương rồi nhỉ.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</header>
+
+</body>
+<th:block th:replace="/layout:: #scriptBlock"></th:block>
+</html>

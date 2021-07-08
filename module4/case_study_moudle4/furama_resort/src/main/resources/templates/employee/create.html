@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <link rel="stylesheet" href="css/touch.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+<!--     Font Awesome-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <style>
+        a{
+            text-decoration: none;
+        }
+        .form-outline .form-control{
+            background: #ffffff;
+        }
+        .create-list{
+            border-radius: 13px;
+            border: 1px solid #170d6b;
+            height: auto;
+            padding: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="get-in-touch">
+        <div class="create-list container w-100  bg-light " >
+            <h1 class="title">ADD NEW EMPLOYEE</h1>
+        <form class="row g-3 needs-validation novalidate" th:action="@{/create-employee}" th:object="${employee}" method="post" >
+            <div class="col-md-6">
+                <div class="form-outline">
+                    <input type="text" class="form-control"   th:field="*{code}"/>
+                    <label for="validationCustom01" class="form-label">Code</label>
+                </div>
+                <small style="color: red" th:if="${#fields.hasErrors('code')}" th:errors="*{code}"></small>
+                <p style="color: red" th:if="${messege}" th:text="${messege}"></p>
+
+            </div>
+            <div class="col-md-6">
+                <div class="form-outline">
+                    <input type="text" class="form-control" id="validationCustom01" value=""  th:field="*{name}"/>
+                    <label for="validationCustom01" class="form-label">Name</label>
+                </div>
+                <small style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></small>
+            </div>
+            <div class="col-md-6">
+                <div class="form-outline">
+                    <input type="date" class="form-control" id="validationCustom02" value="" th:field="*{birthday}"required/>
+                    <label for="validationCustom01" class="form-label">Day of Birth</label>
+                </div>
+                <small style="color: red" th:if="${#fields.hasErrors('birthday')}" th:errors="*{birthday}"></small>
+            </div>
+            <div class="col-md-6">
+                <div class="form-outline">
+                    <input type="text" class="form-control" id="validationCustom03" value=""th:field="*{idCard}"required/>
+                    <label for="validationCustom01" class="form-label">Id Card</label>
+                </div>
+                <small style="color: red" th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}"></small>
+            </div>
+            <div class="col-md-6">
+                <div class="form-outline">
+                    <input type="text" class="form-control" id="validationCustom07" value=""  th:field="*{phone}"/>
+                    <label for="validationCustom01" class="form-label">Phone</label>
+                </div>
+                <small style="color: red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></small>
+            </div>
+            <div class="col-md-6">
+                <div class="form-outline">
+                    <input type="text" class="form-control" id="validationCustom04" th:field="*{salary}"required/>
+                    <label for="validationCustom01" class="form-label">Salary</label>
+                </div>
+                <small style="color: red" th:if="${#fields.hasErrors('salary')}" th:errors="*{salary}"></small>
+            </div>
+            <div class="col-md-6">
+                <div class="form-outline">
+                    <input type="email" class="form-control" id="validationCustom05" th:field="*{email}"required/>
+                    <label for="validationCustom01" class="form-label">Email</label>
+                </div>
+                <small style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></small>
+            </div>
+            <div class="col-md-6">
+                <div class="form-outline">
+                    <input type="text" class="form-control" id="validationCustom06" th:field="*{address}"required/>
+                    <label for="validationCustom01" class="form-label">Address</label>
+                </div>
+                <small style="color: red" th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></small>
+            </div>
+            <div class="col-md-4">
+                <select class="select" data-mdb-filter="true" th:field="*{position}" id="position">
+                    <option th:each="p : ${position}" th:value="${p.id}" th:text="${p.name}"></option>
+                </select>
+                <label class="form-label select-label">POSITION</label>
+            </div>
+            <div class="col-md-4">
+                <select class="select" data-mdb-filter="true" th:field="*{division}" id="division">
+                    <option th:each="p : ${division}" th:value="${p.id}" th:text="${p.name}"></option>
+                </select>
+                <label class="form-label select-label">DIVISION</label>
+            </div>
+            <div class="col-md-4">
+                <select class="select" data-mdb-filter="true" th:field="*{educationDegree}" id="educationDegree">
+                    <option  th:each="p : ${education}" th:value="${p.id}" th:text="${p.name}"></option>
+                </select>
+                <label class="form-label select-label">EDUCATION DEGREE</label>
+            </div>
+            <div class="col-md-6  d-flex justify-content-center ">
+                <button type="submit" class="btn btn-success ">SUBMIT</button>
+            </div>
+            <div class="col-md-6 d-flex justify-content-center">
+                <a  href="/employee"><button type="button" class="btn btn-danger ">CANCEL</button></a>
+            </div>
+        </form>
+        </div>
+    </section>
+<!--    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>-->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/mdb.min.js"></script>
+</body>
+</html>
