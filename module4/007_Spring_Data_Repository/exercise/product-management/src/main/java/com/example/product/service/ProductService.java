@@ -13,6 +13,7 @@ public interface ProductService {
     void save(Product product);
 
     void remove(int id);
+    void update(int id ,Product product);
 
     Page<Product> searchInName(String name, Pageable pageable);
 

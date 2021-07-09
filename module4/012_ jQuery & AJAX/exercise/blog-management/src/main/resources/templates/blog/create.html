@@ -11,22 +11,20 @@
         <table class="table table-borderless">
             <tbody>
             <tr class="form-group">
-                <td class="font-weight-bold">Title</td>
-                <td><input class="form-control" type="text" th:field="*{title}"/></td>
+                <td>
+                    <div class="form-outline mb-4">
+                        <input type="text" id="form1Example1" class="form-control" th:field="*{title}" />
+                        <label class="form-label" for="form1Example1">Title</label>
+                    </div>
+
+                </td>
             </tr>
             <tr class="form-group">
-                <td class="font-weight-bold">Category</td>
                 <td>
-<!--                    <select class="custom-select w-50" th:field="*{category.id}">-->
-<!--                        <option th:each="category : ${categories}" th:value="${category.id}"-->
-<!--                                th:text="${category.name}"></option>-->
-<!--                    </select>-->
                     <select class="select" th:field="*{category.id}">
                         <option th:each="category : ${categories}" th:value="${category.id}"
                                 th:text="${category.name}"></option>
-
                     </select>
-
                 </td>
             </tr>
             <tr class="form-group">

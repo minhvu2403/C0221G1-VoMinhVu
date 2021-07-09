@@ -33,9 +33,8 @@ public class ProductController {
         Page<Product> products=productService.searchInName(keywordValue,pageable);
         modelAndView.addObject("keywordValue",keywordValue);
         modelAndView.addObject("products",products);
+        model.addAttribute("categories",categoryService.findAll());
         model.addAttribute("product", new Product());
-        model.addAttribute("categories",categoryService.findAll(pageable));
-
         return modelAndView;
 
     }
@@ -46,14 +45,15 @@ public class ProductController {
 //        return "redirect:/product/";
 //    }
     @PostMapping("/save")
-    public String save(Product product, RedirectAttributes redirect,Pageable pageable,Model model) {
+    public String save(Product product, RedirectAttributes redirect) {
         this.productService.save(product);
         redirect.addFlashAttribute("msg", "Add Product successfully!");
+
         return "redirect:/product/";
     }
     @GetMapping("/edit")
     public String edit(@RequestParam int id,Pageable pageable, Model model){
-        model.addAttribute("categories",categoryService.findAll(pageable));
+        model.addAttribute("categories",categoryService.findAll());
         model.addAttribute("product",productService.findById(id));
         return "redirect:/product/";
     }

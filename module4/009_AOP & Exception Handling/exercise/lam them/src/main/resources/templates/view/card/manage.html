@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{view/home::head}">
+</head>
+<body>
+<nav th:replace="~{view/home::header}"></nav>
+<h1 class="text-center mt-5 mb-5">Book</h1>
+<h1 class="text-center" th:text="${message}"></h1>
+
+<a class="btn btn-outline-success ml-3 mb-3">Add new book</a>
+<table class="table">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Name book</th>
+        <th>Name member</th>
+        <th>Day start borrow</th>
+        <th>Day end borrow</th>
+        <th>Status</th>
+        <th>Give Back</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="card, state : ${cardList}">
+        <td th:text="${state.count}"></td>
+        <td th:text="${card.book.name}"></td>
+        <td th:text="${card.member.name}"></td>
+        <td th:text="${card.dayStartBorrow}"></td>
+        <td th:text="${card.dayEndBorrow}"></td>
+        <td th:text="${card.status == true ? 'Paid' : 'Unpai'}"></td>
+        <!--        <th:block th:switch="${card.status}">-->
+        <!--            <td th:case="true">Paid</td>-->
+        <!--            <td th:case="false">Unpaid</td>-->
+        <!--            <td th:case="null">Unpaid</td>-->
+        <!--        </th:block>-->
+
+        <td><a th:href="@{/card/give-back(id=${card.id})}" class="btn btn-outline-warning">Give Back</a></td>
+    </tr>
+    </tbody>
+</table>
+
+
+</body>
+</html>

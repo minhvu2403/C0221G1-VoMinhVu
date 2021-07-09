@@ -1,4 +1,9 @@
 package com.example.codegym.repository;
 
-public interface ProvinceRepository {
+import com.example.codegym.model.Province;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface ProvinceRepository extends CrudRepository<Province, Long> {
 }

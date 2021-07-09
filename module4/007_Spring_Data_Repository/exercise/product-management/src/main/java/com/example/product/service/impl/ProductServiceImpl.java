@@ -39,6 +39,11 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
+    public void update(int id, Product product) {
+//        productRepository.update(id,product);
+    }
+
+    @Override
     public Page<Product> searchInName(String nameProduct, Pageable pageable) {
         return this.productRepository.findByNameProductContaining(nameProduct,pageable);
     }
